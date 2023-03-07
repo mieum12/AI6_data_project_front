@@ -2,6 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <ContentNav>
           <Header />
         </ContentNav>
+        <Form />
         <Footer />
       </Nav>
     </>
