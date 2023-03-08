@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 // import styled from "styled-components";
 import Shelter from "../../components/Shelter";
 
-function shelterPage() {
+function ShelterPage() {
   return (
     <div>
       
@@ -16,4 +16,4 @@ function shelterPage() {
   );
 }
 
-export default shelterPage;
+export default ShelterPage;
