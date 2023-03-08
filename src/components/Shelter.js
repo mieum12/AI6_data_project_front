@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-function ShelterList() {
+function Shelter() {
   return (
     <div>
-      <Lists>ShelterList가 들어오는 자리입니다.</Lists>
+      <Lists>Shelter가 들어오는 자리입니다.</Lists>
     </div>
   );
 }
@@ -13,4 +13,4 @@ const Lists = styled.div`
 
 `
 
-export default ShelterList;
+export default Shelter;
