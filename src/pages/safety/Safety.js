@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 
-const SafetyPage = () => {
+const Safety = () => {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ const SafetyPage = () => {
   );
 };
 
-export default SafetyPage;
+export default Safety;

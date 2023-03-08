@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Header";
 
-function PlusPage() {
+function Plus() {
   return (
     <>
       <Header />
@@ -13,4 +13,4 @@ function PlusPage() {
 
 const PlusList = styled.div``;
 
-export default PlusPage;
+export default Plus;

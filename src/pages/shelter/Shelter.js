@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 
 // import styled from "styled-components";
 
-function ShelterPage() {
+function Shelter() {
   return (
     <div>
       <Header />
@@ -12,4 +12,4 @@ function ShelterPage() {
   );
 }
 
-export default ShelterPage;
+export default Shelter;
