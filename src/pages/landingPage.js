@@ -1,7 +1,14 @@
 import React from "react";
+import Header from "../components/Header";
+import Body from "../components/Body";
 
-const landingPage = () => {
-  return <div>landingPage</div>;
+const LandingPage = () => {
+  return (
+    <>
+      <Header />
+      <Body />
+    </>
+  );
 };
 
-export default landingPage;
+export default LandingPage;

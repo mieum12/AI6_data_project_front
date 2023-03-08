@@ -10,13 +10,13 @@ function Header() {
         </div>
         <ul className="menu">
           <li>
-            <a href="/shelterPage">시설 보기</a>
+            <a href="/ShelterPage">시설 보기</a>
           </li>
           <li>
-            <a href="/plusPage">다른 시설 소개</a>
+            <a href="/PlusPage">다른 시설 소개</a>
           </li>
           <li>
-            <a href="/">지역별 안전도 정보</a>
+            <a href="/SafetyPage">지역별 안전도 정보</a>
           </li>
         </ul>
       </div>

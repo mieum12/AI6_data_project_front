@@ -1,18 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "../../components/Header";
 
-function plusPage() {
+function PlusPage() {
   return (
-    <div>
-      <PlusList>
-        
-      </PlusList>
-    </div>
+    <>
+      <Header />
+      <PlusList>PlusList 페이지입니다</PlusList>
+    </>
   );
 }
 
-const PlusList = styled.div`
+const PlusList = styled.div``;
 
-`
-
-export default plusPage;
+export default PlusPage;

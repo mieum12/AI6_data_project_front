@@ -1,16 +1,14 @@
 import "./App.css";
 import styled from "styled-components";
-import Header from "./components/Header";
+import RoutesList from "./routes/RoutesList";
 import Footer from "./components/Footer";
-import Body from "./components/Body";
 
 function App() {
   return (
     <>
       <Nav>
         <ContentNav>
-          <Header />
-          <Body />
+          <RoutesList />
         </ContentNav>
         <Footer />
       </Nav>
