@@ -4,9 +4,7 @@ import styled from "styled-components";
 function shelterListPage() {
   return (
     <div>
-      <ShelterList>
-        
-      </ShelterList>
+      <ShelterList/>
     </div>
   );
 }
