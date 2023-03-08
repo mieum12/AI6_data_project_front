@@ -39,6 +39,6 @@ const FormSection = styled.div`
     border-color: transparent;
     border-radius: 5px;
     color: white;
-    background-color: #6a8663;
+    background-color: #425f57;
   }
 `;

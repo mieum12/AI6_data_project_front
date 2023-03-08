@@ -27,9 +27,9 @@ function Header() {
 const HeaderSection = styled.div`
   font-weight: bold;
   font-size: 20px;
-  color: green;
-  margin: 30px;
-
+  color: #425f57;
+  padding: 30px;
+  background-color: #f8f5f1;
   .wrapper {
     width: 100%;
     display: flex;
@@ -47,7 +47,7 @@ const HeaderSection = styled.div`
   }
   a {
     text-decoration: none;
-    color: #6a8663;
+    color: #425f57;
   }
 `;
 

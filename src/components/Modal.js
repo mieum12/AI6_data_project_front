@@ -9,7 +9,7 @@ export default function Modal({ setModalOpen }) {
   return (
     <ModalSection>
       <button className="close" onClick={modalCloseHandler}>
-        X
+        {/* X */}
       </button>
       <p>모달 창 입니다.</p>
     </ModalSection>
@@ -22,16 +22,16 @@ const ModalSection = styled.div`
   height: 200px;
 
   // 모달 창 중앙 배치
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 40%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 
   // 모달 창 디자인
   text-align: center;
   border-radius: 5px;
-  color: white;
-  background-color: #6a8663;
+  color: #425f57;
+  background-color: #f8f5f1;
 
   .close {
     // 닫기 버튼 우상단 배치

@@ -2,7 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Form from "./components/Form";
+import Body from "./components/Body";
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <Nav>
         <ContentNav>
           <Header />
+          <Body />
         </ContentNav>
-        <Form />
         <Footer />
       </Nav>
     </>
