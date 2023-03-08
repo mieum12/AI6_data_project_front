@@ -5,7 +5,7 @@ const SafetyPage = () => {
   return (
     <>
       <Header />
-      <div>safetyPage</div>
+      <div>safetyPage 입니다!</div>
     </>
   );
 };
