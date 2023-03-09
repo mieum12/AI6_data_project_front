@@ -26,7 +26,7 @@ function Plus() {
 const PlusList = styled.div`
 display: flex;
 justify-content: center;
-height: 540px;
+height: 650px;
 background-color: #f8f5f1;
 .Box{
   display: flex;
@@ -37,7 +37,7 @@ background-color: #f8f5f1;
   background: #425f57;
   margin: 20px;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 20px;
   
 }
 `;

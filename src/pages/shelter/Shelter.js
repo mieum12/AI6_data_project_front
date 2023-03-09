@@ -18,7 +18,7 @@ function Shelter() {
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
-  height: 540px;
+  height: 650px;
   background-color: #f8f5f1;
 `
 

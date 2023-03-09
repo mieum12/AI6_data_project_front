@@ -1,23 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from 'react-router-dom'
 
 function Header() {
   return (
     <HeaderSection>
       <div className="wrapper">
-        <div className="title">
-          <a href="/"> 🏕️ 시설이름 </a>
-        </div>
+        <Link to="/" className="title">✨ 반딧불이</Link>
         <ul className="menu">
-          <li>
-            <a href="/ShelterPage">시설 보기</a>
-          </li>
-          <li>
-            <a href="/PlusPage">다른 시설 소개</a>
-          </li>
-          <li>
-            <a href="/SafetyPage">지역별 안전도 정보</a>
-          </li>
+          <Link to="/ShelterPage"><li>시설 보기</li></Link>
+          <Link to="/PlusPage"><li>다른 시설 소개</li></Link>
+          <Link to="/SafetyPage"><li>지역별 안전도 정보</li></Link>
         </ul>
       </div>
     </HeaderSection>

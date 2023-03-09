@@ -18,7 +18,7 @@ export default function Form() {
   return (
     <FormSection>
       <button className="modalButton" onClick={modalOpenHandler}>
-        ShowModal
+        클릭시 상세 Modal이 뜨는 버튼 테스트
       </button>
       {modalOpen && <Modal setModalOpen={setModalOpen} />}
     </FormSection>
@@ -33,7 +33,7 @@ const FormSection = styled.div`
 
   // 모달 창 디자인
   .modalButton {
-    font-size: 30px;
+    // font-size: 30px;
     padding: 5px 10px;
 
     border-color: transparent;
