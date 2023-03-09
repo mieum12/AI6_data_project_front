@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Modal from "./Modal";
 
 export default function Body() {
   return (
@@ -15,13 +14,35 @@ export default function Body() {
         </div>
       </BodySection1>
       <BodySection2>
-        <div class="center2">
+        <div class="name">
           <div>000 이용법</div>
-          <div class="modal">
-            <Modal />
-            <Modal />
-            <Modal />
-          </div>
+        </div>
+        <div className="Box">
+          이미지 <br />
+          링크
+          <br />
+          번호
+          <br />
+          소개글
+          <br />
+        </div>
+        <div className="Box">
+          이미지 <br />
+          링크
+          <br />
+          번호
+          <br />
+          소개글
+          <br />
+        </div>
+        <div className="Box">
+          이미지 <br />
+          링크
+          <br />
+          번호
+          <br />
+          소개글
+          <br />
         </div>
       </BodySection2>
       <BodySection3>
@@ -46,19 +67,32 @@ const BodySection1 = styled.div`
   }
 `;
 const BodySection2 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1470px;
-  height: 480px;
+  height: 700px;
   background-color: #425f57;
-  color: #f8f5f1;
 
-  .center2 {
+  .name {
     text-align: center;
-    padding: 100px 0 0 0;
+    padding: 0;
+    width: 300px;
+    height: 50px;
+    background-color: #f8f5f1;
   }
-  .modal {
+
+  .Box {
     display: flex;
-    justify-content: space-evenly;
-    padding: 30px 0 0 0;
+    width: 200px;
+    height: 300px;
+    background-color: #f8f5f1;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: #425f57;
+    border-width: 10px;
   }
 `;
 const BodySection3 = styled.div`
