@@ -5,7 +5,13 @@ export default function Body() {
   return (
     <>
       <PictureSection>
-        <div>사진</div>
+        <div>
+          <img
+            className="picture"
+            src="https://img.freepik.com/free-photo/back-view-family-hugging-admiring-their-home_259150-59357.jpg?w=1800&t=st=1678331701~exp=1678332301~hmac=81282b164f83c78efd55d4678a5bfeca022bbdc8f2012a582d464a91149df87f"
+            alt="family"
+          />
+        </div>
       </PictureSection>
       <BodySection1>
         <div class="center1">
@@ -14,35 +20,37 @@ export default function Body() {
         </div>
       </BodySection1>
       <BodySection2>
-        <div class="name">
-          <div>000 이용법</div>
+        <div className="nameList">
+          <div className="name">000 이용법</div>
         </div>
-        <div className="Box">
-          이미지 <br />
-          링크
-          <br />
-          번호
-          <br />
-          소개글
-          <br />
-        </div>
-        <div className="Box">
-          이미지 <br />
-          링크
-          <br />
-          번호
-          <br />
-          소개글
-          <br />
-        </div>
-        <div className="Box">
-          이미지 <br />
-          링크
-          <br />
-          번호
-          <br />
-          소개글
-          <br />
+        <div className="BoxList">
+          <div className="Box">
+            이미지 <br />
+            링크
+            <br />
+            번호
+            <br />
+            소개글
+            <br />
+          </div>
+          <div className="Box">
+            이미지 <br />
+            링크
+            <br />
+            번호
+            <br />
+            소개글
+            <br />
+          </div>
+          <div className="Box">
+            이미지 <br />
+            링크
+            <br />
+            번호
+            <br />
+            소개글
+            <br />
+          </div>
         </div>
       </BodySection2>
       <BodySection3>
@@ -54,12 +62,15 @@ export default function Body() {
   );
 }
 const PictureSection = styled.div`
-  width: 1470px;
-  height: 480px;
+  height: 750px;
+
+  .picture {
+    height: 750px;
+    width: 100%;
+  }
 `;
 const BodySection1 = styled.div`
-  width: 1470px;
-  height: 480px;
+  height: 650px;
   background-color: #f8f5f1;
   .center1 {
     text-align: center;
@@ -67,23 +78,25 @@ const BodySection1 = styled.div`
   }
 `;
 const BodySection2 = styled.div`
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-items: center;
-  width: 1470px;
-  height: 700px;
+  gap: -10px;
+  height: 650px;
   background-color: #425f57;
-
+  .nameList {
+    display: flex;
+    justify-content: center;
+  }
   .name {
-    text-align: center;
-    padding: 0;
     width: 300px;
     height: 50px;
     background-color: #f8f5f1;
   }
-
-  .Box {
+  .BoxList {
     display: flex;
+    justify-content: center;
+  }
+  .Box {
     width: 200px;
     height: 300px;
     background-color: #f8f5f1;
@@ -96,8 +109,7 @@ const BodySection2 = styled.div`
   }
 `;
 const BodySection3 = styled.div`
-  width: 1470px;
-  height: 480px;
+  height: 650px;
   background-color: #f8f5f1;
   .center3 {
     text-align: center;
