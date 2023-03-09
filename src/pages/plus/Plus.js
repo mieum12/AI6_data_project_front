@@ -11,17 +11,30 @@ function Plus() {
         <div className="Box">
           <img src='/국민재난안전포털.jpeg' alt="플러스페이지사진"/> 
           <h3><Link to="https://www.safekorea.go.kr/" target="_blank">국민 재난 안전 포털</Link></h3>
-          <div>재난 발생 정보 조회 및 재난 안전 상황 정보 등의 재난 현황을 확인할 수 있으며 또 다른 안전시설 등의 확인이 가능합니다.</div>
+          <div>▫️ 재난 현황 확인 </div>
+          <div>: 재난 정보 조회 및 상황 정보 등</div><br/>
+          <div>▫️ 타 안전시설 확인</div>
+          <div>: 지진 대피소, 민방위 대피소 등</div>
         </div>
 
         <div className="Box">
         <img src='/행정안전부.jpeg' alt="플러스페이지사진"/>
           <h3><Link to="https://www.mois.go.kr/" target="_blank">행정 안전부</Link></h3>
-          <div>국가 안전 시스템 정책 소개 및 온라인 민원 신청 안내를 받을 수 있습니다.</div><br/>
-          <div>이재민 관련 지원 사업 신속 보도자료 등 확인이 가능합니다.</div>
+          <div>▫️ 국가 안전 시스템 정책 소개</div><br/>
+          <div>▫️ 온라인 민원 신청 안내</div><br/>
+          <div>▫️ 이재민 관련 지원 사업, 신속 보도자료 등 확인</div>
         </div>
 
-        <div className="Box">3</div>
+        <div className="Box">
+        <img src='/서울종합방재센터.jpeg' alt="플러스페이지사진"/>
+          <h3><Link to="https://119.seoul.go.kr/" target="_blank">서울 종합 방재 센터(119)</Link></h3>
+          <div>▫️ 재난 정보 서비스 소개</div>
+          <div>: 재난 발생 통계, 재난 보고 등</div><br/>
+          <div>▫️ 사고별 대응 요령 소개</div><br/>
+          <div>▫️ 시민 참여 활동: 자원봉사</div>
+        </div>
+
+
       </PlusList>
     </>
   );
