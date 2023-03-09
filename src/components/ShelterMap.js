@@ -11,7 +11,7 @@ function ShelterMap() {
 const Map = styled.div`
 display: flex;
 align-self: center;
-width: 400px;
+width: 360px;
 height: 400px;
 background: #f8f5f1;
 margin: 10px;

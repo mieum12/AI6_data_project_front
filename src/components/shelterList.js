@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import Form from "./Form";
 
 function ShelterList() {
   return (
     <ListTable> 수용시설 리스트 표 가져올 곳
+      <Form/>
     </ListTable>
   );
 }
@@ -11,7 +13,7 @@ function ShelterList() {
 const ListTable = styled.div`
 display: flex;
 align-self: center;
-width: 400px;
+width: 450px;
 height: 400px;
 background: #f8f5f1;
 margin: 10px;

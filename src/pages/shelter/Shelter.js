@@ -18,7 +18,7 @@ function Shelter() {
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
-  height: 700px; //임시로 지정
+  height: 540px;
   background-color: #f8f5f1;
 `
 

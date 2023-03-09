@@ -27,9 +27,9 @@ export default function Form() {
 
 const FormSection = styled.div`
   // 전체 중앙 배치
-  position: absolute;
-  top: 40%;
-  left: 45%;
+  // position: absolute;
+  // top: 40%;
+  // left: 45%;
 
   // 모달 창 디자인
   .modalButton {
