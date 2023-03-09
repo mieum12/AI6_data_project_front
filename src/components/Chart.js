@@ -13,7 +13,7 @@ export default function Chart() {
       </ChartSection>
       <SafetySection>
         <div className="back"></div>
-        <ul>
+        <ul className="cardWrapper">
           <li className="card">a</li>
           <li className="card">b</li>
           <li className="card">c</li>
@@ -63,11 +63,15 @@ const ChartSection = styled.div`
 
 const SafetySection = styled.div`
   position: relative;
-  z-index: 1;
+
+  .cardWrapper {
+    margin: 40px;
+    text-align: center;
+  }
 
   .card {
     display: inline-block;
-    margin: 20px;
+    margin: 50px 20px 60px 20px;
 
     width: 199px;
     height: 255.5px;
@@ -81,9 +85,9 @@ const SafetySection = styled.div`
 
   .back {
     position: absolute;
-    z-index: 999;
+    z-index: -1;
 
-    width: auto;
+    width: 100%;
     height: 439px;
 
     background: #425f57;
