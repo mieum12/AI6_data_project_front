@@ -15,8 +15,7 @@ function ShelterMap() {
   },[])
 
   return (
-    <Map id="map" style={{width:'340',height:'390'}}> 지도 가져올 곳
-    </Map>
+    <Map id="map" style={{width:'340',height:'390'}}/>
   );
 }
 

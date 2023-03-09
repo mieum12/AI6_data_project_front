@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Form from "./Form";
-import Modal from "./Modal";
+// import ShelterRoadview from "./ShelterRoadview";
 
 function ShelterList() {
+
+
+
   return (
     <ListTable> 수용시설 리스트 표 가져올 곳
       <Form/>
+      {/* <ShelterRoadview/> */}
     </ListTable>
   );
 }
