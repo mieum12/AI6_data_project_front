@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Header";
 import ShelterMap from "../../components/ShelterMap";
-import ShelterList from "../../components/shelterList";
+import ShelterList from "../../components/ShelterList";
 
 function Shelter() {
   return (

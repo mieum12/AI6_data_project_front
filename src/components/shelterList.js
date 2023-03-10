@@ -5,8 +5,6 @@ import Form from "./Form";
 
 function ShelterList() {
 
-
-
   return (
     <ListTable> 수용시설 리스트 표 가져올 곳
       <Form/>
