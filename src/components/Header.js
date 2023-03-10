@@ -1,16 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <HeaderSection>
       <div className="wrapper">
-        <Link to="/" className="title">✨ 반딧불이</Link>
+        <Link to="/" className="title">
+          <img src="/asset/반딧불이_logo.png" alt="f사이트로고" />
+        </Link>
         <ul className="menu">
-          <Link to="/ShelterPage"><li>시설 보기</li></Link>
-          <Link to="/PlusPage"><li>다른 시설 소개</li></Link>
-          <Link to="/SafetyPage"><li>지역별 안전도 정보</li></Link>
+          <Link to="/ShelterPage">
+            <li>시설 보기</li>
+          </Link>
+          <Link to="/PlusPage">
+            <li>다른 시설 소개</li>
+          </Link>
+          <Link to="/SafetyPage">
+            <li>지역별 안전도 정보</li>
+          </Link>
         </ul>
       </div>
     </HeaderSection>
@@ -21,7 +29,7 @@ const HeaderSection = styled.div`
   font-weight: bold;
   font-size: 20px;
   color: #425f57;
-  padding: 30px;
+  padding: 5px 30px;
   background-color: #f8f5f1;
   .wrapper {
     width: 100%;
@@ -31,6 +39,11 @@ const HeaderSection = styled.div`
   }
   .title {
   }
+
+  img {
+    width: 100px;
+  }
+
   .menu {
     list-style: none;
     display: flex;
