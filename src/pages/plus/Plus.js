@@ -9,7 +9,7 @@ function Plus() {
       <Header />
       <PlusList>
         <div className="Box">
-          <img src='/국민재난안전포털.jpeg' alt="플러스페이지사진"/> 
+          <img src='/asset/국민재난안전포털.jpeg' alt="플러스페이지사진"/> 
           <h3><Link to="https://www.safekorea.go.kr/" target="_blank">국민 재난 안전 포털</Link></h3>
           <div>▫️ 재난 현황 확인 </div>
           <div>: 재난 정보 조회 및 상황 정보 등</div><br/>
@@ -18,7 +18,7 @@ function Plus() {
         </div>
 
         <div className="Box">
-        <img src='/행정안전부.jpeg' alt="플러스페이지사진"/>
+        <img src='/asset/행정안전부.jpeg' alt="플러스페이지사진"/>
           <h3><Link to="https://www.mois.go.kr/" target="_blank">행정 안전부</Link></h3>
           <div>▫️ 국가 안전 시스템 정책 소개</div><br/>
           <div>▫️ 온라인 민원 신청 안내</div><br/>
@@ -26,7 +26,7 @@ function Plus() {
         </div>
 
         <div className="Box">
-        <img src='/서울종합방재센터.jpeg' alt="플러스페이지사진"/>
+        <img src='/asset/서울종합방재센터.jpeg' alt="플러스페이지사진"/>
           <h3><Link to="https://119.seoul.go.kr/" target="_blank">서울 종합 방재 센터(119)</Link></h3>
           <div>▫️ 재난 정보 서비스 소개</div>
           <div>: 재난 발생 통계, 재난 보고 등</div><br/>
