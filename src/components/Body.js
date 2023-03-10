@@ -6,11 +6,7 @@ export default function Body() {
     <>
       <PictureSection>
         <div>
-          <img
-            className="picture"
-            src="https://img.freepik.com/free-photo/back-view-family-hugging-admiring-their-home_259150-59357.jpg?w=1800&t=st=1678331701~exp=1678332301~hmac=81282b164f83c78efd55d4678a5bfeca022bbdc8f2012a582d464a91149df87f"
-            alt="family"
-          />
+          <img className="picture" src="../asset/background.jpg" alt="family" />
         </div>
       </PictureSection>
       <BodySection1>
@@ -91,6 +87,9 @@ const BodySection2 = styled.div`
     width: 300px;
     height: 50px;
     background-color: #f8f5f1;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
   }
   .BoxList {
     display: flex;
