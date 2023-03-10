@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import styled from "styled-components";
 import { Chart } from "../../components/Chart";
+import { ChartCard } from "../../components/ChartCard";
 
 const Safety = () => {
   return (
@@ -14,19 +15,7 @@ const Safety = () => {
         chartTitle="수용 시설 현황"
         chartGraph="통합 자치구 수용시설 그래프"
       />
-      <SafetySection>
-        <div className="BoxList">
-          <div className="Box">
-            a동 <br />
-          </div>
-          <div className="Box">
-            b동 <br />
-          </div>
-          <div className="Box">
-            c동 <br />
-          </div>
-        </div>
-      </SafetySection>
+      <ChartCard />
     </>
   );
 };
@@ -40,41 +29,6 @@ const Background = styled.div`
   top: 10px;
   left: 0;
   z-index: -2;
-`;
-
-const SafetySection = styled.div`
-  display: grid;
-  align-items: center;
-  gap: -10px;
-  height: 500px;
-  background-color: #425f57;
-  .nameList {
-    display: flex;
-    justify-content: center;
-  }
-  .name {
-    width: 300px;
-    height: 50px;
-    background-color: #f8f5f1;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  .BoxList {
-    display: flex;
-    justify-content: center;
-  }
-  .Box {
-    width: 200px;
-    height: 300px;
-    background-color: #f8f5f1;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: #425f57;
-    border-width: 10px;
-  }
 `;
 
 export default Safety;
