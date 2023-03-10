@@ -52,7 +52,6 @@ const PictureSection = styled.div`
   height: 750px;
 
   .picture {
-    height: 750px;
     width: 100%;
   }
 `;
