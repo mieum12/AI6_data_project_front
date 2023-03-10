@@ -20,6 +20,7 @@ const ModalSection = styled.div`
   // 모달 창 크기
   width: 400px;
   height: 550px;
+  z-index: 999; // 모달 창 최상단으로 보이게 하는 코드
 
   // 모달 창 중앙 배치
   position: absolute;
