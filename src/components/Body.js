@@ -10,7 +10,7 @@ export default function Body() {
         </div>
       </PictureSection>
       <BodySection1>
-        <div class="center1">
+        <div class="textList">
           <div>이재민을 위한 서비스 어플</div>
           <div>재난 대비 수용시설 현황에 대한 글 작성</div>
         </div>
@@ -21,31 +21,22 @@ export default function Body() {
         </div>
         <div className="BoxList">
           <div className="Box">
-            이미지 <br />
-            링크
-            <br />
-            번호
-            <br />
-            소개글
-            <br />
+            <h3>이미지</h3>
+            <div>링크</div>
+            <div>번호</div>
+            <div>소개글</div>
           </div>
           <div className="Box">
-            이미지 <br />
-            링크
-            <br />
-            번호
-            <br />
-            소개글
-            <br />
+            <h3>이미지</h3>
+            <div>링크</div>
+            <div>번호</div>
+            <div>소개글</div>
           </div>
           <div className="Box">
-            이미지 <br />
-            링크
-            <br />
-            번호
-            <br />
-            소개글
-            <br />
+            <h3>이미지</h3>
+            <div>링크</div>
+            <div>번호</div>
+            <div>소개글</div>
           </div>
         </div>
       </BodySection2>
@@ -68,7 +59,7 @@ const PictureSection = styled.div`
 const BodySection1 = styled.div`
   height: 650px;
   background-color: #f8f5f1;
-  .center1 {
+  .textList {
     text-align: center;
     padding: 240px 0 0 0;
   }
@@ -86,6 +77,7 @@ const BodySection2 = styled.div`
   .name {
     width: 300px;
     height: 50px;
+    padding: 25px 0 0 0;
     background-color: #f8f5f1;
     border-radius: 20px;
     display: flex;
@@ -105,6 +97,10 @@ const BodySection2 = styled.div`
     border-style: solid;
     border-color: #425f57;
     border-width: 10px;
+  }
+  h3 {
+    width: 200px;
+    height: 150px;
   }
 `;
 const BodySection3 = styled.div`
