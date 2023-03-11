@@ -2,7 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 import RoutesList from "./routes/RoutesList";
 import Footer from "./components/Footer";
-
+console.log("20230311 김민성 - 지우셔도 됩니다. ");
 function App() {
   return (
     <>
