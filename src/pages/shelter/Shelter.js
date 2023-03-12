@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Header";
-import ShelterMap from "../../components/ShelterMap";
-import ShelterList from "../../components/shelterList";
+import ShelterMap from "../../components/shelter/ShelterMap";
+import ShelterList from "../../components/shelter/shelterList";
 
 function Shelter() {
   return (

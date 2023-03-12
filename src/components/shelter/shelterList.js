@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import Form from "./Form";
+// import styles from "./ShelterMap.module.css"
+import Form from "../Form";
 // import ShelterRoadview from "./ShelterRoadview";
+
 
 function ShelterList() {
 
   return (
-    <ListTable> 수용시설 리스트 표 가져올 곳
-      <Form/>
-      {/* <ShelterRoadview/> */}
+    <ListTable>
+      {/* <div className={styles.listTable}> 수용시설 리스트 표 가져올 곳 */}
+        <Form/>
+        {/* <ShelterRoadview/> */}
+      {/* </div> */}
     </ListTable>
   );
 }

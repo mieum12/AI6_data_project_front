@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+// import styles from "./ShelterMap.module.css"
 
 const{kakao}=window;
 
@@ -15,7 +16,7 @@ function ShelterMap() {
   },[])
 
   return (
-    <Map id="map" style={{width:'340',height:'390'}}/>
+    <Map id="map"/>
   );
 }
 
