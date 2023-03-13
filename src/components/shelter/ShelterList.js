@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./Shelter_List.style";
+import * as S from "./ShelterList.style";
 import Form from "../Form";
 // import ShelterRoadview from "./ShelterRoadview";
 
