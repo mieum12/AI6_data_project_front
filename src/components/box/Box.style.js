@@ -8,7 +8,7 @@ export const BoxSection = styled.div`
   .Box {
     width: 200px;
     height: 400px;
-    background-color: #f8f5f1;
+    // background-color: #f8f5f1;
     color: #425f57;
     margin: 20px;
     padding: 20px;
@@ -16,6 +16,7 @@ export const BoxSection = styled.div`
     border-style: solid;
     border-color: #425f57;
     border-width: 10px;
+    background-color: ${(props) => props.backColor || "#f8f5f1" }
   }
   img {
       width: 200px;

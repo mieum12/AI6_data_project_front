@@ -12,7 +12,7 @@ export const Box = ({ boxImage, boxLink, LinkName, boxNumber, boxText }) => {
             <Link to={boxLink}>{LinkName}</Link>
           </h3>
           <div>{boxNumber}</div>
-          <div>{boxText}</div>
+          <div>{boxText.map( text => <p>{text}</p> )}</div>
         </div>
       </div>
     </S.BoxSection>
