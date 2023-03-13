@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import * as S from "./Landing.style";
-import Box from "../../components/Box";
+import Box from "../../components/box/Box";
 
 const LandingPage = () => {
   return (
