@@ -1,4 +1,4 @@
-import Landing from "../pages/Landing";
+import Landing from "../pages/landing/Landing";
 import Plus from "../pages/plus/Plus";
 import Shelter from "../pages/shelter/Shelter";
 import Safety from "../pages/safety/Safety";
