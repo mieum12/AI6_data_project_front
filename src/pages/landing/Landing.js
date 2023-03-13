@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../../components/Header";
 import * as S from "./Landing.style";
 import Box from "../../components/box/Box";
+import LineGraph from "../../components/rechart/Recahrt";
+import ScatterGraph from "../../components/rechart/ScatterRechart";
 
 const LandingPage = () => {
   return (
@@ -30,7 +32,10 @@ const LandingPage = () => {
       </S.BodySection2>
       <S.BodySection3>
         <div class="center3">
-          <div>map</div>
+          <div>
+            <LineGraph />
+            <ScatterGraph />
+          </div>
         </div>
       </S.BodySection3>
     </>

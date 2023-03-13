@@ -41,10 +41,11 @@ export const BodySection2 = styled.div`
   }
 `;
 export const BodySection3 = styled.div`
-  height: 650px;
+  height: 1000px;
   background-color: #f8f5f1;
   .center3 {
     text-align: center;
-    padding: 240px 0 0 0;
+    padding: 120px 0 0 0;
   }
 `;
+// height 원래 650px;
