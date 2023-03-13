@@ -1,7 +1,8 @@
 import "./App.css";
 import styled from "styled-components";
 import RoutesList from "./routes/RoutesList";
-import Footer from "./components/Footer";
+import { Footer } from "./components/Footer";
+
 function App() {
   return (
     <>

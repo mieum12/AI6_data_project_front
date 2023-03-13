@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function Modal({ setModalOpen }) {
+export const Modal = ({ setModalOpen }) => {
   const modalCloseHandler = () => {
     // const setModalOpen = props;
     setModalOpen(false);
@@ -14,7 +14,7 @@ export default function Modal({ setModalOpen }) {
       <p>모달 창 입니다.</p>
     </ModalSection>
   );
-}
+};
 
 const ModalSection = styled.div`
   // 모달 창 크기

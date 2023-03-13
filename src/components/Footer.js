@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterSection>
       <div>
@@ -32,4 +32,3 @@ const FooterSection = styled.div`
   color: #f8f5f1;
   background-color: #425f57;
 `;
-export default Footer;

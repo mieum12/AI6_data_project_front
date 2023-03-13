@@ -3,7 +3,7 @@ import * as S from "./ShelterMap.style";
 
 const { kakao } = window;
 
-function ShelterMap() {
+export const ShelterMap = () => {
   useEffect(() => {
     const mapContainer = document.getElementById("map"); // 지도를 표시할 div
     const mapOption = {
@@ -15,6 +15,6 @@ function ShelterMap() {
   }, []);
 
   return <S.Map id="map" />;
-}
+};
 
 export default ShelterMap;

@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "./Box.style";
 import { Link } from "react-router-dom";
 
-const Box = ({ boxImage, boxLink, LinkName, boxNumber, boxText }) => {
+export const Box = ({ boxImage, boxLink, LinkName, boxNumber, boxText }) => {
   return (
     <S.BoxSection>
       <div className="BoxList">
@@ -18,5 +18,3 @@ const Box = ({ boxImage, boxLink, LinkName, boxNumber, boxText }) => {
     </S.BoxSection>
   );
 };
-
-export default Box;

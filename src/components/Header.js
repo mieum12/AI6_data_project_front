@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../routes/Route";
 
-function Header() {
+export const Header = () => {
   return (
     <HeaderSection>
       <div className="wrapper">
@@ -24,7 +24,7 @@ function Header() {
       </div>
     </HeaderSection>
   );
-}
+};
 
 const HeaderSection = styled.div`
   font-weight: bold;

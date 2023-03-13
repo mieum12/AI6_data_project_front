@@ -1,8 +1,8 @@
 import React from "react";
 import * as S from "./PlusBody.style";
-import Box from "../box/Box";
+import { Box } from "../box/Box";
 
-function PlusBody() {
+export function PlusBody() {
   return (
     <>
       <S.PlusList>
@@ -38,5 +38,3 @@ function PlusBody() {
     </>
   );
 }
-
-export default PlusBody;
