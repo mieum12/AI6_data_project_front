@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../routes/Route";
 
-function Header() {
+export function Header() {
   return (
     <HeaderSection>
       <div className="wrapper">
@@ -57,5 +56,3 @@ const HeaderSection = styled.div`
     color: #425f57;
   }
 `;
-
-export default Header;

@@ -1,8 +1,7 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ROUTE_ARR } from "./Route";
 
-const RoutesList = () => {
+export const RoutesList = () => {
   return (
     <Router>
       <Routes>
@@ -15,5 +14,3 @@ const RoutesList = () => {
     </Router>
   );
 };
-
-export default RoutesList;
