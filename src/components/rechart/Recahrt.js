@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./Rechart.style";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 //npm install recharts 필요
 //npm install styled-componets 필요
 
@@ -55,12 +55,12 @@ LineGraph.defaultProps = {
 export default function LineGraph({ graphTitle, SafetyData }) {
   //매개변수로 Data랑 Title넣음
   return (
-    <S.LineGraphsContainer>
-      <S.LineGraphsTitle>{graphTitle} 안전도</S.LineGraphsTitle>
+    <S.BarGraphsContainer>
+      <S.BarGraphsTitle>{graphTitle} 안전도</S.BarGraphsTitle>
       {/* graph제목 지정가능 */}
-      <S.LineGraphsWrapper>
+      <S.BarGraphsWrapper>
         {/* 여기서 부터 진짜 핵심들 */}
-        <LineChart
+        <BarChart
           width={700} //css적요소
           height={280} //css적요소
           data={SafetyData} //위에서 정의한 json 목록들을 저장해둔 변수명
@@ -78,16 +78,17 @@ export default function LineGraph({ graphTitle, SafetyData }) {
           {/* data지정해둔 목록들의 name키의 value값들을 x축으로 지정한다. */}
           <YAxis />
           <Tooltip />
+          <Legend />
           {/* 마우스 가져다 됐을 시 각 점에 비교현황식으로 흰색박스에 툴이 보임. */}
-          <Line type="monotone" dataKey="fire" stroke="#6ABD8C" activeDot={{ r: 8 }} isAnimationActive={true} />
-          <Line type="monotone" dataKey="rain" stroke="#6ABD8C" isAnimationActive={true} />
-          {/* 각각의 line으로 하나씩 선을 만들 수 있고 type은 잘 모르겠음
+          <Bar dataKey="fire" stackId="a" fill="#8884d8" />
+          <Bar dataKey="rain" stackId="a" fill="#6ABD8C" />
+          {/* 각각의 line으로 하나씩 선을 만들 수 있고 type => 숫자 number 문자 monotone
             datakey  fire => 마찬가지로 위에 정의한 json중 fire키의 value값 가져오란 뜻
-            stroke => 색상
-            activeDot => 점끼리 크기비교해서 더 큰쪽에 도트가 더 커보이는 효과.. 자세히는 잘 ㅜ
-            isAnimationActive => 애니메이션 효과!! false 하면 꺼짐! */}
-        </LineChart>
-      </S.LineGraphsWrapper>
-    </S.LineGraphsContainer>
+            line그래프 에선 stroke =>  Bar에선 fill 색상!!
+            activeDot => 점끼리 크기비교해서 더 큰쪽에 도트가 더 커보이는 효과 => line그래프에서만 씀
+            isAnimationActive => 애니메이션 효과!! false 하면 꺼짐! => line그래프에서만 씀 */}
+        </BarChart>
+      </S.BarGraphsWrapper>
+    </S.BarGraphsContainer>
   );
 }
