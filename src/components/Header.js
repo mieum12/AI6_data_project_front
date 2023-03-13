@@ -1,22 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { ROUTE } from "../routes/Route";
 
 function Header() {
   return (
     <HeaderSection>
       <div className="wrapper">
-        <Link to="/" className="title">
+        <Link to={ROUTE.LANDING_PAGE.link} className="title">
           <img src="/asset/반딧불이_logo.png" alt="f사이트로고" />
         </Link>
         <ul className="menu">
-          <Link to="/ShelterPage">
+          <Link to={ROUTE.SHELTER_PAGE.link}>
             <li>시설 보기</li>
           </Link>
-          <Link to="/PlusPage">
+          <Link to={ROUTE.PLUS_PAGE.link}>
             <li>다른 시설 소개</li>
           </Link>
-          <Link to="/SafetyPage">
+          <Link to={ROUTE.SAFETY_PAGE.link}>
             <li>지역별 안전도 정보</li>
           </Link>
         </ul>

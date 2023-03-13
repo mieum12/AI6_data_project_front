@@ -1,18 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from "../pages/Landing";
-import Plus from "../pages/plus/Plus";
-import Safety from "../pages/safety/Safety";
-import Shelter from "../pages/shelter/Shelter";
+import { ROUTE_ARR } from "./Route";
 
 const RoutesList = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/PlusPage" element={<Plus />} />
-        <Route path="/SafetyPage" element={<Safety />} />
-        <Route path="/ShelterPage" element={<Shelter />} />
+        {ROUTE_ARR.map((route, index) => {
+          return (
+            <Route path={route.path} element={<route.element />} key={index} />
+          );
+        })}
       </Routes>
     </Router>
   );
