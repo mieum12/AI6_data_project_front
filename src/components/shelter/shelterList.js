@@ -1,8 +1,9 @@
-import * as S from "./shelterList.style";
+import React from "react";
+import * as S from "./ShelterList.style";
 import Form from "../Form";
 // import ShelterRoadview from "./ShelterRoadview";
 
-export function ShelterList() {
+function ShelterList() {
   return (
     <S.ListTable>
       {/* <div className={styles.listTable}> 수용시설 리스트 표 가져올 곳 */}
@@ -12,3 +13,5 @@ export function ShelterList() {
     </S.ListTable>
   );
 }
+
+export default ShelterList;

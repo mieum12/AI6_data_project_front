@@ -1,9 +1,10 @@
+import React from "react";
 import Header from "../../components/Header";
 import styled from "styled-components";
 import { Chart } from "../../components/Chart";
 import { ChartCard } from "../../components/ChartCard";
 
-export const Safety = () => {
+const Safety = () => {
   return (
     <>
       <Header />
@@ -29,3 +30,5 @@ const Background = styled.div`
   left: 0;
   z-index: -2;
 `;
+
+export default Safety;

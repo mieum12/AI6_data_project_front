@@ -1,7 +1,8 @@
+import React from "react";
 import Header from "../../components/Header";
 import PlusBody from "../../components/plus/PlusBody";
 
-export function Plus() {
+function Plus() {
   return (
     <>
       <Header />
@@ -9,3 +10,5 @@ export function Plus() {
     </>
   );
 }
+
+export default Plus;

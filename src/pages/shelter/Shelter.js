@@ -1,9 +1,10 @@
+import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Header";
 import ShelterMap from "../../components/shelter/ShelterMap";
-import ShelterList from "../../components/shelter/shelterList";
+import ShelterList from "../../components/shelter/ShelterList";
 
-export function Shelter() {
+function Shelter() {
   return (
     <div>
       <Header />
@@ -20,3 +21,5 @@ const FlexContainer = styled.div`
   height: 650px;
   background-color: #f8f5f1;
 `;
+
+export default Shelter;

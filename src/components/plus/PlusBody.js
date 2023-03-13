@@ -1,7 +1,8 @@
+import React from "react";
 import * as S from "./PlusBody.style";
 import Box from "../box/Box";
 
-export function PlusBody() {
+function PlusBody() {
   return (
     <>
       <S.PlusList>
@@ -37,3 +38,5 @@ export function PlusBody() {
     </>
   );
 }
+
+export default PlusBody;

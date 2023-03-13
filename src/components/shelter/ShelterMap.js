@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import * as S from "./ShelterMap.style";
 
 const { kakao } = window;
 
-export function ShelterMap() {
+function ShelterMap() {
   useEffect(() => {
     const mapContainer = document.getElementById("map"); // 지도를 표시할 div
     const mapOption = {
@@ -16,3 +16,5 @@ export function ShelterMap() {
 
   return <S.Map id="map" />;
 }
+
+export default ShelterMap;
