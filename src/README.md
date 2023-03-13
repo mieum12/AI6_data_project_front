@@ -13,15 +13,12 @@
 | delete | 사용하지 않는 변수, 파일 etc 삭제 |
 | !BREAKING CHANGE | 커다란 API 변경의 경우 |
 | !HOTFIX | 급하게 치명적인 버그를 고쳐야 하는 경우 |
-|
+
 <br>
 
 
 ## 📂 폴더 구조
 ```
-📦public
- ┗  📂asset
- 
  📦src
  ┣ 📂components
  ┃ ┣ 📂box
@@ -35,9 +32,9 @@
  ┃ ┗ 📄
  ┣ 📂datas
  ┃ ┗ 📄
+ ┣ 📂config
+ ┃ ┗ 📄 
  ┣ 📂pages
- ┃ ┣ 📂config
- ┃ ┃ ┗ 📄 
  ┃ ┣ 📂landing
  ┃ ┃ ┗ 📄 
  ┃ ┣ 📂plus
