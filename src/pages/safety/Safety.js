@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../../components/Header";
 import styled from "styled-components";
-import { Chart } from "../../components/Chart";
-import { ChartCard } from "../../components/ChartCard";
+// components > safety> index.js 만들어 구조분해할당으로 컴포넌트 불러옴
+import { ChartCard, Chart } from "../../components/safety";
 
 const Safety = () => {
   return (
