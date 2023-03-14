@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+import { PRIMARY_COLOR_GREEN, PRIMARY_COLOR_WHITE } from "../config/constants";
 
 export const Footer = () => {
   return (
@@ -29,6 +29,6 @@ const FooterSection = styled.div`
   font-weight: bold;
   font-size: 12px;
   padding: 30px;
-  color: #f8f5f1;
-  background-color: #425f57;
+  color: ${PRIMARY_COLOR_WHITE};
+  background-color: ${PRIMARY_COLOR_GREEN};
 `;

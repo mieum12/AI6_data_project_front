@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../routes/Route";
+import { PRIMARY_COLOR_GREEN, PRIMARY_COLOR_WHITE } from "../config/constants";
 
 export const Header = () => {
   return (
@@ -29,9 +30,9 @@ export const Header = () => {
 const HeaderSection = styled.div`
   font-weight: bold;
   font-size: 20px;
-  color: #425f57;
+  color: ${PRIMARY_COLOR_GREEN};
   padding: 5px 30px;
-  background-color: #f8f5f1;
+  background-color: ${PRIMARY_COLOR_WHITE};
   .wrapper {
     width: 100%;
     display: flex;
@@ -54,7 +55,7 @@ const HeaderSection = styled.div`
   }
   a {
     text-decoration: none;
-    color: #425f57;
+    color: ${PRIMARY_COLOR_GREEN};
   }
 `;
 
