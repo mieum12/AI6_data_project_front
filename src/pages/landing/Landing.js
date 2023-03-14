@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
-import * as S from "../../components/landing/Landing.style";
+import * as S from "./Landing.style";
 import { Box } from "../../components/landing";
 import LineGraph from "../../components/rechart/Recahrt";
 import ScatterGraph from "../../components/rechart/ScatterRechart";
