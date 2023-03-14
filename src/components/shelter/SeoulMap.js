@@ -9,7 +9,7 @@ import {
   Graticule
 } from "react-simple-maps";
 
-const geoUrl = "/features.json";
+const geoUrl = "/seoul_geo.json";
 
 const colorScale = scaleLinear()
   .domain([0.29, 0.68])
@@ -19,7 +19,7 @@ const MapChart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    csv(`/vulnerability.csv`).then((data) => {
+    csv(`/shelter_amt.csv`).then((data) => {
       setData(data);
     });
   }, []);
@@ -37,12 +37,12 @@ const MapChart = () => {
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
             geographies.map((geo) => {
-              const d = data.find((s) => s.ISO3 === geo.id);
+              const d = data.find((s) => s.gu_name === geo.id);
               return (
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill={d ? colorScale(d["2017"]) : "#F5F4F6"}
+                  fill={d ? colorScale(d["amt"]) : "#F5F4F6"}
                 />
               );
             })
