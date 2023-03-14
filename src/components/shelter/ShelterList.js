@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./ShelterList.style";
 import Form from "../Form";
 // import ShelterRoadview from "./ShelterRoadview";
@@ -14,4 +13,3 @@ export const ShelterList = () => {
   );
 };
 
-export default ShelterList;

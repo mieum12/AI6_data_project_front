@@ -17,4 +17,3 @@ export const ShelterMap = () => {
   return <S.Map id="map" />;
 };
 
-export default ShelterMap;
