@@ -6,7 +6,7 @@ import {
 
 export const ChartSection = styled.div`
   margin: 20px 0 80px 0;
-  width: 100%;
+  /* width: 100%; */
   height: 550px;
 
   .chartTitle {
@@ -29,7 +29,7 @@ export const ChartSection = styled.div`
     color: ${PRIMARY_COLOR_WHITE};
 
     margin: auto;
-    margin-top: 50px;
+    margin-top: 35px;
     display: block;
     padding-top: 30px;
 

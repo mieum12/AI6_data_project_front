@@ -1,17 +1,13 @@
 import * as S from "./ChartCard.style";
 
-export const ChartCard = () => {
+export const ChartCard = ({ cardTitle, safetyEmoji, description }) => {
   return (
     <S.SafetySection>
-      <div className="BoxList">
+      <div>
         <div className="Box">
-          a동 <br />
-        </div>
-        <div className="Box">
-          b동 <br />
-        </div>
-        <div className="Box">
-          c동 <br />
+          {cardTitle} <br />
+          {safetyEmoji} <br />
+          {description}
         </div>
       </div>
     </S.SafetySection>

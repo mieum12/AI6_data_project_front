@@ -10,22 +10,7 @@ export const SafetySection = styled.div`
   gap: -10px;
   height: 500px;
   background-color: ${PRIMARY_COLOR_GREEN};
-  .nameList {
-    display: flex;
-    justify-content: center;
-  }
-  .name {
-    width: 300px;
-    height: 50px;
-    background-color: ${PRIMARY_COLOR_WHITE};
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  .BoxList {
-    display: flex;
-    justify-content: center;
-  }
+
   .Box {
     width: 200px;
     height: 300px;
