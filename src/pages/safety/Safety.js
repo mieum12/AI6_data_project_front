@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import styled from "styled-components";
 // components > safety> index.js 만들어 구조분해할당으로 컴포넌트 불러옴
 import { ChartCard, Chart } from "../../components/safety";
+import { PRIMARY_COLOR_WHITE } from "../../config/constants";
 
 const Safety = () => {
   return (
@@ -21,7 +22,7 @@ const Safety = () => {
 };
 
 const Background = styled.div`
-  background-color: #f8f5f1;
+  background-color: ${PRIMARY_COLOR_WHITE};
   width: 100%;
   height: 1976px;
 
