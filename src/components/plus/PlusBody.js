@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./PlusBody.style";
-import { Box } from "../box/Box";
+import { Box } from "../landing";
 
 export function PlusBody() {
   return (
