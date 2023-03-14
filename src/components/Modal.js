@@ -15,7 +15,17 @@ export const Modal = ({ setModalOpen }) => {
       <button className="close" onClick={modalCloseHandler}>
         X
       </button>
-      <p>모달 창 입니다.</p>
+      <ModalTitle>선택한 시설의 이름</ModalTitle>
+      <ModalBody>
+        <img src="/asset/반딧불이_logo.png" alt="시설사진??"/>
+        <div>
+          시설 이름: <br/>
+          주소: <br/>
+          수용 가능 인원: <br/>
+          시설 면적: <br/>
+        </div>
+      </ModalBody>
+
     </ModalSection>
   );
 };
@@ -33,10 +43,11 @@ const ModalSection = styled.div`
   transform: translate(-50%, -50%);
 
   // 모달 창 디자인
-  text-align: center;
+  // text-align: center;
   border-radius: 5px;
   background-color: ${PRIMARY_COLOR_GREEN};
   color: ${PRIMARY_COLOR_WHITE};
+  padding: 20px;
 
   .close {
     // 닫기 버튼 우상단 배치
@@ -50,3 +61,18 @@ const ModalSection = styled.div`
     color: ${PRIMARY_COLOR_WHITE};
   }
 `;
+
+const ModalTitle = styled.div`
+text-align: center;
+justify-content: top;
+font-size: 25px
+`
+
+const ModalBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .img {
+    margin: 10px
+  }
+`

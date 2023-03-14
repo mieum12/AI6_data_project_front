@@ -31,8 +31,10 @@ const MapChart = () => {
         scale: 147
       }}
     >
-      <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
-      <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
+      {/* //위도,경도 배경라인 */}
+      <Sphere stroke="red" strokeWidth={0.5} />
+      <Graticule stroke="red" strokeWidth={0.5} />
+
       {data.length > 0 && (
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
