@@ -4,55 +4,48 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "rec
 //npm install recharts 필요
 //npm install styled-componets 필요
 
-LineGraph.defaultProps = {
+RainBarGraph.defaultProps = {
   //여기에 axios로 json형식으로 data받는거겠지요..? 아마도
   SafetyData: [
     {
       name: "강남구",
-      fire: 4000,
       rain: 2400,
       amt: 2400,
     },
     {
       name: "강북구",
-      fire: 3000,
       rain: 1398,
       amt: 2210,
     },
     {
       name: "강동구",
-      fire: 2000,
       rain: 9800,
       amt: 2290,
     },
     {
       name: "동대문구",
-      fire: 2780,
       rain: 3908,
       amt: 2000,
     },
     {
       name: "서대문구",
-      fire: 1890,
       rain: 4800,
       amt: 2181,
     },
     {
       name: "송파구",
-      fire: 2390,
       rain: 3800,
       amt: 2500,
     },
     {
       name: "강서구",
-      fire: 3490,
       rain: 4300,
       amt: 2100,
     },
   ],
 };
 
-export default function LineGraph({ graphTitle, SafetyData }) {
+export default function RainBarGraph({ graphTitle, SafetyData }) {
   //매개변수로 Data랑 Title넣음
   return (
     <S.BarGraphsContainer>
@@ -80,7 +73,6 @@ export default function LineGraph({ graphTitle, SafetyData }) {
           <Tooltip />
           <Legend />
           {/* 마우스 가져다 됐을 시 각 점에 비교현황식으로 흰색박스에 툴이 보임. */}
-          <Bar dataKey="fire" stackId="a" fill="#8884d8" />
           <Bar dataKey="rain" stackId="a" fill="#6ABD8C" />
           {/* 각각의 line으로 하나씩 선을 만들 수 있고 type => 숫자 number 문자 monotone
             datakey  fire => 마찬가지로 위에 정의한 json중 fire키의 value값 가져오란 뜻

@@ -42,7 +42,7 @@ export const BodySection2 = styled.div`
   }
 `;
 export const BodySection3 = styled.div`
-  height: 1000px;
+  height: 1400px;
   background-color: ${PRIMARY_COLOR_WHITE};
   .center3 {
     text-align: center;
