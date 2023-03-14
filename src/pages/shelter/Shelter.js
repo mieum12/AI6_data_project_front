@@ -1,24 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import Header from "../../components/Header";
 import { ShelterMap, ShelterList } from "../../components/shelter";
+import * as S from "./Shelter.style"
 
 function Shelter() {
   return (
     <div>
       <Header />
-      <FlexContainer>
+      <S.FlexContainer>
         <ShelterMap />
         <ShelterList />
-      </FlexContainer>
+      </S.FlexContainer>
     </div>
   );
 }
-const FlexContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 650px;
-  background-color: #f8f5f1;
-`;
 
 export default Shelter;
