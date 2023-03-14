@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import {
+  PRIMARY_COLOR_GREEN,
+  PRIMARY_COLOR_WHITE,
+} from "../../config/constants";
 
 export const BoxSection = styled.div`
   .BoxList {
@@ -8,15 +12,15 @@ export const BoxSection = styled.div`
   .Box {
     width: 200px;
     height: 400px;
-    // background-color: #f8f5f1;
-    color: #425f57;
+    // background-color: ${PRIMARY_COLOR_WHITE};
+    color: ${PRIMARY_COLOR_GREEN};
     margin: 20px;
     padding: 20px;
     border-radius: 30px;
     border-style: solid;
-    border-color: #425f57;
+    border-color: ${PRIMARY_COLOR_GREEN};
     border-width: 10px;
-    background-color: ${(props) => props.backColor || "#f8f5f1" }
+    background-color: ${(props) => props.backColor || PRIMARY_COLOR_WHITE }
   }
   img {
       width: 200px;

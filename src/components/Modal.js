@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import {
+  PRIMARY_COLOR_GREEN,
+  PRIMARY_COLOR_WHITE,
+} from "../config/constants";
 
 export const Modal = ({ setModalOpen }) => {
   const modalCloseHandler = () => {
@@ -31,8 +35,8 @@ const ModalSection = styled.div`
   // 모달 창 디자인
   text-align: center;
   border-radius: 5px;
-  background-color: #425f57;
-  color: #f8f5f1;
+  background-color: ${PRIMARY_COLOR_GREEN};
+  color: ${PRIMARY_COLOR_WHITE};
 
   .close {
     // 닫기 버튼 우상단 배치
@@ -43,6 +47,6 @@ const ModalSection = styled.div`
     // 닫기 버튼 디자인
     border-color: transparent;
     background-color: transparent;
-    color: #f8f5f1;
+    color: ${PRIMARY_COLOR_WHITE};
   }
 `;

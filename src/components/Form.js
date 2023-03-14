@@ -1,6 +1,9 @@
 import { useState } from "react";
-import styled from "styled-components";
 import { Modal } from "./Modal";
+import styled from "styled-components";
+import {
+  PRIMARY_COLOR_GREEN
+} from "../config/constants";
 
 export default function Form() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -39,6 +42,6 @@ const FormSection = styled.div`
     border-color: transparent;
     border-radius: 5px;
     color: white;
-    background-color: #425f57;
+    background-color: ${PRIMARY_COLOR_GREEN};
   }
 `;
