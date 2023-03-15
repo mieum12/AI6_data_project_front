@@ -38,7 +38,7 @@ const LandingPage = () => {
             <RainBarGraph />
             <FireBarGraph />
             <ScatterGraph />
-            {/* <MapChart /> */}
+            <MapChart />
           </div>
         </div>
       </S.BodySection3>
