@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../routes/Route";
 import { PRIMARY_COLOR_GREEN, PRIMARY_COLOR_WHITE } from "../config/constants";
+import logo from "../asset/반딧불이_logo.png";
 
 export const Header = () => {
   return (
     <HeaderSection>
       <div className="wrapper">
         <Link to={ROUTE.LANDING_PAGE.link} className="title">
-          <img src="/asset/반딧불이_logo.png" alt="f사이트로고" />
+          <img src={logo} alt="f사이트로고" />
         </Link>
         <ul className="menu">
           <Link to={ROUTE.SHELTER_PAGE.link}>

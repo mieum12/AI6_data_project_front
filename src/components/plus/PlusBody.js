@@ -2,6 +2,11 @@ import React from "react";
 import * as S from "./PlusBody.style";
 import { Box } from "../landing";
 
+// 사이트 이미지
+import jaenan from "../../asset/국민재난안전포털.jpeg";
+import haengjeong from "../../asset/행정안전부.jpeg";
+import bangjae from "../../asset/서울종합방재센터.jpeg";
+
 export function PlusBody() {
   return (
     <>
@@ -9,7 +14,7 @@ export function PlusBody() {
         <div className="BoxList">
           <Box
             backColor="#425f57"
-            boxImage="/asset/국민재난안전포털.jpeg"
+            boxImage={jaenan}
             boxLink="https://www.safekorea.go.kr/"
             LinkName="국민재난안전포털"
             boxText1="▫️ 재난 현황 확인"
@@ -24,7 +29,7 @@ export function PlusBody() {
             // ]}
           />
           <Box
-            boxImage="/asset/행정안전부.jpeg"
+            boxImage={haengjeong}
             boxLink="https://www.mois.go.kr/"
             LinkName="행정안전부"
             boxText1="▫️ 국가 안전 시스템 정책 소개"
@@ -37,7 +42,7 @@ export function PlusBody() {
             // ]}
           />
           <Box
-            boxImage="/asset/서울종합방재센터.jpeg"
+            boxImage={bangjae}
             boxLink="https://119.seoul.go.kr/"
             LinkName="서울종합방재센터(119)"
             boxText1="▫️ 재난 정보 서비스 소개"
