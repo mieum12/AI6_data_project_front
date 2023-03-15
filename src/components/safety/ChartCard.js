@@ -1,15 +1,10 @@
 import * as S from "./ChartCard.style";
 
-export const ChartCard = ({ cardTitle, safetyEmoji, description }) => {
+export const ChartCard = ({ chartTitle, chartGraph }) => {
   return (
-    <S.SafetySection>
-      <div>
-        <div className="Box">
-          {cardTitle} <br />
-          {safetyEmoji} <br />
-          {description}
-        </div>
-      </div>
-    </S.SafetySection>
+    <S.ChartSection>
+      <div className="chartTitle">{chartTitle}</div>
+      <div className="chartBack">{chartGraph}</div>
+    </S.ChartSection>
   );
 };
