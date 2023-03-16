@@ -6,7 +6,7 @@ const SeoulMap = () => {
   return (
     <>
       <Card>
-        <div ClassName="svg">
+        <div className="svg">
           <Seoul />
         </div>
       </Card>

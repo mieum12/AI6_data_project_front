@@ -119,7 +119,7 @@
 //   })
 
 //   return (
-//     <div class="map_wrap">
+//     <div className="map_wrap">
 //     <div id="mapWrapper" style={{width:'50%',height:'300px',float:'left'}}>
 //         <div id="map" style={{width:'100%',height:'100%'}}></div>
 //     </div>
