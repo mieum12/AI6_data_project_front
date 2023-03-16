@@ -4,23 +4,12 @@ import styled from "styled-components";
 import { PRIMARY_COLOR_GREEN } from "../../config/constants";
 
 const SeoulMap = () => {
-  return (
-    <>
-      <Card>
-        <div>
-          <Seoul />
-        </div>
-      </Card>
-    </>
-  );
+  return <StyledSeoul />;
 };
 
-const Card = styled.div`
-  .svg {
-    fill: lightgrey;
-    stroke: white;
-  }
-
+const StyledSeoul = styled(Seoul)`
+  width: 700px;
+  height: 700px;
   path:hover {
     fill: ${PRIMARY_COLOR_GREEN};
   }
