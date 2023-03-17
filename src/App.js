@@ -4,13 +4,13 @@ import "./App.css";
 import styled from "styled-components";
 import RoutesList from "./routes/RoutesList";
 import { Footer } from "./components/Footer";
-import { SERVER_BASE_URL } from "./config/constants";
+// import { SERVER_BASE_URL } from "./config/constants";
 
 function App() {
   // CORS 확인용 임시 코드
   useEffect(() => {
     async function fetchData() {
-      const { data } = await axios.get(`${SERVER_BASE_URL}/shelter`);
+      const { data } = await axios.get(`http://localhost:8000/shelter`);
       console.log(data);
     }
     fetchData();

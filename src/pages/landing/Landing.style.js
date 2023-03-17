@@ -14,7 +14,8 @@ export const BodySection1 = styled.div`
   background-color: ${PRIMARY_COLOR_WHITE};
   .textList {
     text-align: center;
-    padding: 240px 0 0 0;
+    padding: 350px 0 0 0;
+    color: ${PRIMARY_COLOR_GREEN};
   }
 `;
 export const BodySection2 = styled.div`
@@ -42,7 +43,7 @@ export const BodySection2 = styled.div`
   }
 `;
 export const BodySection3 = styled.div`
-  height: 2700px;
+  height: 900px;
   background-color: ${PRIMARY_COLOR_WHITE};
   .center3 {
     text-align: center;
