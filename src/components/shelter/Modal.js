@@ -6,8 +6,10 @@ import {
 } from "../../config/constants";
 import logo from "../../asset/반딧불이_logo.png";
 
+import logo from "../../asset/반딧불이_logo.png";
 // const[title,setTitle] = useState('0');
 
+export const Modal = ({ setModalOpen, shelterNm }) => {
 export const Modal = ({ setModalOpen, shelterNm }) => {
   const modalCloseHandler = () => {
     // const setModalOpen = props;
@@ -66,7 +68,7 @@ const ModalSection = styled.div`
     color: ${PRIMARY_COLOR_WHITE};
   }
   img {
-    padding: 50px
+    padding: 50px;
     width: 300px;
     height: 300px;
   }
