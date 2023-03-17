@@ -4,10 +4,11 @@ import {
   PRIMARY_COLOR_GREEN,
   PRIMARY_COLOR_WHITE,
 } from "../../config/constants";
+import logo from "../../asset/반딧불이_logo.png";
 
 // const[title,setTitle] = useState('0');
 
-export const Modal = ({ setModalOpen,shelterNm }) => {
+export const Modal = ({ setModalOpen, shelterNm }) => {
   const modalCloseHandler = () => {
     // const setModalOpen = props;
     setModalOpen(false);
@@ -19,8 +20,8 @@ export const Modal = ({ setModalOpen,shelterNm }) => {
         X
       </button>
       <ModalTitle>선택한 시설의 이름</ModalTitle>
-      <img src="http://localhost:3000/static/media/%EB%B0%98%EB%94%A7%EB%B6%88%EC%9D%B4_logo.e1ada335b3a7b9d3eec9.png" alt="시설사진"/>
-      {/* <img src="../../asset/반딧불이_logo.png" alt="시설사진"/> */}
+
+      <img src={logo} alt="시설사진" />
       {/* 지금 파일 경로가 맞는것같은데 왜 안뜨는지 잘 모르겠어요 */}
       <ModalBody>
         {/* 클릭한 것의 값들이 들어오는 방법으르 모르겠어요 */}
@@ -29,7 +30,6 @@ export const Modal = ({ setModalOpen,shelterNm }) => {
         <div>주소 : </div>
         <div>수용 가능 인원 : </div>
       </ModalBody>
-
     </ModalSection>
   );
 };
@@ -73,15 +73,14 @@ const ModalSection = styled.div`
 `;
 
 const ModalTitle = styled.div`
-text-align: center;
-justify-content: top;
-font-size: 30px
-
-`
+  text-align: center;
+  justify-content: top;
+  font-size: 30px;
+`;
 
 const ModalBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 20px;
-`
+`;
