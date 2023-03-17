@@ -22,8 +22,8 @@ export const ShelterMap = () => {
   useEffect(() => {
     const mapContainer = document.getElementById("map"); // 지도를 표시할 div
     const mapOption = {
-      center: new kakao.maps.LatLng(37.551399, 126.988259), // 지도의 중심좌표=임시로 남산타워
-      level: 9, // 지도의 확대 레벨
+      center: new kakao.maps.LatLng(37.550229, 126.977279), // 지도의 중심좌표=임시로 남산타워
+      level: 5, // 지도의 확대 레벨
     };
     // 지도를 표시할 div와 지도 옵션으로  지도를 생성
     const map = new kakao.maps.Map(mapContainer, mapOption);
@@ -74,7 +74,7 @@ export const ShelterMap = () => {
 
       // 마커에 클릭이벤트를 등록합니다
       kakao.maps.event.addListener(marker, 'click', function() {
-            // 마커 위에 인포윈도우를 표시합니다(오류났는데 동작은 됨)
+            // 마커 위에 인포윈도우를 표시합니다 : 동작은 됨
             infowindow.open(map, marker);  
       });
     }

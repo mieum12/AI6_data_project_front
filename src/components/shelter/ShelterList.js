@@ -55,6 +55,7 @@ export const ShelterList = () => {
                 <tr key={shelter.id}>
                   <td className="gu-name">{shelter.guNm}</td>
                   <td className="shelter-name"><Form shelter={shelter.shelterNm}></Form></td>
+                  {/* shelter이름을 클릭하면 모달 창이 뜨는데 클릭한 이름의 id에 해당하는 값들을 모달 창에 전달하고싶어요 */}
                   <td className="shelter-type">{shelter.shelterType}</td>
                   <td className="shelter-address">{shelter.address}</td>
                   <td className="shelter-qty">{shelter.qty}명</td>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { Modal } from "./Modal";
 import styled from "styled-components";
 import {
@@ -11,19 +12,21 @@ export default function Form({shelter}) {
   const modalOpenHandler = () => {
     setModalOpen(true);
   };
+  
+  //클릭한 시설의 id값을 전달해서 해당 설명이 뜨도록???
 
-  // const showModal = () => {
-  //   if (modalOpen) {
-  //     <Modal setModalOpen={setModalOpen} />;
-  //   }
-  // };
+
 
   return (
     <FormSection>
       <button className="modalButton" onClick={modalOpenHandler}>
         {shelter}
       </button>
-      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+      {modalOpen && 
+        <Modal 
+          setModalOpen={setModalOpen}
+          // shelterNm={shelter.shelterNm} 
+          />}
     </FormSection>
   );
 }
