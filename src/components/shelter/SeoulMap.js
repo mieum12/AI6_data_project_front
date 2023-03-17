@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import {
@@ -6,7 +6,7 @@ import {
   Geographies,
   Geography,
   Sphere,
-  Graticule
+  Graticule,
 } from "react-simple-maps";
 
 const geoUrl = "/seoul_geo.json";
@@ -28,7 +28,7 @@ const MapChart = () => {
     <ComposableMap
       projectionConfig={{
         rotate: [-10, 0, 0],
-        scale: 147
+        scale: 147,
       }}
     >
       {/* //위도,경도 배경라인 */}

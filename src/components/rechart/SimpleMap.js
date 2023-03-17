@@ -1,8 +1,14 @@
-import React from "react";
-import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup } from "react-simple-maps";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Annotation,
+  ZoomableGroup,
+} from "react-simple-maps";
 
 const geoUrl = "/seoul_geo.json";
-const MapChart = () => {
+
+export const MapChart = () => {
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
@@ -12,8 +18,17 @@ const MapChart = () => {
         scale: 1100,
       }}
     >
-      <Geographies geography={geoUrl} fill="black" stroke="#FFFFFF" strokeWidth={0.5}>
-        {({ geographies }) => geographies.map((geo) => <Geography key={geo.rsmKey} geography={geo} />)}
+      <Geographies
+        geography={geoUrl}
+        fill="black"
+        stroke="#FFFFFF"
+        strokeWidth={0.5}
+      >
+        {({ geographies }) =>
+          geographies.map((geo) => (
+            <Geography key={geo.rsmKey} geography={geo} />
+          ))
+        }
       </Geographies>
       <Annotation
         subject={[2.3522, 48.8566]}
@@ -32,5 +47,3 @@ const MapChart = () => {
     </ComposableMap>
   );
 };
-
-export default MapChart;
