@@ -7,10 +7,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { SERVER_BASE_URL } from "../../config/constants";
 
-
-
 export const ShelterList = () => {
-
   const [shelter, setShelter] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -24,23 +21,19 @@ export const ShelterList = () => {
     fetchData();
   }, []);
 
-
-
   return (
     <S.ListTable>
       <Form />
       {/* <MapChart/> */}
 
       {/* 데이터받아오기 */}
-      {shelter.map((shelter)=> (
+      {shelter.map((shelter) => (
         <div key={shelter.shortId}>
           <div>{shelter.guNm}</div>
           <div>{shelter.shelter}</div>
           <div>{shelter.address}</div>
         </div>
       ))}
-      
     </S.ListTable>
   );
 };
-
