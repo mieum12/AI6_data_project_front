@@ -13,12 +13,12 @@ export const Box = ({ boxImage, boxLink, LinkName, boxNumber, boxText }) => {
             </Link>
           </h3>
           <div>{boxNumber}</div>
-          {/* <div>
-            {boxText1.split("\n").map((text) => (
+          <div>
+            {boxText.split("\n").map((text) => (
               <pre>{text}</pre>
             ))}
-          </div> */}
-          <div>{boxText}</div>
+          </div>
+          {/* <div>{boxText}</div> */}
         </div>
       </div>
     </S.BoxSection>
