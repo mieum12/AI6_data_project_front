@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
   PRIMARY_COLOR_GREEN,
   PRIMARY_COLOR_WHITE,
-} from "../config/constants";
+} from "../../config/constants";
 
 export const Modal = ({ setModalOpen }) => {
   const modalCloseHandler = () => {
@@ -17,13 +17,11 @@ export const Modal = ({ setModalOpen }) => {
       </button>
       <ModalTitle>선택한 시설의 이름</ModalTitle>
       <ModalBody>
-        <img src="/asset/반딧불이_logo.png" alt="시설사진??"/>
-        <div>
-          시설 이름: <br/>
-          주소: <br/>
-          수용 가능 인원: <br/>
-          시설 면적: <br/>
-        </div>
+        <img src="../../asset/반딧불이_logo.png" alt="시설사진"/>
+        <div>시설 이름:</div>
+        <div>주소:</div>
+        <div>수용 가능 인원:</div>
+        <div>시설 면적:</div>
       </ModalBody>
 
     </ModalSection>
@@ -48,6 +46,7 @@ const ModalSection = styled.div`
   background-color: ${PRIMARY_COLOR_GREEN};
   color: ${PRIMARY_COLOR_WHITE};
   padding: 20px;
+  box-shadow: 0 18px 20px 0 grey;
 
   .close {
     // 닫기 버튼 우상단 배치
@@ -72,7 +71,9 @@ const ModalBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .img {
-    margin: 10px
+  img {
+    padding: 50px
+    width: 300px;
+    height: 300px;
   }
 `

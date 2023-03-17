@@ -1,5 +1,5 @@
 import * as S from "./ShelterList.style";
-import Form from "../Form";
+import Form from "./Form";
 // import MapChart from "./SeoulMap";
 
 //데이터 가져오기
@@ -21,9 +21,22 @@ export const ShelterList = () => {
     fetchData();
   }, []);
 
+  // React.useEffect(() => {
+  //   for (const el of shelter) {
+  //     const element = document.getElementById(el.id);
+
+  //     console.log("element", element);
+  //     element.addEventListener("click", (e) => {
+  //       console.log("e", e);
+  //       console.log(e.id +  "clicked !" );
+  //     });
+  //   }
+  // }, []);
+
+
   return (
     <S.ListTable>
-      <Form />
+      {/* <Form /> */}
       {/* <MapChart/> */}
 
       <S.Table>
@@ -40,11 +53,11 @@ export const ShelterList = () => {
           <tbody className="table-body" >
               {shelter.map((shelter)=> (
                 <tr key={shelter.id}>
-                  <td>{shelter.guNm}</td>
-                  <td>{shelter.shelterNm}</td>
-                  <td>{shelter.shelterType}</td>
-                  <td>{shelter.address}</td>
-                  <td>{shelter.qty}명</td>
+                  <td className="gu-name">{shelter.guNm}</td>
+                  <td className="shelter-name"><Form shelter={shelter.shelterNm}></Form></td>
+                  <td className="shelter-type">{shelter.shelterType}</td>
+                  <td className="shelter-address">{shelter.address}</td>
+                  <td className="shelter-qty">{shelter.qty}명</td>
                 </tr>
               ))}
           </tbody>

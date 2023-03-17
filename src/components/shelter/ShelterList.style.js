@@ -25,13 +25,13 @@ export const Table = styled.div`
   background-color: ${PRIMARY_COLOR_WHITE}
   width : 500px;
   border-color: ${PRIMARY_COLOR_GREEN};
+  height: 100%;
+  display: block;
+  overflow: scroll;
   
   table {
     border-collapse: collapse;
-    // border-left: none;
-    // border-right: none;
     font-size: 13px
-    // overflow: scroll;
     
   }
   .table-head {
@@ -40,7 +40,15 @@ export const Table = styled.div`
   }
   .table-body {
     height: 500px;
-    overflow: scroll;
+  }
+  .gu-name {
+    width: 70px;
+  }
+  .shelter-name {
+    width: 200px
+  }
+  .shelter-type {
+    width: 100px
   }
 
 `
