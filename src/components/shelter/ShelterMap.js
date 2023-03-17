@@ -1,37 +1,42 @@
-import { useEffect } from "react";
 import * as S from "./ShelterMap.style";
+//데이터 가져오기
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const { kakao } = window;
 
 export const ShelterMap = () => {
+  const [shelter, setShelter] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8000/shelter`);
+        setShelter(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   useEffect(() => {
     const mapContainer = document.getElementById("map"); // 지도를 표시할 div
     const mapOption = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-      level: 3, // 지도의 확대 레벨
+      center: new kakao.maps.LatLng(37.551399, 126.988259), // 지도의 중심좌표=임시로 남산타워
+      level: 5, // 지도의 확대 레벨
     };
-    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    // 지도를 표시할 div와 지도 옵션으로  지도를 생성
     const map = new kakao.maps.Map(mapContainer, mapOption);
 
     // 임의로 마커
-    var positions = [
-      {
-        title: "카카오",
-        latlng: new kakao.maps.LatLng(33.450705, 126.570677),
-      },
-      {
-        title: "생태연못",
-        latlng: new kakao.maps.LatLng(33.450936, 126.569477),
-      },
-      {
-        title: "텃밭",
-        latlng: new kakao.maps.LatLng(33.450879, 126.56994),
-      },
-      {
-        title: "근린공원",
-        latlng: new kakao.maps.LatLng(33.451393, 126.570738),
-      },
-    ];
+    var positions = shelter.map((shelter)=> {
+      return {
+        title: shelter.shelterNm,
+        latlng: new kakao.maps.LatLng(shelter.yCord, shelter.xCord),
+      }
+    }
+    );
+
 
     // 마커 이미지의 이미지 주소입니다
     var imageSrc =
@@ -50,6 +55,27 @@ export const ShelterMap = () => {
         position: positions[i].latlng, // 마커를 표시할 위치
         title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
         image: markerImage, // 마커 이미지
+        clickable: true
+      });
+
+      // 마커를 지도에 표시합니다.
+      marker.setMap(map);
+
+      // 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
+      var iwContent = positions[i].title, 
+      // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+          iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+
+      // 인포윈도우를 생성합니다
+      var infowindow = new kakao.maps.InfoWindow({
+          content : iwContent,
+          removable : iwRemoveable
+      });
+
+      // 마커에 클릭이벤트를 등록합니다
+      kakao.maps.event.addListener(marker, 'click', function() {
+            // 마커 위에 인포윈도우를 표시합니다(오류났는데 동작은 됨)
+            infowindow.open(map, marker);  
       });
     }
   }, []);
