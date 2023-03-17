@@ -4,6 +4,9 @@ import { Box } from "../../components/landing";
 // import SimpleMap from "../../components/rechart";
 import background from "../../asset/background.jpg";
 import { SeoulMap } from "../../components/rechart";
+import shelter from "../../../src/asset/반딧불찾기.png";
+import plus from "../../../src/asset/반딧불더하기.png";
+import safety from "../../../src/asset/반딧불알리미.png";
 
 const LandingPage = () => {
   return (
@@ -26,15 +29,15 @@ const LandingPage = () => {
         </div>
         <div className="BoxList">
           <Box
-            boxImage=""
+            boxImage={shelter}
             boxNumber="반딧불 찾기"
-            boxText="각 구에 해당하는 수용시설의 위치, 수용인원 등을 조회할 수 있습니다."
+            boxText={"각 구에 해당하는 수용시설의 위치,\n수용인원 등을 조회할 수 있습니다."}
           />
-          <Box boxImage="이미지2" boxNumber="반딧불 더하기" boxText="이재민분들을 위한 관련 사이트를 안내해줍니다." />
+          <Box boxImage={plus} boxNumber="반딧불 더하기" boxText={"이재민분들을 위한 관련 사이트를\n안내해줍니다."} />
           <Box
-            boxImage="이미지3"
+            boxImage={safety}
             boxNumber="반딧불 알리미"
-            boxText="최근 재난 발생 현황을 나타내고, 이에 따른 안전도를 표시합니다."
+            boxText={"최근 재난 발생 현황을 나타내고,\n이에 따른 안전도를 표시합니다."}
           />
         </div>
       </S.BodySection2>
