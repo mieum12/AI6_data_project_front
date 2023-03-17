@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { SERVER_BASE_URL } from "../../config/constants";
 import {
   BarChart,
@@ -12,18 +12,28 @@ import {
 } from "recharts";
 
 export const Chart = () => {
+  const [rain, setRain] = useState([]);
+
   useEffect(() => {
-    async function fetchData() {
-      const { data } = await axios.get(`${SERVER_BASE_URL}/rain`);
-      console.log(data);
-    }
-    fetchData();
+    const fetchRain = async () => {
+      try {
+        const response = await axios.get(`${SERVER_BASE_URL}/rain`);
+        setRain(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchRain();
   }, []);
+
+  console.log(rain);
+
   return (
     <BarChart
       width={500}
       height={300}
-      // data={data}
+      data={rain}
       margin={{
         top: 5,
         right: 30,
