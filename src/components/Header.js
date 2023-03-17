@@ -14,13 +14,13 @@ export const Header = () => {
         </Link>
         <ul className="menu">
           <Link to={ROUTE.SHELTER_PAGE.link}>
-            <li>시설 보기</li>
+            <li>반딧불 찾기</li>
           </Link>
           <Link to={ROUTE.PLUS_PAGE.link}>
-            <li>다른 시설 소개</li>
+            <li>반딧불 더하기</li>
           </Link>
           <Link to={ROUTE.SAFETY_PAGE.link}>
-            <li>지역별 안전도 정보</li>
+            <li>반딧불 알리미</li>
           </Link>
         </ul>
       </div>
