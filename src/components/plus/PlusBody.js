@@ -17,7 +17,7 @@ export function PlusBody() {
             boxImage={jaenan}
             boxLink="https://www.safekorea.go.kr/"
             LinkName="국민재난안전포털"
-            boxText1={
+            boxText={
               " ▫️재난 현황 확인\n   재난 정보 조회 및 상황 정보 등\n ▫️타 안전시설 확인\n   지진 대피소, 민방위 대피소 등"
             }
           />
@@ -25,7 +25,7 @@ export function PlusBody() {
             boxImage={haengjeong}
             boxLink="https://www.mois.go.kr/"
             LinkName="행정안전부"
-            boxText1={
+            boxText={
                 "▫️ 국가 안전 시스템 정책 소개\n   ▫️ 온라인 민원 신청 안내\n   ▫️ 이재민 관련 지원 사업, 신속 보도자료 등 확인"
               }
           />
@@ -33,7 +33,7 @@ export function PlusBody() {
             boxImage={bangjae}
             boxLink="https://119.seoul.go.kr/"
             LinkName="서울종합방재센터(119)"
-            boxText1={
+            boxText={
                 "▫️ 재난 정보 서비스 소개\n   재난 발생 통계, 재난 보고 등\n ▫️ 사고별 대응 요령 소개\n   ▫️ 시민 참여 활동: 자원봉사"
               }
           />

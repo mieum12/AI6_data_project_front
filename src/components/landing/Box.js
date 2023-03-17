@@ -7,10 +7,7 @@ export const Box = ({
   boxLink,
   LinkName,
   boxNumber,
-  boxText1,
-  boxText2,
-  boxText3,
-  boxText4,
+  boxText
 }) => {
   return (
     <S.BoxSection>
@@ -18,7 +15,7 @@ export const Box = ({
         <div className="Box">
           <img src={boxImage} alt="사진이 올 장소" />
           <h3>
-            <Link to={boxLink}>{LinkName}</Link>
+            <Link to={boxLink} className='text-link'>{LinkName}</Link>
           </h3>
           <div>{boxNumber}</div>
           {/* <div>
@@ -26,7 +23,7 @@ export const Box = ({
               <pre>{text}</pre>
             ))}
           </div> */}
-          <div>{boxText1}</div>
+          <div>{boxText}</div>
         </div>
       </div>
     </S.BoxSection>

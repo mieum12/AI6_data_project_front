@@ -27,7 +27,10 @@ export const BoxSection = styled.div`
       height: 200px;
       border-radius: 20px;
     }
-  // h3 { 링크 이름 보라색,밑줄 없애기
-  //   text-decoration: none;
-  // }
+  .text-link {
+    color: inherit;
+    text-decoration: inherit;
+    display: flex;
+    justify-content: center;
+  }
 `;
