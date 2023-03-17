@@ -7,10 +7,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import { SERVER_BASE_URL } from "../../config/constants";
 
-
-
 export const ShelterList = () => {
-
   const [shelter, setShelter] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -23,8 +20,6 @@ export const ShelterList = () => {
     };
     fetchData();
   }, []);
-
-
 
   return (
     <S.ListTable>
@@ -60,4 +55,3 @@ export const ShelterList = () => {
     </S.ListTable>
   );
 };
-
