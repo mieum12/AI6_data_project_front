@@ -2,15 +2,15 @@ import { httpClient } from "./httpClient";
 
 export async function fetchFire() {
   try {
-    const data = await httpClient.get("/fire");
-    return data.data;
+    const { data } = await httpClient.get("/fire");
+    return data;
   } catch (err) {
     throw err;
   }
 
   // index.html <- <div id="app"></div>
   // bundle.js  <-react
-  useEffect();
+  // useEffect();
 }
 
 // `
