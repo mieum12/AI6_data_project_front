@@ -6,10 +6,8 @@ import {
 } from "../../config/constants";
 import logo from "../../asset/반딧불이_logo.png";
 
-import logo from "../../asset/반딧불이_logo.png";
 // const[title,setTitle] = useState('0');
 
-export const Modal = ({ setModalOpen, shelterNm }) => {
 export const Modal = ({ setModalOpen, shelterNm }) => {
   const modalCloseHandler = () => {
     // const setModalOpen = props;
