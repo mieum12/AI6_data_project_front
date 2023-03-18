@@ -17,7 +17,7 @@ export const Background = styled.div`
 
 export const ChartSection = styled.div`
   /* 차트 2개 한 columns에 두기 */
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr;
   justify-content: center;
 `;
