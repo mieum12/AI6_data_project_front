@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchRain } from "../api/fetchRain";
+import { fetchRain } from "../api";
 
 export function useRain() {
   const [rain, setRain] = useState([]);
