@@ -65,7 +65,7 @@ const ModalSection = styled.div`
     color: ${PRIMARY_COLOR_WHITE};
   }
   img {
-    padding: 50px
+    padding: 50px;
     width: 300px;
     height: 300px;
   }
