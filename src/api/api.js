@@ -1,7 +1,7 @@
 import axios from "axios";
 import { SERVER_BASE_URL } from "../config/constants";
 
-export const httpClient = axios.create({
+export const api = axios.create({
   baseURL: SERVER_BASE_URL,
 });
 
@@ -22,8 +22,3 @@ export const httpClient = axios.create({
 //         Authorization = 'token x',
 //     }
 // }
-
-// `
-// GET /
-
-// `
