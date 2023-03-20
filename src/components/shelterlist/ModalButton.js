@@ -1,42 +1,34 @@
 import { useState } from "react";
 import { Modal } from "./Modal";
 import styled from "styled-components";
-import {
-  PRIMARY_COLOR_GREEN, PRIMARY_COLOR_WHITE
-} from "../../styles/primaryColor";
+import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 
-export default function Form({shelter}) {
+export default function Form({ shelter }) {
   const [modalOpen, setModalOpen] = useState(false);
   const onOpen = () => {
-    setModalOpen(prev => !prev);
+    setModalOpen((prev) => !prev);
   };
-  
-  
+
   //클릭한 시설의 id값을 전달해서 해당 설명이 뜨도록???
-
-
 
   return (
     <FormSection>
       <button className="modalButton" onClick={onOpen}>
         {shelter}
       </button>
-      {modalOpen && 
-        <Modal 
-          setModalOpen={setModalOpen}
-          />}
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
     </FormSection>
   );
 }
 
 const FormSection = styled.div`
-.modalButton {
+  .modalButton {
     border: none;
     padding: 5px 10px;
-    color: ${PRIMARY_COLOR_GREEN};
-    background-color: ${PRIMARY_COLOR_WHITE};
+    color: ${PRIMARY_COLOR};
+    background-color: ${COLOR_WHITE};
   }
-  .modalButton:hover{
+  .modalButton:hover {
     color: orange;
   }
 `;

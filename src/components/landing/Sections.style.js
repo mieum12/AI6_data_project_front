@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PRIMARY_COLOR_WHITE, PRIMARY_COLOR_GREEN } from "../../config/constants";
+import { COLOR_WHITE, PRIMARY_COLOR } from "../../styles/color";
 
 export const PictureSection = styled.div`
   height: 900px;
@@ -11,11 +11,11 @@ export const PictureSection = styled.div`
 
 export const BodySection1 = styled.div`
   height: 800px;
-  background-color: ${PRIMARY_COLOR_WHITE};
+  background-color: ${COLOR_WHITE};
   .textList {
     text-align: center;
     padding: 400px 0 0 0;
-    color: ${PRIMARY_COLOR_GREEN};
+    color: ${PRIMARY_COLOR};
   }
 `;
 export const BodySection2 = styled.div`
@@ -23,7 +23,7 @@ export const BodySection2 = styled.div`
   align-items: center;
   gap: -10px;
   height: 800px;
-  background-color: ${PRIMARY_COLOR_GREEN};
+  background-color: ${PRIMARY_COLOR};
   .nameList {
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ export const BodySection2 = styled.div`
     width: 300px;
     height: 50px;
     padding: 25px 0 0 0;
-    background-color: ${PRIMARY_COLOR_WHITE};
+    background-color: ${COLOR_WHITE};
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ export const BodySection2 = styled.div`
 `;
 export const BodySection3 = styled.div`
   height: 800px;
-  background-color: ${PRIMARY_COLOR_WHITE};
+  background-color: ${COLOR_WHITE};
   .center3 {
     text-align: center;
     padding: 50px 0 0 0;

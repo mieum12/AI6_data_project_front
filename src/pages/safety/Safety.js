@@ -6,9 +6,7 @@ const Safety = () => {
   return (
     <>
       <S.Background></S.Background>
-      <S.ChartSection>
-        <ChartWrapper />
-      </S.ChartSection>
+      <ChartWrapper />
       <SafetyCard />
     </>
   );

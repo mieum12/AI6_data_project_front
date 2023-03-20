@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import {
-  PRIMARY_COLOR_GREEN,
-  PRIMARY_COLOR_WHITE,
-} from "../../config/constants";
+import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 
 export const ChartSection = styled.div`
   margin: 20px 0 80px 0;
@@ -15,19 +12,19 @@ export const ChartSection = styled.div`
 
     text-align: center;
     font-size: 32px;
-    color: ${PRIMARY_COLOR_WHITE};
+    color: ${COLOR_WHITE};
     padding-top: 10px;
 
     width: 238px;
     height: 50px;
 
-    background: ${PRIMARY_COLOR_GREEN};
+    background: ${PRIMARY_COLOR};
     border-radius: 2010px;
   }
 
   .chartBack {
     text-align: center;
-    color: ${PRIMARY_COLOR_WHITE};
+    color: ${COLOR_WHITE};
 
     margin: auto;
     margin-top: 25px;
@@ -36,7 +33,7 @@ export const ChartSection = styled.div`
 
     width: 1000px;
     height: 500px;
-    background: ${PRIMARY_COLOR_GREEN};
+    background: ${PRIMARY_COLOR};
     border-radius: 10px;
   }
 `;

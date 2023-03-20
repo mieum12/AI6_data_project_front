@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { PRIMARY_COLOR_WHITE } from "../../config/constants";
+import { COLOR_WHITE } from "../../styles/color";
 
 export const FireChart = () => {
   const { fire } = useFire();
@@ -30,8 +30,8 @@ export const FireChart = () => {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis stroke={PRIMARY_COLOR_WHITE} dataKey="union_district" />
-            <YAxis stroke={PRIMARY_COLOR_WHITE} domain={[0, 450]} />
+            <XAxis stroke={COLOR_WHITE} dataKey="union_district" />
+            <YAxis stroke={COLOR_WHITE} domain={[0, 450]} />
             <Tooltip />
             <Legend />
             <Bar name="연평균" dataKey="year_avg" barSize={65} fill="#8884d8" />

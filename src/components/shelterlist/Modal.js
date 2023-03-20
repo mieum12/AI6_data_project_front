@@ -1,14 +1,11 @@
 // import { useState } from "react";
 import styled from "styled-components";
-import {
-  PRIMARY_COLOR_GREEN,
-  PRIMARY_COLOR_WHITE,
-} from "../../styles/primaryColor";
+import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 import logo from "../../asset/반딧불이_logo.png";
 
 export const Modal = ({ setModalOpen, shelterNm }) => {
   const onClose = () => {
-    setModalOpen(prev => !prev);
+    setModalOpen((prev) => !prev);
   };
 
   return (
@@ -45,8 +42,8 @@ const ModalSection = styled.div`
   // 모달 창 디자인
   // text-align: center;
   border-radius: 5px;
-  background-color: ${PRIMARY_COLOR_GREEN};
-  color: ${PRIMARY_COLOR_WHITE};
+  background-color: ${PRIMARY_COLOR};
+  color: ${COLOR_WHITE};
   padding: 20px;
   box-shadow: 0 18px 20px 0 grey;
 
@@ -59,7 +56,7 @@ const ModalSection = styled.div`
     // 닫기 버튼 디자인
     border-color: transparent;
     background-color: transparent;
-    color: ${PRIMARY_COLOR_WHITE};
+    color: ${COLOR_WHITE};
   }
   img {
     padding: 50px;

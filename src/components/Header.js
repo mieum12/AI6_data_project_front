@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../routes/Route";
-import { PRIMARY_COLOR_GREEN, PRIMARY_COLOR_WHITE } from "../config/constants";
+import { PRIMARY_COLOR, COLOR_WHITE } from "../styles/color";
 import logo from "../asset/반딧불이_logo.png";
 
 export const Header = () => {
@@ -30,9 +30,9 @@ export const Header = () => {
 const HeaderSection = styled.div`
   font-weight: bold;
   font-size: 20px;
-  color: ${PRIMARY_COLOR_GREEN};
+  color: ${PRIMARY_COLOR};
   padding: 5px 30px;
-  background-color: ${PRIMARY_COLOR_WHITE};
+  background-color: ${COLOR_WHITE};
   .wrapper {
     width: 100%;
     display: flex;
@@ -55,7 +55,7 @@ const HeaderSection = styled.div`
   }
   a {
     text-decoration: none;
-    color: ${PRIMARY_COLOR_GREEN};
+    color: ${PRIMARY_COLOR};
   }
 `;
 

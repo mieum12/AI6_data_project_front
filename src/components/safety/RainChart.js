@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { PRIMARY_COLOR_WHITE } from "../../config/constants";
+import { COLOR_WHITE } from "../../styles/color";
 
 export const RainChart = () => {
   const { rain } = useRain();
@@ -31,8 +31,8 @@ export const RainChart = () => {
           >
             <CartesianGrid strokeDasharray="3 3" />
             {/* stroke: 실선 색 변경 */}
-            <XAxis stroke={PRIMARY_COLOR_WHITE} dataKey="union_district" />
-            <YAxis stroke={PRIMARY_COLOR_WHITE} domain={[0, 0.25]} />
+            <XAxis stroke={COLOR_WHITE} dataKey="union_district" />
+            <YAxis stroke={COLOR_WHITE} domain={[0, 0.25]} />
             <Tooltip />
             <Legend />
             {/* stackId: 누적 bar만들어줌 */}
