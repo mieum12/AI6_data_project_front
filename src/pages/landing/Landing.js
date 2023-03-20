@@ -1,9 +1,8 @@
 import Header from "../../components/Header";
 import * as S from "./Landing.style";
 import { Box } from "../../components/landing";
-// import SimpleMap from "../../components/rechart";
 import background from "../../asset/background.jpg";
-import { SeoulMap } from "../../components/rechart";
+import { SeoulMap } from "../../components/seoulmap";
 import shelter from "../../../src/asset/반딧불찾기.png";
 import plus from "../../../src/asset/반딧불더하기.png";
 import safety from "../../../src/asset/반딧불알리미.png";
