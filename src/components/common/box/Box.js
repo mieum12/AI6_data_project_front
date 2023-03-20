@@ -14,8 +14,8 @@ export const Box = ({ boxImage, boxLink, LinkName, boxTitle, boxText }) => {
           </h3>
           <h3 className="title">{boxTitle}</h3>
           <div>
-            {boxText.split("\n").map((text) => (
-              <pre>{text}</pre>
+            {boxText.split("\n").map((text, index) => (
+              <pre key={index}>{text}</pre>
             ))}
           </div>
           {/* <div>{boxText}</div> */}
