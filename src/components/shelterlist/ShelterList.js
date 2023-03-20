@@ -1,14 +1,15 @@
 import * as S from "./ShelterList.style";
 import ModalButton from "./ModalButton"
 import { useShelter } from "../../hooks";
+import { useState } from "react";
 
 export const ShelterList = () => {
   const {shelter} =useShelter();
+  console.log({shelter})
 
-
-  return (
+  return (<>
     <S.ListTable>
-
+      
       <S.Table>
         <table >
           <thead className="table-head">
@@ -36,5 +37,6 @@ export const ShelterList = () => {
       </S.Table>
       
     </S.ListTable>
+    </>
   );
 };
