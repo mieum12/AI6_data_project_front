@@ -1,11 +1,9 @@
-import Header from "../../components/Header";
 import { ShelterMap, ShelterList } from "../../components/index.js";
 import * as S from "./Shelter.style";
 
 function Shelter() {
   return (
     <div>
-      <Header />
       <S.FlexContainer>
         <ShelterMap />
         <ShelterList />

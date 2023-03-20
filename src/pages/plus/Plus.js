@@ -1,10 +1,8 @@
-import Header from "../../components/Header";
 import { PlusBody } from "../../components/plus/PlusBody";
 
 function Plus() {
   return (
     <>
-      <Header />
       <PlusBody />
     </>
   );
