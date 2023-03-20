@@ -1,5 +1,5 @@
 import * as S from "./SafetyBox.style";
-import { Box } from "../landing";
+import { Box } from "../common/box";
 
 export function SafetyBox() {
   return (
