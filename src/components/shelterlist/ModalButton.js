@@ -24,7 +24,6 @@ export default function Form({shelter}) {
       {modalOpen && 
         <Modal 
           setModalOpen={setModalOpen}
-          // shelterNm={shelter.shelterNm} 
           />}
     </FormSection>
   );
