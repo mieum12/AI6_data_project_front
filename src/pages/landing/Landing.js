@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import * as S from "./Landing.style";
-import { Box } from "../../components/landing";
+import { Box } from "../../components/common/box";
 import background from "../../asset/background.jpg";
 import { SeoulMap } from "../../components/seoulmap";
 import shelter from "../../../src/asset/반딧불찾기.png";
@@ -29,13 +29,13 @@ const LandingPage = () => {
         <div className="BoxList">
           <Box
             boxImage={shelter}
-            boxNumber="반딧불 찾기"
+            boxTitle="반딧불 찾기"
             boxText={"각 구에 해당하는 수용시설의 위치,\n수용인원 등을 조회할 수 있습니다."}
           />
-          <Box boxImage={plus} boxNumber="반딧불 더하기" boxText={"이재민분들을 위한 관련 사이트를\n안내해줍니다."} />
+          <Box boxImage={plus} boxTitle="반딧불 더하기" boxText={"이재민분들을 위한 관련 사이트를\n안내해줍니다."} />
           <Box
             boxImage={safety}
-            boxNumber="반딧불 알리미"
+            boxTitle="반딧불 알리미"
             boxText={"최근 재난 발생 현황을 나타내고,\n이에 따른 안전도를 표시합니다."}
           />
         </div>

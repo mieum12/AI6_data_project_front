@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import {
-  PRIMARY_COLOR_GREEN,
-  PRIMARY_COLOR_WHITE,
-} from "../../config/constants";
+import { PRIMARY_COLOR_GREEN, PRIMARY_COLOR_WHITE } from "../../../config/constants";
 
 export const BoxSection = styled.div`
   .BoxList {
@@ -20,14 +17,20 @@ export const BoxSection = styled.div`
     border-style: solid;
     border-color: ${PRIMARY_COLOR_GREEN};
     border-width: 10px;
-    background-color: ${(props) => props.backColor || PRIMARY_COLOR_WHITE }
+    background-color: ${(props) => props.backColor || PRIMARY_COLOR_WHITE};
   }
   img {
-      width: 200px;
-      height: 200px;
-      border-radius: 20px;
-    }
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+  }
   .text-link {
+    color: inherit;
+    text-decoration: inherit;
+    display: flex;
+    justify-content: center;
+  }
+  .title {
     color: inherit;
     text-decoration: inherit;
     display: flex;

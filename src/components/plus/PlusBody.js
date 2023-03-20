@@ -1,5 +1,5 @@
 import * as S from "./PlusBody.style";
-import { Box } from "../landing";
+import { Box } from "../common/box";
 
 // 사이트 이미지
 import jaenan from "../../asset/국민재난안전포털.jpeg";

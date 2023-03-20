@@ -9,11 +9,11 @@ export const Box = ({ boxImage, boxLink, LinkName, boxTitle, boxText }) => {
         <div className="Box">
           <img src={boxImage} alt="사진이 올 장소" />
           <h3>
-            <Link to={boxLink} className="text-link">
+            <Link to={boxLink} className="text-link" target="_blank">
               {LinkName}
             </Link>
           </h3>
-          <div>{boxTitle}</div>
+          <h3 className="title">{boxTitle}</h3>
           <div>
             {boxText.split("\n").map((text) => (
               <pre>{text}</pre>
