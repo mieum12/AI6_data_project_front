@@ -10,11 +10,11 @@ export const PictureSection = styled.div`
 `;
 
 export const BodySection1 = styled.div`
-  height: 650px;
+  height: 800px;
   background-color: ${PRIMARY_COLOR_WHITE};
   .textList {
     text-align: center;
-    padding: 350px 0 0 0;
+    padding: 400px 0 0 0;
     color: ${PRIMARY_COLOR_GREEN};
   }
 `;
@@ -22,7 +22,7 @@ export const BodySection2 = styled.div`
   display: grid;
   align-items: center;
   gap: -10px;
-  height: 650px;
+  height: 800px;
   background-color: ${PRIMARY_COLOR_GREEN};
   .nameList {
     display: flex;
@@ -43,11 +43,11 @@ export const BodySection2 = styled.div`
   }
 `;
 export const BodySection3 = styled.div`
-  height: 900px;
+  height: 800px;
   background-color: ${PRIMARY_COLOR_WHITE};
   .center3 {
     text-align: center;
-    padding: 120px 0 0 0;
+    padding: 50px 0 0 0;
   }
 `;
 // height 원래 650px;
