@@ -6,7 +6,7 @@ export const ChartWrapper = () => {
     <S.ChartSection>
       <RainChart />
       <FireChart />
-      {/* <ShelterChart /> */}
+      <ShelterChart />
     </S.ChartSection>
   );
 };
