@@ -50,5 +50,8 @@ export const Table = styled.div`
   .shelter-type {
     width: 100px
   }
+  .shelter-qty {
+    width: 50px
+  }
 
 `

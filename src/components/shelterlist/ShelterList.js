@@ -47,7 +47,7 @@ export const ShelterList = () => {
               <td>시설 이름</td>
               <td>시설 종류</td>
               <td>시설 주소</td>
-              <td>수용 가능 인원</td>
+              <td>수용 인원</td>
             </tr>
           </thead>
           <tbody className="table-body" >
