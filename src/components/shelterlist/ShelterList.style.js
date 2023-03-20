@@ -38,6 +38,12 @@ export const Table = styled.div`
     background-color: ${PRIMARY_COLOR_GREEN};
     color: ${PRIMARY_COLOR_WHITE}
   }
+  .select {
+    vertical-align: middle;
+    text-align: center;
+    background-color: ${PRIMARY_COLOR_GREEN};
+    color: ${PRIMARY_COLOR_WHITE}
+  }
   .table-body {
     height: 500px;
   }

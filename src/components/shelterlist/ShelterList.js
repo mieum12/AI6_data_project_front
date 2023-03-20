@@ -1,11 +1,29 @@
 import * as S from "./ShelterList.style";
 import ModalButton from "./ModalButton"
 import { useShelter } from "../../hooks";
-import { useState } from "react";
 
 export const ShelterList = () => {
   const {shelter} =useShelter();
   console.log({shelter})
+
+  //임시데이터
+  const gu_category = [
+    {id: 1,
+      guNm: "강남구"
+    },
+    {id: 2,
+      guNm: "강동구"
+    },
+    {id: 3,
+      guNm: "강북구"
+    },
+    {id: 4,
+      guNm: "강서구"
+    },
+    {id: 5,
+      guNm: "관악구"
+    },
+  ]
 
   return (<>
     <S.ListTable>
@@ -14,7 +32,14 @@ export const ShelterList = () => {
         <table >
           <thead className="table-head">
             <tr>
-              <td>서울시 00구</td>
+              <td>
+                <select name="gu" className="select">
+                  <option disabled selected>서울시 00구</option>
+                  {gu_category.map((gu_category)=>(
+                    <option value={gu_category.guNm}>{gu_category.guNm}</option>
+                  ))}
+                </select>
+              </td>
               <td>시설 이름</td>
               <td>시설 종류</td>
               <td>시설 주소</td>
@@ -22,7 +47,9 @@ export const ShelterList = () => {
             </tr>
           </thead>
           <tbody className="table-body" >
-              {shelter.map((shelter)=> (
+              {shelter
+              // .filter(shelter=> shelter.shelterNm.includes('강남구'))
+              .map((shelter)=>(
                 <tr key={shelter.id}>
                   <td className="gu-name">{shelter.guNm}</td>
                   <td className="shelter-name"><ModalButton shelter={shelter.shelterNm}></ModalButton></td>
