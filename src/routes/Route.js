@@ -2,6 +2,7 @@ import Landing from "../pages/landing/Landing";
 import Plus from "../pages/plus/Plus";
 import Shelter from "../pages/shelter/Shelter";
 import Safety from "../pages/safety/Safety";
+import Post from "../pages/post/post";
 
 export const ROUTE = {
   LANDING_PAGE: {
@@ -23,6 +24,11 @@ export const ROUTE = {
     path: "/SafetyPage",
     link: "/SafetyPage",
     element: Safety,
+  },
+  POST_PAGE: {
+    path: "/PostPage",
+    link: "/PostPage",
+    element: Post,
   },
 };
 

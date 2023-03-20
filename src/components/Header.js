@@ -21,6 +21,9 @@ export const Header = () => {
           <Link to={ROUTE.SAFETY_PAGE.link}>
             <li>반딧불 알리미</li>
           </Link>
+          <Link to={ROUTE.POST_PAGE.link}>
+            <li>반딧불 이야기</li>
+          </Link>
         </ul>
       </div>
     </HeaderSection>
