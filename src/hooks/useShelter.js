@@ -9,7 +9,7 @@ export function useShelter() {
       const shelter = await fetchShelter();
       setShelter(shelter);
     } catch (err) {
-      throw err;
+      console.log("error", err);
     }
   }
 

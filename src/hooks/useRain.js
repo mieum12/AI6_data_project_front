@@ -9,7 +9,7 @@ export function useRain() {
       const rain = await fetchRain();
       setRain(rain);
     } catch (err) {
-      throw err;
+      console.log("error", err);
     }
   }
 

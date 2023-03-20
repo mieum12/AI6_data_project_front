@@ -9,7 +9,7 @@ export function useFire() {
       const fire = await fetchFire();
       setFire(fire);
     } catch (err) {
-      throw err;
+      console.log("error", err);
     }
   }
 
