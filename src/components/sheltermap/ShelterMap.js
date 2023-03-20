@@ -63,7 +63,7 @@ export const ShelterMap = () => {
       const iwContent = 
         //ModalButton을 import해오는 방법을 모르겠음
         '<ModalButton shelter={shelter.shelterNm}></ModalButton>'+ 
-        //그냥 버튼 태그는 사용 가능
+        //그냥 버튼 태그는 사용 가능한데
         '<button onclick={openModal}>보기</button>'+
         positions[i].title, 
         // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
