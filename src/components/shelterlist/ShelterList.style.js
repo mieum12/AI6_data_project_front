@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
   PRIMARY_COLOR_GREEN,
   PRIMARY_COLOR_WHITE,
-} from "../../config/constants";
+} from "../../styles/primaryColor";
 
 export const ListTable = styled.div`
   // display: flex;

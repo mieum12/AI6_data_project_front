@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { PRIMARY_COLOR_WHITE } from "../../styles/primaryColor";
 
 export const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
   height: 650px;
-  background-color: #f8f5f1;
+  background-color: ${PRIMARY_COLOR_WHITE};
 `;

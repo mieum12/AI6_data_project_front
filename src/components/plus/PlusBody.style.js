@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {
   PRIMARY_COLOR_WHITE,
-} from "../../config/constants";
+} from "../../styles/primaryColor";
 
 export const PlusList = styled.div`
   display: grid;

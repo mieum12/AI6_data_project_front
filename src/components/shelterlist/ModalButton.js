@@ -1,17 +1,16 @@
 import { useState } from "react";
-
 import { Modal } from "./Modal";
 import styled from "styled-components";
 import {
   PRIMARY_COLOR_GREEN, PRIMARY_COLOR_WHITE
-} from "../../config/constants";
+} from "../../styles/primaryColor";
 
 export default function Form({shelter}) {
   const [modalOpen, setModalOpen] = useState(false);
-
-  const modalOpenHandler = () => {
-    setModalOpen(true);
+  const onOpen = () => {
+    setModalOpen(prev => !prev);
   };
+  
   
   //클릭한 시설의 id값을 전달해서 해당 설명이 뜨도록???
 
@@ -19,7 +18,7 @@ export default function Form({shelter}) {
 
   return (
     <FormSection>
-      <button className="modalButton" onClick={modalOpenHandler}>
+      <button className="modalButton" onClick={onOpen}>
         {shelter}
       </button>
       {modalOpen && 

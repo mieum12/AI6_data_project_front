@@ -3,21 +3,18 @@ import styled from "styled-components";
 import {
   PRIMARY_COLOR_GREEN,
   PRIMARY_COLOR_WHITE,
-} from "../../config/constants";
-
+} from "../../styles/primaryColor";
 import logo from "../../asset/반딧불이_logo.png";
-// const[title,setTitle] = useState('0');
 
 export const Modal = ({ setModalOpen, shelterNm }) => {
-  const modalCloseHandler = () => {
-    // const setModalOpen = props;
-    setModalOpen(false);
+  const onClose = () => {
+    setModalOpen(prev => !prev);
   };
 
   return (
     <ModalSection>
-      <button className="close" onClick={modalCloseHandler}>
-        X
+      <button className="close" onClick={onClose}>
+        <h2>X</h2>
       </button>
       <ModalTitle>선택한 시설의 이름</ModalTitle>
 
@@ -56,7 +53,7 @@ const ModalSection = styled.div`
   .close {
     // 닫기 버튼 우상단 배치
     position: absolute;
-    top: 4%;
+    top: 1.5%;
     right: 3%;
 
     // 닫기 버튼 디자인
