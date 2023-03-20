@@ -1,5 +1,5 @@
 // components > safety> index.js 만들어 구조분해할당으로 컴포넌트 불러옴
-import { ChartWrapper, SafetyBox } from "../../components";
+import { ChartWrapper, SafetyCard } from "../../components";
 import * as S from "./Safety.style";
 
 const Safety = () => {
@@ -9,7 +9,7 @@ const Safety = () => {
       <S.ChartSection>
         <ChartWrapper />
       </S.ChartSection>
-      <SafetyBox />
+      <SafetyCard />
     </>
   );
 };
