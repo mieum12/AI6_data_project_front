@@ -1,7 +1,8 @@
 import * as S from "./Box.style";
 import { Link } from "react-router-dom";
 
-export const Box = ({ boxImage, boxLink, LinkName, boxNumber, boxText }) => {
+// TODO: Box 컴포넌트 landing 폴더 밖으로 변경
+export const Box = ({ boxImage, boxLink, LinkName, boxTitle, boxText }) => {
   return (
     <S.BoxSection>
       <div className="BoxList">
@@ -12,7 +13,7 @@ export const Box = ({ boxImage, boxLink, LinkName, boxNumber, boxText }) => {
               {LinkName}
             </Link>
           </h3>
-          <div>{boxNumber}</div>
+          <div>{boxTitle}</div>
           <div>
             {boxText.split("\n").map((text) => (
               <pre>{text}</pre>

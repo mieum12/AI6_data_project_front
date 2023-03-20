@@ -11,6 +11,7 @@ export function PlusBody() {
     <>
       <S.PlusList>
         <div className="BoxList">
+          {/* TODO: PRIMARY_COLOR로 변경 */}
           <Box
             backColor="#425f57"
             boxImage={jaenan}
@@ -25,16 +26,16 @@ export function PlusBody() {
             boxLink="https://www.mois.go.kr/"
             LinkName="행정안전부"
             boxText={
-                "▫️ 국가 안전 시스템 정책 소개\n▫️ 온라인 민원 신청 안내\n▫️ 이재민 관련 지원 사업과\n      신속 보도자료 등 확인"
-              }
+              "▫️ 국가 안전 시스템 정책 소개\n▫️ 온라인 민원 신청 안내\n▫️ 이재민 관련 지원 사업과\n      신속 보도자료 등 확인"
+            }
           />
           <Box
             boxImage={bangjae}
             boxLink="https://119.seoul.go.kr/"
             LinkName="서울종합방재센터(119)"
             boxText={
-                "▫️ 재난 정보 서비스 소개\n  : 재난 발생 통계, 재난 보고 등\n▫️ 사고별 대응 요령 소개\n▫️ 시민 참여 활동: 자원봉사"
-              }
+              "▫️ 재난 정보 서비스 소개\n  : 재난 발생 통계, 재난 보고 등\n▫️ 사고별 대응 요령 소개\n▫️ 시민 참여 활동: 자원봉사"
+            }
           />
         </div>
       </S.PlusList>
