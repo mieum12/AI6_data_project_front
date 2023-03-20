@@ -16,4 +16,14 @@ border-radius: 20px;
 border-style: solid;
 border-color: ${PRIMARY_COLOR_GREEN};
 border-width:10px;
+button{
+  background-color: ${PRIMARY_COLOR_GREEN};
+  color: ${PRIMARY_COLOR_WHITE};
+  border-radius:30px;
+  border:none;
+}
+button:hover {
+  background-color: orange;
+  color: ${PRIMARY_COLOR_WHITE};
+
 `
