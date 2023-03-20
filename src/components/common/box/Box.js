@@ -1,7 +1,6 @@
 import * as S from "./Box.style";
 import { Link } from "react-router-dom";
 
-// TODO: Box 컴포넌트 landing 폴더 밖으로 변경
 export const Box = ({ boxImage, boxLink, LinkName, boxTitle, boxText }) => {
   return (
     <S.BoxSection>
