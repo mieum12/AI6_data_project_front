@@ -6,8 +6,8 @@ export function useShelter() {
 
   async function _fetchShelter() {
     try {
-      const rain = await fetchShelter();
-      setShelter(rain);
+      const shelter = await fetchShelter();
+      setShelter(shelter);
     } catch (err) {
       throw err;
     }

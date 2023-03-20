@@ -1,23 +1,12 @@
 import * as S from "./ShelterMap.style";
 //데이터 가져오기
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
+import { useShelter } from "../../hooks";
 
 const { kakao } = window;
 
 export const ShelterMap = () => {
-  const [shelter, setShelter] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8000/shelter`);
-        setShelter(response.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchData();
-  }, []);
+  const {shelter} =useShelter();
 
   useEffect(() => {
     const mapContainer = document.getElementById("map"); // 지도를 표시할 div

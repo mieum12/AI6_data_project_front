@@ -1,43 +1,13 @@
 import * as S from "./ShelterList.style";
 import Form from "./Form";
-// import MapChart from "./SeoulMap";
-
-//데이터 가져오기
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-// import { SERVER_BASE_URL } from "../../config/constants";
+import { useShelter } from "../../hooks";
 
 export const ShelterList = () => {
-  const [shelter, setShelter] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8000/shelter`);
-        setShelter(response.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchData();
-  }, []);
-
-  // React.useEffect(() => {
-  //   for (const el of shelter) {
-  //     const element = document.getElementById(el.id);
-
-  //     console.log("element", element);
-  //     element.addEventListener("click", (e) => {
-  //       console.log("e", e);
-  //       console.log(e.id +  "clicked !" );
-  //     });
-  //   }
-  // }, []);
+  const {shelter} =useShelter();
 
 
   return (
     <S.ListTable>
-      {/* <Form /> */}
-      {/* <MapChart/> */}
 
       <S.Table>
         <table >
