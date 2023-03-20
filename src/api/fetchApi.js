@@ -26,3 +26,12 @@ export async function fetchShelter() {
     console.log("error: ", err);
   }
 }
+
+// 생활권에 따른 data 불러옴
+// export async function fetchShelterDistrict() {
+//   try {
+//     const { data } = await api.get(`/shelter/${생활권Id}`);
+//   } catch (err) {
+//     console.log("error", err);
+//   }
+// }
