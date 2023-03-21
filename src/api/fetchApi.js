@@ -26,12 +26,13 @@ export async function fetchShelter() {
     console.log("error: ", err);
   }
 }
-
-// 생활권에 따른 data 불러옴
-// export async function fetchShelterDistrict() {
-//   try {
-//     const { data } = await api.get(`/shelter/${생활권Id}`);
-//   } catch (err) {
-//     console.log("error", err);
-//   }
-// }
+// TODO: shelter/강남구 이렇게 가져오는 api
+// 이렇게하는게 맞는지
+export async function fetchShelterDistrict({guNm}) {
+  try {
+    const { data } = await api.get(`/shelter/${guNm}`);
+    return data;
+  } catch (err) {
+    console.log("error", err);
+  }
+}

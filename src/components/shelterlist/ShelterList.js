@@ -1,9 +1,18 @@
 import * as S from "./ShelterList.style";
 import ModalButton from "./ModalButton"
-import { useShelter } from "../../hooks";
+import { useShelter, useShelterDistrict } from "../../hooks";
+
+//구
+// import axios from "axios";
+// import { SERVER_BASE_URL } from "../../config/constants";
+
+
+
 
 export const ShelterList = () => {
+
   const {shelter} =useShelter();
+  const {shelterDistrict} =useShelterDistrict();
 
   //중복없이 구 이름 하나씩 모으기
   const filter = shelter.map((shelter)=>{
@@ -11,7 +20,8 @@ export const ShelterList = () => {
   })
   // Set으로 중복 구 없애기, 가나다순
   const totalGu = [...new Set(filter)].sort()
-  
+
+
 
   return (<>
     <S.ListTable>
@@ -22,10 +32,14 @@ export const ShelterList = () => {
             <tr>
               <td>
                 {/* 구별 카테고리: select menu 만들기 */}
-                <select name="gu" className="select">
-                  <option disabled selected>서울시 00구</option>
+                <select name="gu" className="select" 
+                // 만약 여기서 옵션에서 강남구를 선택했을 때
+                // onchange={handleOnChange()}
+                >
+                  <option >서울시 00구</option>
                   {totalGu.map((totalGu)=>(
-                    <option value={totalGu}>{totalGu}</option>
+                    <option value={totalGu}
+                            >{totalGu}</option>
                   ))}
                   
                 </select>
@@ -38,7 +52,8 @@ export const ShelterList = () => {
           </thead>
           <tbody className="table-body" >
               {shelter
-              // .filter(shelter=> shelter.shelterNm.includes('강남구'))
+              //TODO : shelter의 guNm과 shelterDistrict의 고유값(guNm)이 같을 경우 아래 리스트업하기ㅠㅠ
+              // .filter(shelter => shelter.guNm === shelterDistrict.${guNm})
               .map((shelter)=>(
                 <tr key={shelter.id}>
                   <td className="gu-name">{shelter.guNm}</td>
