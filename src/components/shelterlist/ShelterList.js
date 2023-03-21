@@ -4,26 +4,14 @@ import { useShelter } from "../../hooks";
 
 export const ShelterList = () => {
   const {shelter} =useShelter();
-  console.log({shelter})
 
-  //임시데이터
-  const gu_category = [
-    {id: 1,
-      guNm: "강남구"
-    },
-    {id: 2,
-      guNm: "강동구"
-    },
-    {id: 3,
-      guNm: "강북구"
-    },
-    {id: 4,
-      guNm: "강서구"
-    },
-    {id: 5,
-      guNm: "관악구"
-    },
-  ]
+  //중복없이 구 이름 하나씩 모으기
+  const filter = shelter.map((shelter)=>{
+    return(shelter.guNm)
+  })
+  // Set으로 중복 구 없애기, 가나다순
+  const totalGu = [...new Set(filter)].sort()
+  
 
   return (<>
     <S.ListTable>
@@ -33,11 +21,13 @@ export const ShelterList = () => {
           <thead className="table-head">
             <tr>
               <td>
+                {/* 구별 카테고리: select menu 만들기 */}
                 <select name="gu" className="select">
                   <option disabled selected>서울시 00구</option>
-                  {gu_category.map((gu_category)=>(
-                    <option value={gu_category.guNm}>{gu_category.guNm}</option>
+                  {totalGu.map((totalGu)=>(
+                    <option value={totalGu}>{totalGu}</option>
                   ))}
+                  
                 </select>
               </td>
               <td>시설 이름</td>
