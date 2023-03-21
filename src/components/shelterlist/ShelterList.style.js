@@ -19,8 +19,8 @@ export const Table = styled.div`
   text-align: center;
   color: ${PRIMARY_COLOR};
   background-color: ${COLOR_WHITE};
-  width: 500px;
   border-color: ${PRIMARY_COLOR};
+  width: 700px;
   height: 100%;
   display: block;
   overflow: scroll;
@@ -28,6 +28,7 @@ export const Table = styled.div`
   table {
     border-collapse: collapse;
     font-size: 13px;
+    width: 700px;
   }
   .table-head {
     background-color: ${PRIMARY_COLOR};
@@ -51,7 +52,10 @@ export const Table = styled.div`
   .shelter-type {
     width: 100px;
   }
+  .shelter-address {
+    width: 500px
+  }
   .shelter-qty {
-    width: 50px;
+    width: 70px;
   }
 `;
