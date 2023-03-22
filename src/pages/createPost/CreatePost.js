@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-function CreatePost() {
+function CreatePostPage() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [userNm, setUserNm] = useState("");
@@ -83,4 +83,4 @@ function CreatePost() {
   );
 }
 
-export default CreatePost;
+export default CreatePostPage;

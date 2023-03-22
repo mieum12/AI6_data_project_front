@@ -2,6 +2,7 @@ import React from "react";
 import PostList from "./PostList";
 import { withRouter } from "react-router-dom";
 
+// TODO: 무슨 페이지 일까요...?ㅎㅎ
 const PostMain = (props) => {
   return (
     <>
