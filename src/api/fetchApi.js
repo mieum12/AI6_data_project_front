@@ -70,6 +70,7 @@ export async function updatePost(userNm, password, title, content) {
   }
 }
 
+// 게시글 삭제
 export async function deletePost(postId) {
   try {
     await api.delete(`/post/${postId}`);
