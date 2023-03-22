@@ -1,11 +1,13 @@
 import * as S from "./SafetyCard.style";
 import { Box } from "../../components";
+import { PRIMARY_COLOR } from "../../styles/color";
 
 export const SafetyCard = ({ cardTitle, safetyEmoji, description }) => {
   return (
     <S.PlusList>
       <div className="BoxList">
         <Box
+          backColor={PRIMARY_COLOR}
           // boxImage={}
           boxNumber="a동"
           boxText={
@@ -13,6 +15,7 @@ export const SafetyCard = ({ cardTitle, safetyEmoji, description }) => {
           }
         />
         <Box
+          backColor={PRIMARY_COLOR}
           // boxImage={}
           boxNumber="b동"
           boxText={
@@ -20,6 +23,7 @@ export const SafetyCard = ({ cardTitle, safetyEmoji, description }) => {
           }
         />
         <Box
+          backColor={PRIMARY_COLOR}
           // boxImage={}
           boxNumber="c동"
           boxText={

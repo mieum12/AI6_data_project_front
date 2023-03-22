@@ -1,9 +1,16 @@
 import * as S from "./Box.style";
 import { Link } from "react-router-dom";
 
-export const Box = ({ boxImage, boxLink, LinkName, boxTitle, boxText }) => {
+export const Box = ({
+  boxImage,
+  boxLink,
+  LinkName,
+  boxTitle,
+  boxText,
+  backColor,
+}) => {
   return (
-    <S.BoxSection>
+    <S.BoxSection backColor={backColor}>
       <div className="BoxList">
         <div className="Box">
           <img src={boxImage} alt="사진이 올 장소" />

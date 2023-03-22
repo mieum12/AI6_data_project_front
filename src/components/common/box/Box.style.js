@@ -9,8 +9,9 @@ export const BoxSection = styled.div`
   .Box {
     width: 200px;
     height: 400px;
-    // background-color: ${COLOR_WHITE};
-    color: ${PRIMARY_COLOR};
+    /* backColor에 따라 상반되는 color 설정 */
+    color: ${(props) =>
+      props.backColor === PRIMARY_COLOR ? COLOR_WHITE : PRIMARY_COLOR};
     margin: 20px;
     padding: 20px;
     border-radius: 30px;
