@@ -4,7 +4,6 @@ import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 import logo from "../../asset/반딧불이_logo.png";
 
 export const Modal = ({ setModalOpen, mapName }) => {
-  console.log(mapName);
   const onClose = () => {
     setModalOpen((prev) => !prev);
   };
