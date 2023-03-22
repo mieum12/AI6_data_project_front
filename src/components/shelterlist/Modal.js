@@ -20,7 +20,7 @@ export const Modal = ({ setModalOpen, name }) => {
         <div>시설 이름 : {name.shelterNm} </div>
         <div>시설 종류 :{name.shelterType} </div>
         <div>주소 : {name.address}</div>
-        <div>수용 가능 인원 : {name.qty}</div>
+        <div>수용 가능 인원 : {name.qty}명</div>
       </ModalBody>
     </ModalSection>
   );

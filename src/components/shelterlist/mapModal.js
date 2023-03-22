@@ -21,7 +21,7 @@ export const Modal = ({ setModalOpen, mapName }) => {
         <div>시설 이름 : {mapName.markerParams.title} </div>
         <div>시설 종류 : {mapName.markerParams.type}</div>
         <div>주소 : {mapName.markerParams.address}</div>
-        <div>수용 가능 인원 : {mapName.markerParams.qty}</div>
+        <div>수용 가능 인원 : {mapName.markerParams.qty}명</div>
       </ModalBody>
     </ModalSection>
   );
