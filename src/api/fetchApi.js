@@ -29,6 +29,7 @@ export async function fetchShelter(guNm) {
     console.log("error: ", err);
   }
 }
+<<<<<<< HEAD
 // TODO: shelter/강남구 이렇게 가져오는 api
 // 이렇게하는게 맞는지
 export async function fetchShelterDistrict({ guNm }) {
@@ -39,3 +40,5 @@ export async function fetchShelterDistrict({ guNm }) {
     console.log("error", err);
   }
 }
+=======
+>>>>>>> d0d0a719db848cd4518d8e35b37a1461a914c4d9

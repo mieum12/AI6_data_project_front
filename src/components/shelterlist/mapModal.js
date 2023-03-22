@@ -4,7 +4,6 @@ import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 import logo from "../../asset/반딧불이_logo.png";
 
 export const Modal = ({ setModalOpen, mapName }) => {
-  console.log(mapName);
   const onClose = () => {
     setModalOpen((prev) => !prev);
   };
@@ -14,15 +13,15 @@ export const Modal = ({ setModalOpen, mapName }) => {
       <button className="close" onClick={onClose}>
         <h2>X</h2>
       </button>
-      <ModalTitle>선택한 시설의 이름</ModalTitle>
+      <ModalTitle>{mapName.markerParams.title}</ModalTitle>
 
       <img src={logo} alt="시설사진" />
       <ModalBody>
         {/* 클릭한 것의 값들이 들어오는 방법으르 모르겠어요 */}
-        <div>시설 이름 : {mapName.shelterNm} </div>
-        <div>시설 종류 : </div>
-        <div>주소 : </div>
-        <div>수용 가능 인원 : </div>
+        <div>시설 이름 : {mapName.markerParams.title} </div>
+        <div>시설 종류 : {mapName.markerParams.type}</div>
+        <div>주소 : {mapName.markerParams.address}</div>
+        <div>수용 가능 인원 : {mapName.markerParams.qty}명</div>
       </ModalBody>
     </ModalSection>
   );

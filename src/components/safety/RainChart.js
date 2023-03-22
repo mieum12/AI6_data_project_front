@@ -18,7 +18,6 @@ export const RainChart = () => {
     <>
       <div className="chartTitle">강우량 현황</div>
       <div className="chartBack">
-        {/* TODO: x축 이름 검은색으로 변경 */}
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={rain}

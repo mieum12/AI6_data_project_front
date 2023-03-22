@@ -17,11 +17,10 @@ export const Modal = ({ setModalOpen, name }) => {
 
       <img src={logo} alt="시설사진" />
       <ModalBody>
-        {/* 클릭한 것의 값들이 들어오는 방법으르 모르겠어요 */}
         <div>시설 이름 : {name.shelterNm} </div>
         <div>시설 종류 :{name.shelterType} </div>
         <div>주소 : {name.address}</div>
-        <div>수용 가능 인원 : {name.qty}</div>
+        <div>수용 가능 인원 : {name.qty}명</div>
       </ModalBody>
     </ModalSection>
   );

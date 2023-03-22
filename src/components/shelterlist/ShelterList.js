@@ -1,13 +1,18 @@
 import * as S from "./ShelterList.style";
 import ModalButton from "./ModalButton";
-import { useShelter, useShelterDistrict } from "../../hooks";
+import { useShelter } from "../../hooks";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 export const ShelterList = () => {
   const { guNm } = useParams();
   const { shelter } = useShelter(guNm);
+<<<<<<< HEAD
 
   console.log("guNm", guNm);
+=======
+  const [selectedGu, setSelectedGu] = useState("");
+>>>>>>> d0d0a719db848cd4518d8e35b37a1461a914c4d9
 
   //중복없이 구 이름 하나씩 모으기
   const filter = shelter.map((shelter) => {
@@ -16,7 +21,42 @@ export const ShelterList = () => {
   // Set으로 중복 구 없애기, 가나다순
   const totalGu = [...new Set(filter)].sort();
 
-  function guHandler() {}
+  const selectedGuName = (e) => {
+    setSelectedGu(e.target.value);
+  };
+
+  // 전체 구 목록 조회
+  let filterGuList = shelter.map((shelter) => (
+    <tr key={shelter.id}>
+      <td className="gu-name">{shelter.guNm}</td>
+      <td className="shelter-name">
+        <ModalButton name={shelter} shelter={shelter.shelterNm}></ModalButton>
+      </td>
+      <td className="shelter-type">{shelter.shelterType}</td>
+      <td className="shelter-address">{shelter.address}</td>
+      <td className="shelter-qty">{shelter.qty}명</td>
+    </tr>
+  ));
+
+  // 선택한 구가 있을 경우 해당 구의 목록만 조회
+  if (selectedGu.length > 0) {
+    filterGuList = shelter
+      .filter((selectedShelter) => selectedShelter.guNm === selectedGu)
+      .map((shelter) => (
+        <tr key={shelter.id}>
+          <td className="gu-name">{shelter.guNm}</td>
+          <td className="shelter-name">
+            <ModalButton
+              name={shelter}
+              shelter={shelter.shelterNm}
+            ></ModalButton>
+          </td>
+          <td className="shelter-type">{shelter.shelterType}</td>
+          <td className="shelter-address">{shelter.address}</td>
+          <td className="shelter-qty">{shelter.qty}명</td>
+        </tr>
+      ));
+  }
 
   return (
     <>
@@ -27,13 +67,14 @@ export const ShelterList = () => {
               <tr>
                 <td>
                   <select
+                    onChange={selectedGuName}
+                    value={selectedGu}
                     name="gu"
                     className="select"
-                    // 만약 여기서 옵션에서 강남구를 선택했을 때
                   >
                     <option>서울시 00구</option>
                     {totalGu.map((totalGu, index) => (
-                      <option key={index} value={totalGu} onChange={guHandler}>
+                      <option key={index} value={totalGu}>
                         {totalGu}
                       </option>
                     ))}
@@ -46,23 +87,8 @@ export const ShelterList = () => {
               </tr>
             </thead>
             <tbody className="table-body">
-              {shelter
-                //TODO : shelter의 guNm과 shelterDistrict/guNm의 guNm이 같을 경우 아래 리스트업하기
-                // .filter(shelter => shelter.guNm === shelterDistrict.${guNm})
-                .map((shelter) => (
-                  <tr key={shelter.id}>
-                    <td className="gu-name">{shelter.guNm}</td>
-                    <td className="shelter-name">
-                      <ModalButton
-                        name={shelter}
-                        shelter={shelter.shelterNm}
-                      ></ModalButton>
-                    </td>
-                    <td className="shelter-type">{shelter.shelterType}</td>
-                    <td className="shelter-address">{shelter.address}</td>
-                    <td className="shelter-qty">{shelter.qty}명</td>
-                  </tr>
-                ))}
+              {/* shelter의 guNm과 shelterDistrict/guNm의 guNm이 같을 경우 아래 리스트업하기 */}
+              {filterGuList}
             </tbody>
           </table>
         </S.Table>

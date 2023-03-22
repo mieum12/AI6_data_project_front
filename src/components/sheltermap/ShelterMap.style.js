@@ -22,5 +22,4 @@ button{
 button:hover {
   background-color: orange;
   color: ${COLOR_WHITE};
-
 `;

@@ -8,29 +8,29 @@ import { useNavigate } from "react-router-dom";
 // 유니코드를 이용하라는 거 같기도 한데 변경해서 넣어봐도 안되서 잘 모르겠습니다ㅠ
 const GU_LIST = [
   { id: "Dobong-gu", label: "도봉구" },
-  // { id: "Dongdaemun-gu", label: "동대문구" },
-  // { id: "Eunpyeong-gu", label: "은평구" },
-  // { id: "Gangbuk-gu", label: "강북구" },
-  // { id: "Gangdong-gu", label: "강동구" },
-  // { id: "Gangseo-gu", label: "강서구" },
-  // { id: "Geumcheon-gu", label: "금천구" },
-  // { id: "Guro-gu", label: "구로구" },
-  // { id: "Gwanak-gu", label: "관악구" },
-  // { id: "Gwangjin-gu", label: "광진구" },
-  // { id: "Gangnam-gu", label: "강남구" },
-  // { id: "Jongno-gu", label: "종로구" },
-  // { id: "Jung-gu", label: "중구" },
-  // { id: "Jungnang-gu", label: "중랑구" },
-  // { id: "Mapo-gu", label: "마포구" },
-  // { id: "Nowon-gu", label: "노원구" },
-  // { id: "Seocho-gu", label: "서초구" },
-  // { id: "Seodaemun-gu", label: "서대문구" },
-  // { id: "Seongbuk-gu", label: "성북구" },
-  // { id: "Seongdong-gu", label: "성동구" },
-  // { id: "Songpa-gu", label: "송파구" },
-  // { id: "Yangcheon-gu", label: "양천구" },
-  // { id: "Yeongdeungpo-gu_1_", label: "영등포구" },
-  // { id: "Yongsan-gu", label: "용산구" },
+  { id: "Dongdaemun-gu", label: "동대문구" },
+  { id: "Eunpyeong-gu", label: "은평구" },
+  { id: "Gangbuk-gu", label: "강북구" },
+  { id: "Gangdong-gu", label: "강동구" },
+  { id: "Gangseo-gu", label: "강서구" },
+  { id: "Geumcheon-gu", label: "금천구" },
+  { id: "Guro-gu", label: "구로구" },
+  { id: "Gwanak-gu", label: "관악구" },
+  { id: "Gwangjin-gu", label: "광진구" },
+  { id: "Gangnam-gu", label: "강남구" },
+  { id: "Jongno-gu", label: "종로구" },
+  { id: "Jung-gu", label: "중구" },
+  { id: "Jungnang-gu", label: "중랑구" },
+  { id: "Mapo-gu", label: "마포구" },
+  { id: "Nowon-gu", label: "노원구" },
+  { id: "Seocho-gu", label: "서초구" },
+  { id: "Seodaemun-gu", label: "서대문구" },
+  { id: "Seongbuk-gu", label: "성북구" },
+  { id: "Seongdong-gu", label: "성동구" },
+  { id: "Songpa-gu", label: "송파구" },
+  { id: "Yangcheon-gu", label: "양천구" },
+  { id: "Yeongdeungpo-gu_1_", label: "영등포구" },
+  { id: "Yongsan-gu", label: "용산구" },
 ];
 
 export const SeoulMap = () => {
@@ -52,12 +52,15 @@ export const SeoulMap = () => {
   useEffect(() => {
     for (const el of GU_LIST) {
       const element = document.getElementById(el.id);
-      element.addEventListener("click", click);
+
+      element.addEventListener("click", (e) => {
+        handleClick(e, el);
+      });
     }
-    function click(e) {
+    function handleClick(e, el) {
       e.preventDefault();
-      // console.log(e.target.id);
-      window.alert(e.target.getAttribute("label") + "입니다!\n관련 시설을 찾고 싶은 신가요?");
+      // console.log(el.label);
+      window.alert(el.label + "입니다!\n관련 시설을 찾고 싶은 신가요?");
       navigate(ROUTE.SHELTER_PAGE.link);
       // window.location = <Link to={ROUTE.SHELTER_PAGE.link} /> 링크 to 설정 시
       // 화면이 이동은 하는데 http://localhost:3000/[object%20Object] 여기로 이동됩니다.
