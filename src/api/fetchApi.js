@@ -29,3 +29,52 @@ export async function fetchShelter(guNm) {
     console.log("error: ", err);
   }
 }
+
+// 게시판 글 조회
+export async function fetchPost() {
+  try {
+    const { data } = await api.get("/post");
+    return data;
+  } catch (err) {
+    console.log("error", err);
+  }
+}
+
+// 게시글 작성
+export async function createPost(userNm, password, title, content) {
+  try {
+    const { data } = api.post("/post", {
+      userNm,
+      password,
+      title,
+      content,
+    });
+    return data;
+  } catch (err) {
+    console.log("error", err);
+  }
+}
+
+// 게시글 수정
+export async function updatePost(userNm, password, title, content) {
+  try {
+    const { data } = api.put("/post", {
+      userNm,
+      password,
+      title,
+      content,
+    });
+    return data;
+  } catch (err) {
+    console.log("error", err);
+  }
+}
+
+export async function deletePost(postId) {
+  try {
+    await api.delete(`/post/${postId}`);
+    return null;
+  } catch (err) {
+    console.log("error", err);
+  }
+}
