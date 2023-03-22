@@ -4,10 +4,9 @@ import { useShelter, useShelterDistrict } from "../../hooks";
 import { useParams } from "react-router-dom";
 
 export const ShelterList = () => {
-
-  const {shelter} =useShelter();
-  const {guNm} = useParams();
-  const {shelterDistrict} =useShelterDistrict({guNm});
+  const { shelter } = useShelter();
+  const { guNm } = useParams();
+  const { shelterDistrict } = useShelterDistrict({ guNm });
   console.log(guNm);
 
   //중복없이 구 이름 하나씩 모으기
@@ -17,9 +16,7 @@ export const ShelterList = () => {
   // Set으로 중복 구 없애기, 가나다순
   const totalGu = [...new Set(filter)].sort();
 
-  function guHandler() {
-
-  }
+  function guHandler() {}
 
   return (
     <>
@@ -35,8 +32,10 @@ export const ShelterList = () => {
                     // 만약 여기서 옵션에서 강남구를 선택했을 때
                   >
                     <option>서울시 00구</option>
-                    {totalGu.map((totalGu) => (
-                      <option value={totalGu} onChange={guHandler}>{totalGu}</option>
+                    {totalGu.map((totalGu, index) => (
+                      <option key={index} value={totalGu} onChange={guHandler}>
+                        {totalGu}
+                      </option>
                     ))}
                   </select>
                 </td>
@@ -54,7 +53,10 @@ export const ShelterList = () => {
                   <tr key={shelter.id}>
                     <td className="gu-name">{shelter.guNm}</td>
                     <td className="shelter-name">
-                      <ModalButton name={shelter} shelter={shelter.shelterNm}></ModalButton>
+                      <ModalButton
+                        name={shelter}
+                        shelter={shelter.shelterNm}
+                      ></ModalButton>
                     </td>
                     <td className="shelter-type">{shelter.shelterType}</td>
                     <td className="shelter-address">{shelter.address}</td>
