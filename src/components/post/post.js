@@ -10,8 +10,9 @@ export const Post = () => {
         <tr>
           <th>번호</th>
           <th>제목</th>
+          <th>내용</th>
           <th>작성시간</th>
-          <th>수정시간</th>
+          {/* <th>수정시간</th> */}
         </tr>
       </thead>
       <tbody>
@@ -19,8 +20,9 @@ export const Post = () => {
           <tr key={post.postId}>
             <td>{post.postId}</td>
             <td>{post.title}</td>
+            <td>{post.content}</td>
             <td>{post.createdAt}</td>
-            <td>{post.updatedAt}</td>
+            {/* <td>{post.updatedAt}</td> */}
           </tr>
         ))}
       </tbody>

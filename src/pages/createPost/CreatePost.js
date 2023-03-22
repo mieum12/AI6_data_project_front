@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { ROUTE } from "../../routes/Route";
 
 function CreatePost() {
   const [title, setTitle] = useState("");
@@ -67,6 +69,9 @@ function CreatePost() {
         <br />
         <br />
         <button type="submit">작성</button>
+        <Link to={ROUTE.POSTLIST_PAGE.link}>
+          <button>뒤로가기</button>
+        </Link>
       </form>
       {/* 아래 코드 작성시 데이터 실시간으로 확인 가능,,,왜인지는 모르겠어요,,,,^^,,, */}
       {/* <div>
