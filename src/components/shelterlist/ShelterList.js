@@ -4,10 +4,10 @@ import { useShelter, useShelterDistrict } from "../../hooks";
 import { useParams } from "react-router-dom";
 
 export const ShelterList = () => {
-  const { shelter } = useShelter();
   const { guNm } = useParams();
-  const { shelterDistrict } = useShelterDistrict({ guNm });
-  console.log(guNm);
+  const { shelter } = useShelter(guNm);
+
+  console.log("guNm", guNm);
 
   //중복없이 구 이름 하나씩 모으기
   const filter = shelter.map((shelter) => {
