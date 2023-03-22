@@ -20,9 +20,9 @@ export const Modal = ({ setModalOpen, mapName }) => {
       <ModalBody>
         {/* 클릭한 것의 값들이 들어오는 방법으르 모르겠어요 */}
         <div>시설 이름 : {mapName.markerParams.title} </div>
-        <div>시설 종류 : </div>
-        <div>주소 : </div>
-        <div>수용 가능 인원 : </div>
+        <div>시설 종류 : {mapName.markerParams.type}</div>
+        <div>주소 : {mapName.markerParams.address}</div>
+        <div>수용 가능 인원 : {mapName.markerParams.qty}</div>
       </ModalBody>
     </ModalSection>
   );

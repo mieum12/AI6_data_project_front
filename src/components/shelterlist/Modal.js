@@ -17,7 +17,6 @@ export const Modal = ({ setModalOpen, name }) => {
 
       <img src={logo} alt="시설사진" />
       <ModalBody>
-        {/* 클릭한 것의 값들이 들어오는 방법으르 모르겠어요 */}
         <div>시설 이름 : {name.shelterNm} </div>
         <div>시설 종류 :{name.shelterType} </div>
         <div>주소 : {name.address}</div>

@@ -10,8 +10,6 @@ export default function Form({ shelter, name, mapName }) {
     setModalOpen((prev) => !prev);
   };
 
-  //클릭한 시설의 id값을 전달해서 해당 설명이 뜨도록???
-
   return (
     <FormSection>
       <button className="modalButton" onClick={onOpen}>

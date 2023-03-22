@@ -23,6 +23,9 @@ export const ShelterMap = () => {
     const positions = shelter.map((shelter) => {
       return {
         title: shelter.shelterNm,
+        type: shelter.shelterType,
+        address: shelter.address,
+        qty: shelter.qty,
         latlng: new kakao.maps.LatLng(shelter.yCord, shelter.xCord),
       };
     });
@@ -41,6 +44,9 @@ export const ShelterMap = () => {
         map: map, // 마커를 표시할 지도
         position: positions[i].latlng, // 마커를 표시할 위치
         title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        type: positions[i].type,
+        address: positions[i].address,
+        qty: positions[i].qty,
         image: markerImage, // 마커 이미지
         clickable: true,
       };
@@ -50,12 +56,7 @@ export const ShelterMap = () => {
       marker.setMap(map);
 
       //🚀🚀🚀🚀🚀 마커를 클릭 시 인포윈도우
-      const iwContent =
-          //ModalButton을 import해오는 방법을 모르겠음
-          // "<ModalButton shelter={shelter.shelterNm}></ModalButton>" +
-          //그냥 버튼 태그는 사용 가능한데
-          // "<button onclick={onOpen}>보기</button>" +
-          positions[i].title,
+      const iwContent = positions[i].title,
         // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
         iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
       // 인포윈도우를 생성합니다
