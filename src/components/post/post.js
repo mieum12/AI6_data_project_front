@@ -6,12 +6,12 @@ export const Post = () => {
   console.log(post);
 
   return (
-    <S.PostTable>
+    <S.PostSection>
       <table>
         <thead>
           <tr>
             <th>번호</th>
-            <th>제목</th>
+            <th className="postTitle">제목</th>
             <th>작성시간</th>
             <th>수정시간</th>
           </tr>
@@ -28,6 +28,6 @@ export const Post = () => {
           ))}
         </tbody>
       </table>
-    </S.PostTable>
+    </S.PostSection>
   );
 };
