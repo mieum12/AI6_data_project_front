@@ -1,11 +1,12 @@
 import { usePost } from "../../hooks";
+import * as S from "./ChartWrapper.style";
 
 export const Post = () => {
   const { post } = usePost();
   console.log(post);
 
   return (
-    <table>
+    <table className="S.PostTable">
       <thead>
         <tr>
           <th>번호</th>
@@ -19,6 +20,7 @@ export const Post = () => {
           <tr key={post.postId}>
             <td>{post.postId}</td>
             <td>{post.title}</td>
+            {/* TODO: 날짜 형식 바꿔서 출력 */}
             <td>{post.createdAt}</td>
             <td>{post.updatedAt}</td>
           </tr>
