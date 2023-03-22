@@ -7,12 +7,9 @@ import { useState } from "react";
 export const ShelterList = () => {
   const { guNm } = useParams();
   const { shelter } = useShelter(guNm);
-<<<<<<< HEAD
 
   console.log("guNm", guNm);
-=======
   const [selectedGu, setSelectedGu] = useState("");
->>>>>>> d0d0a719db848cd4518d8e35b37a1461a914c4d9
 
   //중복없이 구 이름 하나씩 모으기
   const filter = shelter.map((shelter) => {
