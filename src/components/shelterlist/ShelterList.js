@@ -1,6 +1,7 @@
 import * as S from "./ShelterList.style";
 import ModalButton from "./ModalButton"
 import { useShelter, useShelterDistrict } from "../../hooks";
+import { useParams } from "react-router-dom";
 
 //구
 // import axios from "axios";
@@ -12,7 +13,9 @@ import { useShelter, useShelterDistrict } from "../../hooks";
 export const ShelterList = () => {
 
   const {shelter} =useShelter();
-  const {shelterDistrict} =useShelterDistrict();
+  const {guNm} = useParams();
+  const {shelterDistrict} =useShelterDistrict({guNm});
+  console.log(guNm);
 
   //중복없이 구 이름 하나씩 모으기
   const filter = shelter.map((shelter)=>{
@@ -21,6 +24,9 @@ export const ShelterList = () => {
   // Set으로 중복 구 없애기, 가나다순
   const totalGu = [...new Set(filter)].sort()
 
+  function guHandler(e) {
+    console.log(e.target.value)
+  }
 
 
   return (<>
@@ -39,6 +45,7 @@ export const ShelterList = () => {
                   <option >서울시 00구</option>
                   {totalGu.map((totalGu)=>(
                     <option value={totalGu}
+                            onChange={guHandler}
                             >{totalGu}</option>
                   ))}
                   
@@ -53,7 +60,7 @@ export const ShelterList = () => {
           <tbody className="table-body" >
               {shelter
               //TODO : shelter의 guNm과 shelterDistrict의 고유값(guNm)이 같을 경우 아래 리스트업하기ㅠㅠ
-              // .filter(shelter => shelter.guNm === shelterDistrict.${guNm})
+              // .filter(shelter => shelter.guNm === shelterDistrict.guNm)
               .map((shelter)=>(
                 <tr key={shelter.id}>
                   <td className="gu-name">{shelter.guNm}</td>

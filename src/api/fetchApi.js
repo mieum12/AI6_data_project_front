@@ -30,7 +30,7 @@ export async function fetchShelter() {
 // 이렇게하는게 맞는지
 export async function fetchShelterDistrict({guNm}) {
   try {
-    const { data } = await api.get(`/shelter/${guNm}`);
+    const { data } = await api.get(`/shelter?guNm=${guNm}`);
     return data;
   } catch (err) {
     console.log("error", err);
