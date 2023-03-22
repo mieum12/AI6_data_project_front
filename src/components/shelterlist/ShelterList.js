@@ -3,10 +3,6 @@ import ModalButton from "./ModalButton";
 import { useShelter, useShelterDistrict } from "../../hooks";
 import { useParams } from "react-router-dom";
 
-//구
-// import axios from "axios";
-// import { SERVER_BASE_URL } from "../../config/constants";
-
 export const ShelterList = () => {
 
   const {shelter} =useShelter();
@@ -20,6 +16,10 @@ export const ShelterList = () => {
   });
   // Set으로 중복 구 없애기, 가나다순
   const totalGu = [...new Set(filter)].sort();
+
+  function guHandler() {
+    
+  }
 
   return (
     <>
@@ -38,7 +38,7 @@ export const ShelterList = () => {
                   >
                     <option>서울시 00구</option>
                     {totalGu.map((totalGu) => (
-                      <option value={totalGu}>{totalGu}</option>
+                      <option value={totalGu}>{totalGu} onChange={guHandler}</option>
                     ))}
                   </select>
                 </td>
