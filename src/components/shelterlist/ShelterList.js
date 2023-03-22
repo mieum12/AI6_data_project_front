@@ -20,6 +20,37 @@ export const ShelterList = () => {
     setSelectedGu(e.target.value);
   };
 
+  let filterGuList = shelter.map((shelter) => (
+    <tr key={shelter.id}>
+      <td className="gu-name">{shelter.guNm}</td>
+      <td className="shelter-name">
+        <ModalButton name={shelter} shelter={shelter.shelterNm}></ModalButton>
+      </td>
+      <td className="shelter-type">{shelter.shelterType}</td>
+      <td className="shelter-address">{shelter.address}</td>
+      <td className="shelter-qty">{shelter.qty}명</td>
+    </tr>
+  ));
+
+  if (selectedGu.length > 0) {
+    filterGuList = shelter
+      .filter((selectedShelter) => selectedShelter.guNm === selectedGu)
+      .map((shelter) => (
+        <tr key={shelter.id}>
+          <td className="gu-name">{shelter.guNm}</td>
+          <td className="shelter-name">
+            <ModalButton
+              name={shelter}
+              shelter={shelter.shelterNm}
+            ></ModalButton>
+          </td>
+          <td className="shelter-type">{shelter.shelterType}</td>
+          <td className="shelter-address">{shelter.address}</td>
+          <td className="shelter-qty">{shelter.qty}명</td>
+        </tr>
+      ));
+  }
+
   return (
     <>
       <S.ListTable>
@@ -33,7 +64,6 @@ export const ShelterList = () => {
                     value={selectedGu}
                     name="gu"
                     className="select"
-                    // 만약 여기서 옵션에서 강남구를 선택했을 때
                   >
                     <option>서울시 00구</option>
                     {totalGu.map((totalGu, index) => (
@@ -51,24 +81,7 @@ export const ShelterList = () => {
             </thead>
             <tbody className="table-body">
               {/* shelter의 guNm과 shelterDistrict/guNm의 guNm이 같을 경우 아래 리스트업하기 */}
-              {shelter
-                .filter(
-                  (selectedShelter) => selectedShelter.guNm === selectedGu
-                )
-                .map((shelter) => (
-                  <tr key={shelter.id}>
-                    <td className="gu-name">{shelter.guNm}</td>
-                    <td className="shelter-name">
-                      <ModalButton
-                        name={shelter}
-                        shelter={shelter.shelterNm}
-                      ></ModalButton>
-                    </td>
-                    <td className="shelter-type">{shelter.shelterType}</td>
-                    <td className="shelter-address">{shelter.address}</td>
-                    <td className="shelter-qty">{shelter.qty}명</td>
-                  </tr>
-                ))}
+              {filterGuList}
             </tbody>
           </table>
         </S.Table>
