@@ -24,7 +24,7 @@ export const ChartSection = styled.div`
 
   .chartBack {
     text-align: center;
-    color: ${COLOR_WHITE};
+    color: ${PRIMARY_COLOR};
 
     margin: auto;
     margin-top: 25px;
