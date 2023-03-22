@@ -7,6 +7,8 @@ import { useState } from "react";
 export const ShelterList = () => {
   const { guNm } = useParams();
   const { shelter } = useShelter(guNm);
+
+  console.log("guNm", guNm);
   const [selectedGu, setSelectedGu] = useState("");
 
   //중복없이 구 이름 하나씩 모으기
