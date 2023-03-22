@@ -3,7 +3,7 @@ import { Modal } from "./Modal";
 import styled from "styled-components";
 import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 
-export default function Form({ shelter, name }) {
+export default function Form({ shelter, name, mapName }) {
   console.log(name);
   const [modalOpen, setModalOpen] = useState(false);
   const onOpen = () => {

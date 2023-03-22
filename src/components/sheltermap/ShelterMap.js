@@ -1,7 +1,7 @@
 import * as S from "./ShelterMap.style";
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useShelter } from "../../hooks";
-import { Modal } from "../shelterlist/Modal";
+import { Modal } from "../shelterlist/mapModal";
 // import { Link } from "react-router-dom";
 const { kakao } = window;
 
@@ -9,7 +9,6 @@ export const ShelterMap = () => {
   //데이터 받아오기
   const { shelter } = useShelter();
   const [modalOpen, setModalOpen] = useState(false);
-  
 
   useEffect(() => {
     const mapContainer = document.getElementById("map"); // 지도를 표시할 div
@@ -29,8 +28,7 @@ export const ShelterMap = () => {
     });
 
     // 마커 이미지의 이미지 주소입니다
-    const imageSrc =
-      "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+    const imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
     for (var i = 0; i < positions.length; i++) {
       // 마커 이미지의 이미지 크기 입니다
@@ -77,14 +75,10 @@ export const ShelterMap = () => {
     }
   }, [shelter]);
 
-
   return (
     <React.Fragment>
       <S.Map id="map" />
-      {modalOpen && 
-        <Modal 
-          setModalOpen={setModalOpen}
-          />}
+      {modalOpen && <Modal mapName={shelter} setModalOpen={setModalOpen} />}
     </React.Fragment>
   );
 };

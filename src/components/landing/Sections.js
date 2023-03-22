@@ -5,7 +5,7 @@ import { SeoulMap } from "../seoulmap";
 import shelter from "../../../src/asset/반딧불찾기.png";
 import plus from "../../../src/asset/반딧불더하기.png";
 import safety from "../../../src/asset/반딧불알리미.png";
-
+import story from "../../../src/asset/반딧불이야기.png";
 const Sections = () => {
   return (
     <>
@@ -35,6 +35,11 @@ const Sections = () => {
             boxImage={safety}
             boxTitle="반딧불 알리미"
             boxText={"최근 재난 발생 현황을 나타내고,\n이에 따른 안전도를 표시합니다."}
+          />
+          <Box
+            boxImage={story}
+            boxTitle="반딧불 이야기"
+            boxText={"쉼터를 통해 알게된 정보와 생각 등을,\n자유롭게 공유합니다."}
           />
         </div>
       </S.BodySection2>

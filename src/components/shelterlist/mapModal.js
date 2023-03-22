@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 import logo from "../../asset/반딧불이_logo.png";
 
-export const Modal = ({ setModalOpen, name }) => {
+export const Modal = ({ setModalOpen, mapName }) => {
+  console.log(mapName);
   const onClose = () => {
     setModalOpen((prev) => !prev);
   };
@@ -13,15 +14,15 @@ export const Modal = ({ setModalOpen, name }) => {
       <button className="close" onClick={onClose}>
         <h2>X</h2>
       </button>
-      <ModalTitle>{name.shelterNm}</ModalTitle>
+      <ModalTitle>선택한 시설의 이름</ModalTitle>
 
       <img src={logo} alt="시설사진" />
       <ModalBody>
         {/* 클릭한 것의 값들이 들어오는 방법으르 모르겠어요 */}
-        <div>시설 이름 : {name.shelterNm} </div>
-        <div>시설 종류 :{name.shelterType} </div>
-        <div>주소 : {name.address}</div>
-        <div>수용 가능 인원 : {name.qty}</div>
+        <div>시설 이름 : {mapName.shelterNm} </div>
+        <div>시설 종류 : </div>
+        <div>주소 : </div>
+        <div>수용 가능 인원 : </div>
       </ModalBody>
     </ModalSection>
   );
@@ -59,7 +60,7 @@ const ModalSection = styled.div`
     color: ${COLOR_WHITE};
   }
   img {
-    padding: 30px;
+    padding: 50px;
     width: 300px;
     height: 300px;
   }
