@@ -29,12 +29,10 @@ export const ShelterList = () => {
             <thead className="table-head">
               <tr>
                 <td>
-                  {/* 구별 카테고리: select menu 만들기 */}
                   <select
                     name="gu"
                     className="select"
                     // 만약 여기서 옵션에서 강남구를 선택했을 때
-                    // onchange={handleOnChange()}
                   >
                     <option>서울시 00구</option>
                     {totalGu.map((totalGu) => (
@@ -50,7 +48,7 @@ export const ShelterList = () => {
             </thead>
             <tbody className="table-body">
               {shelter
-                //TODO : shelter의 guNm과 shelterDistrict의 고유값(guNm)이 같을 경우 아래 리스트업하기ㅠㅠ
+                //TODO : shelter의 guNm과 shelterDistrict/guNm의 guNm이 같을 경우 아래 리스트업하기
                 // .filter(shelter => shelter.guNm === shelterDistrict.${guNm})
                 .map((shelter) => (
                   <tr key={shelter.id}>
@@ -58,7 +56,6 @@ export const ShelterList = () => {
                     <td className="shelter-name">
                       <ModalButton name={shelter} shelter={shelter.shelterNm}></ModalButton>
                     </td>
-                    {/* shelter이름을 클릭하면 모달 창이 뜨는데 클릭한 이름의 id에 해당하는 값들을 모달 창에 전달하고싶어요 */}
                     <td className="shelter-type">{shelter.shelterType}</td>
                     <td className="shelter-address">{shelter.address}</td>
                     <td className="shelter-qty">{shelter.qty}명</td>
