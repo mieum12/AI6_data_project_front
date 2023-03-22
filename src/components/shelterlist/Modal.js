@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 import logo from "../../asset/반딧불이_logo.png";
 
-export const Modal = ({ setModalOpen, shelterNm }) => {
+export const Modal = ({ setModalOpen, name }) => {
   const onClose = () => {
     setModalOpen((prev) => !prev);
   };
@@ -18,7 +18,7 @@ export const Modal = ({ setModalOpen, shelterNm }) => {
       <img src={logo} alt="시설사진" />
       <ModalBody>
         {/* 클릭한 것의 값들이 들어오는 방법으르 모르겠어요 */}
-        <div>시설 이름 :{shelterNm} </div>
+        <div>시설 이름 : {name.shelterNm} </div>
         <div>시설 종류 : </div>
         <div>주소 : </div>
         <div>수용 가능 인원 : </div>

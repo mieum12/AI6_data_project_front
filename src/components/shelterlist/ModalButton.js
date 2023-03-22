@@ -3,7 +3,8 @@ import { Modal } from "./Modal";
 import styled from "styled-components";
 import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 
-export default function Form({ shelter }) {
+export default function Form({ shelter, name }) {
+  console.log(name);
   const [modalOpen, setModalOpen] = useState(false);
   const onOpen = () => {
     setModalOpen((prev) => !prev);
@@ -16,7 +17,7 @@ export default function Form({ shelter }) {
       <button className="modalButton" onClick={onOpen}>
         {shelter}
       </button>
-      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+      {modalOpen && <Modal name={name} setModalOpen={setModalOpen} />}
     </FormSection>
   );
 }
