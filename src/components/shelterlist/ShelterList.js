@@ -18,7 +18,7 @@ export const ShelterList = () => {
   const totalGu = [...new Set(filter)].sort();
 
   function guHandler() {
-    
+
   }
 
   return (
@@ -38,7 +38,7 @@ export const ShelterList = () => {
                   >
                     <option>서울시 00구</option>
                     {totalGu.map((totalGu) => (
-                      <option value={totalGu}>{totalGu} onChange={guHandler}</option>
+                      <option value={totalGu} onChange={guHandler}>{totalGu}</option>
                     ))}
                   </select>
                 </td>
