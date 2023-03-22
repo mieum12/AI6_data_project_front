@@ -78,7 +78,7 @@ export const ShelterMap = () => {
   return (
     <React.Fragment>
       <S.Map id="map" />
-      {modalOpen && <Modal mapName={shelter} setModalOpen={setModalOpen} />}
+      {modalOpen.open && <Modal mapName={modalOpen.data} setModalOpen={setModalOpen} />}
     </React.Fragment>
   );
 };

@@ -56,9 +56,9 @@ export const SeoulMap = () => {
     }
     function click(e) {
       e.preventDefault();
-      // console.log(e.target.id);
-      window.alert(e.target.getAttribute("label") + "입니다!\n관련 시설을 찾고 싶은 신가요?");
-      navigate(ROUTE.SHELTER_PAGE.link);
+      console.log(e.target.label);
+      window.alert(e.target.label + "입니다!\n관련 시설을 찾고 싶은 신가요?");
+      // navigate(ROUTE.SHELTER_PAGE.link);
       // window.location = <Link to={ROUTE.SHELTER_PAGE.link} /> 링크 to 설정 시
       // 화면이 이동은 하는데 http://localhost:3000/[object%20Object] 여기로 이동됩니다.
       // string을 받아오는데 link to는 객체로 인식되서 object가 떴음.
