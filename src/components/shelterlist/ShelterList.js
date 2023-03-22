@@ -1,13 +1,13 @@
 import * as S from "./ShelterList.style";
 import ModalButton from "./ModalButton";
-import { useShelter, useShelterDistrict } from "../../hooks";
+import { useShelter } from "../../hooks";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 export const ShelterList = () => {
-  const { shelter } = useShelter();
   const { guNm } = useParams();
-  const { shelterDistrict } = useShelterDistrict({ guNm });
-  console.log(guNm);
+  const { shelter } = useShelter(guNm);
+  const [selectedGu, setSelectedGu] = useState("");
 
   //중복없이 구 이름 하나씩 모으기
   const filter = shelter.map((shelter) => {
@@ -16,7 +16,9 @@ export const ShelterList = () => {
   // Set으로 중복 구 없애기, 가나다순
   const totalGu = [...new Set(filter)].sort();
 
-  function guHandler() {}
+  const guHandler = (e) => {
+    setSelectedGu(e.target.value);
+  };
 
   return (
     <>
@@ -27,13 +29,15 @@ export const ShelterList = () => {
               <tr>
                 <td>
                   <select
+                    onChange={guHandler}
+                    value={selectedGu}
                     name="gu"
                     className="select"
                     // 만약 여기서 옵션에서 강남구를 선택했을 때
                   >
                     <option>서울시 00구</option>
                     {totalGu.map((totalGu, index) => (
-                      <option key={index} value={totalGu} onChange={guHandler}>
+                      <option key={index} value={totalGu}>
                         {totalGu}
                       </option>
                     ))}
@@ -46,9 +50,11 @@ export const ShelterList = () => {
               </tr>
             </thead>
             <tbody className="table-body">
+              {/* shelter의 guNm과 shelterDistrict/guNm의 guNm이 같을 경우 아래 리스트업하기 */}
               {shelter
-                //TODO : shelter의 guNm과 shelterDistrict/guNm의 guNm이 같을 경우 아래 리스트업하기
-                // .filter(shelter => shelter.guNm === shelterDistrict.${guNm})
+                .filter(
+                  (selectedShelter) => selectedShelter.guNm === selectedGu
+                )
                 .map((shelter) => (
                   <tr key={shelter.id}>
                     <td className="gu-name">{shelter.guNm}</td>
