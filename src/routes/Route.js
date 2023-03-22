@@ -2,7 +2,8 @@ import Landing from "../pages/landing/Landing";
 import Plus from "../pages/plus/Plus";
 import Shelter from "../pages/shelter/Shelter";
 import Safety from "../pages/safety/Safety";
-import Post from "../pages/post/post";
+import CreatePost from "../pages/createPost/CreatePost";
+import PostMain from "../pages/post/PostMain";
 
 export const ROUTE = {
   LANDING_PAGE: {
@@ -25,10 +26,15 @@ export const ROUTE = {
     link: "/SafetyPage",
     element: Safety,
   },
-  POST_PAGE: {
-    path: "/PostPage",
-    link: "/PostPage",
-    element: Post,
+  CREATEPOST_PAGE: {
+    path: "/CreatePostPage",
+    link: "/CreatePostPage",
+    element: CreatePost,
+  },
+  POSTLIST_PAGE: {
+    path: "/PostMainPage",
+    link: "/PostMainPage",
+    element: PostMain,
   },
 };
 
