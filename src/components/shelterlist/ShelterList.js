@@ -16,10 +16,11 @@ export const ShelterList = () => {
   // Set으로 중복 구 없애기, 가나다순
   const totalGu = [...new Set(filter)].sort();
 
-  const guHandler = (e) => {
+  const selectedGuName = (e) => {
     setSelectedGu(e.target.value);
   };
 
+  // 전체 구 목록 조회
   let filterGuList = shelter.map((shelter) => (
     <tr key={shelter.id}>
       <td className="gu-name">{shelter.guNm}</td>
@@ -32,6 +33,7 @@ export const ShelterList = () => {
     </tr>
   ));
 
+  // 선택한 구가 있을 경우 해당 구의 목록만 조회
   if (selectedGu.length > 0) {
     filterGuList = shelter
       .filter((selectedShelter) => selectedShelter.guNm === selectedGu)
@@ -60,7 +62,7 @@ export const ShelterList = () => {
               <tr>
                 <td>
                   <select
-                    onChange={guHandler}
+                    onChange={selectedGuName}
                     value={selectedGu}
                     name="gu"
                     className="select"
