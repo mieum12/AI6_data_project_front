@@ -3,7 +3,7 @@ import Plus from "../pages/plus/Plus";
 import Shelter from "../pages/shelter/Shelter";
 import Safety from "../pages/safety/Safety";
 import CreatePost from "../pages/createPost/CreatePost";
-import PostMain from "../pages/post/PostMain";
+import PostList from "../pages/post/PostList";
 
 export const ROUTE = {
   LANDING_PAGE: {
@@ -32,9 +32,9 @@ export const ROUTE = {
     element: CreatePost,
   },
   POSTLIST_PAGE: {
-    path: "/PostMainPage",
-    link: "/PostMainPage",
-    element: PostMain,
+    path: "/PostListPage",
+    link: "/PostListPage",
+    element: PostList,
   },
 };
 

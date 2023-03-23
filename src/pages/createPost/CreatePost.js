@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../../routes/Route";
 
-function CreatePost() {
+function CreatePostPage() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [userNm, setUserNm] = useState("");
@@ -88,4 +88,4 @@ function CreatePost() {
   );
 }
 
-export default CreatePost;
+export default CreatePostPage;
