@@ -2,39 +2,47 @@ import styled from "styled-components";
 import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 
 export const PostSection = styled.div`
-  display: block;
-  text-align: center;
   color: ${PRIMARY_COLOR};
   background-color: ${COLOR_WHITE};
-  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  font-size: 15px;
 
+  button {
+    background-color: ${PRIMARY_COLOR};
+    color: ${COLOR_WHITE};
+    border:none;
+    border-radius:10px;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 1100px;
+    margin-bottom: 10px;
+  }
+  
   table {
-    border-collapse: collapse;
-    margin: auto;
+    text-align: center;
+    border-spacing: 0;
+    width: 1000px;
+    margin: 0 auto;
+    border-top: solid ${PRIMARY_COLOR} 20px;
+    border-bottom: solid white 20px;
+    border-radius: 20px;
+  
   }
 
-  thead {
+  .table-head {
     background-color: ${PRIMARY_COLOR};
     color: ${COLOR_WHITE};
   }
-
-  tr {
-    border: 20px;
-    border-radius: 20px;
+  .table-body {
+    background-color: white;
   }
-
-  th,
+  th {
+    padding-bottom: 20px
+  }
   td {
-    border-bottom: 1px solid ${PRIMARY_COLOR};
-
-    padding: 10px;
-    padding: 20px 30px;
+    border-top: 1px solid ${PRIMARY_COLOR};
+    padding: 20px;
   }
 
-  .postTitle {
-    width: 450px;
-  }
-
-  tbody {
-  }
 `;
