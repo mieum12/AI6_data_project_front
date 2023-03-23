@@ -18,6 +18,7 @@ export const Post = () => {
 
   return (
     <S.PostSection>
+      <div className="pageName">게 시 판</div>
       <Link to={ROUTE.CREATEPOST_PAGE.link}>
         <button className="button">글 작성하기</button>
       </Link>

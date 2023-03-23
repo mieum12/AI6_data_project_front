@@ -8,7 +8,21 @@ export const PostSection = styled.div`
   padding-bottom: 20px;
   font-size: 15px;
 
+  .pageName {
+    position: absolute;
+    left: 42%;
+    width: 200px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 5px;
+    color: ${COLOR_WHITE};
+    background-color: ${PRIMARY_COLOR};
+    border-radius: 40px;
+  }
+
   .button {
+    position: absolute;
     background-color: ${PRIMARY_COLOR};
     color: ${COLOR_WHITE};
     border: none;
@@ -16,14 +30,14 @@ export const PostSection = styled.div`
     font-size: 20px;
     padding: 10px;
     margin-left: 1100px;
-    margin-bottom: 20px;
+    top: 200px;
   }
 
   table {
     text-align: center;
     border-spacing: 0;
     width: 1000px;
-    margin: 0 auto;
+    margin: 110px auto;
     margin-bottom: 70px;
     border-top: solid ${PRIMARY_COLOR} 20px;
     border-bottom: solid white 20px;
