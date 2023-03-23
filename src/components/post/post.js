@@ -26,7 +26,7 @@ export const Post = () => {
             <tr key={post.postId}>
               <td>{post.postId}</td>
               <td>
-                <Link to={ROUTE.UPDATEPOST_PAGE.link}>{post.title}</Link>
+                <Link to={ROUTE.VIEWPOST_PAGE.link}>{post.title}</Link>
               </td>
 
               {/* TODO: 날짜 형식 바꿔서 출력 */}
