@@ -43,8 +43,10 @@ export const BodySection2 = styled.div`
   }
 `;
 export const BodySection3 = styled.div`
-  height: 800px;
+  height: 830px;
   background-color: ${COLOR_WHITE};
+  color: ${PRIMARY_COLOR};
+  font-size: 30px;
   .center3 {
     text-align: center;
     padding: 50px 0 0 0;
