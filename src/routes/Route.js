@@ -4,6 +4,7 @@ import Shelter from "../pages/shelter/Shelter";
 import Safety from "../pages/safety/Safety";
 import CreatePost from "../pages/createPost/CreatePost";
 import PostList from "../pages/post/PostList";
+import UpdatePost from "../pages/updatePost/UpdatePost";
 
 export const ROUTE = {
   LANDING_PAGE: {
@@ -30,6 +31,11 @@ export const ROUTE = {
     path: "/CreatePostPage",
     link: "/CreatePostPage",
     element: CreatePost,
+  },
+  UPDATEPOST_PAGE: {
+    path: "/UdatePostPage",
+    link: "/UpdatePostPage",
+    element: UpdatePost,
   },
   POSTLIST_PAGE: {
     path: "/PostListPage",

@@ -7,3 +7,4 @@ export * from "./shelterlist";
 export * from "./sheltermap";
 export * from "./Footer";
 export * from "./Header";
+export * from "./updatepost";
