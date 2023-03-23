@@ -38,34 +38,20 @@ function CreatePostPage() {
       <form onSubmit={handleSubmit}>
         <label>제목:</label>
         <br />
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
         <br />
         <label>내용:</label>
         <br />
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-        />
+        <textarea value={content} onChange={(e) => setContent(e.target.value)} />
+        {/* //TODO */}
         <br />
         <label>사용자명:</label>
         <br />
-        <input
-          type="text"
-          value={userNm}
-          onChange={(e) => setUserNm(e.target.value)}
-        />
+        <input type="text" value={userNm} onChange={(e) => setUserNm(e.target.value)} />
         <br />
         <label>비밀번호:</label>
         <br />
-        <input
-          type="text"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
         <br />
         <br />
         <button type="submit">작성</button>
