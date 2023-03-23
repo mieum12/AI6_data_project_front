@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ROUTE_ARR } from "./Route";
+import { Header, Footer } from "../components";
 
 const RoutesList = () => {
   return (
     <Router>
+      <Header />
       <Routes>
         {ROUTE_ARR.map((route, index) => {
           return (
@@ -11,6 +13,7 @@ const RoutesList = () => {
           );
         })}
       </Routes>
+      <Footer />
     </Router>
   );
 };

@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import {
-  PRIMARY_COLOR_WHITE,
-} from "../../config/constants";
+import { COLOR_WHITE } from "../../styles/color";
 
 export const PlusList = styled.div`
   display: grid;
   align-items: center;
   gap: -10px;
   height: 650px;
-  background-color: ${PRIMARY_COLOR_WHITE};
+  background-color: ${COLOR_WHITE};
   .nameList {
     display: flex;
     justify-content: center;

@@ -1,5 +1,6 @@
 import * as S from "./PlusBody.style";
-import { Box } from "../landing";
+import { Box } from "../common/box";
+import { PRIMARY_COLOR } from "../../styles/color";
 
 // 사이트 이미지
 import jaenan from "../../asset/국민재난안전포털.jpeg";
@@ -12,7 +13,7 @@ export function PlusBody() {
       <S.PlusList>
         <div className="BoxList">
           <Box
-            backColor="#425f57"
+            backColor={PRIMARY_COLOR}
             boxImage={jaenan}
             boxLink="https://www.safekorea.go.kr/"
             LinkName="국민재난안전포털"
@@ -21,20 +22,22 @@ export function PlusBody() {
             }
           />
           <Box
+            backColor={PRIMARY_COLOR}
             boxImage={haengjeong}
             boxLink="https://www.mois.go.kr/"
             LinkName="행정안전부"
             boxText={
-                "▫️ 국가 안전 시스템 정책 소개\n▫️ 온라인 민원 신청 안내\n▫️ 이재민 관련 지원 사업과\n      신속 보도자료 등 확인"
-              }
+              "▫️ 국가 안전 시스템 정책 소개\n▫️ 온라인 민원 신청 안내\n▫️ 이재민 관련 지원 사업과\n      신속 보도자료 등 확인"
+            }
           />
           <Box
+            backColor={PRIMARY_COLOR}
             boxImage={bangjae}
             boxLink="https://119.seoul.go.kr/"
             LinkName="서울종합방재센터(119)"
             boxText={
-                "▫️ 재난 정보 서비스 소개\n  : 재난 발생 통계, 재난 보고 등\n▫️ 사고별 대응 요령 소개\n▫️ 시민 참여 활동: 자원봉사"
-              }
+              "▫️ 재난 정보 서비스 소개\n  : 재난 발생 통계, 재난 보고 등\n▫️ 사고별 대응 요령 소개\n▫️ 시민 참여 활동: 자원봉사"
+            }
           />
         </div>
       </S.PlusList>
