@@ -18,8 +18,10 @@ export const PostModal = ({ setModalOpen, name }) => {
         <div>제목 : {name.title} </div>
         <div>사용자명 : {name.userNm}</div>
         <div>내용 :{name.content} </div>
-        <button className="button">수정하기</button>
-        <button className="button">삭제하기</button>
+        <div className="buttonWrapper">
+          <button className="Pbutton">수정하기</button>
+          <button className="Pbutton">삭제하기</button>
+        </div>
       </ModalBody>
     </ModalSection>
   );
@@ -54,10 +56,26 @@ const ModalSection = styled.div`
     background-color: transparent;
     color: ${COLOR_WHITE};
   }
-  img {
-    padding: 30px;
-    width: 300px;
-    height: 300px;
+
+  .buttonWrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .Pbutton {
+    width: 80px;
+    padding: 7px 5px;
+    margin: 5px 10px 5px 5px;
+    font-weight: bold;
+    background-color: ${COLOR_WHITE};
+    color: ${PRIMARY_COLOR};
+    border-radius: 20px;
+    border: none;
+  }
+
+  .Pbutton:hover {
+    color: orange;
   }
 `;
 
