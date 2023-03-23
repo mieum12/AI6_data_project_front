@@ -1,13 +1,15 @@
 import { usePost } from "../../hooks";
 import * as S from "./Post.style";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ROUTE } from "../../routes/Route";
 import { useNavigate } from "react-router-dom";
-
+import { PostModalButton } from "./PostModalButon";
 
 export const Post = () => {
-  const { post } = usePost();
+  const { postId } = useParams();
+  const { post } = usePost(postId);
   console.log(post);
+
   const navigate = useNavigate();
 
   const moveToProductDetail = (postId) => {
@@ -17,7 +19,7 @@ export const Post = () => {
   return (
     <S.PostSection>
       <Link to={ROUTE.CREATEPOST_PAGE.link}>
-        <button>글 작성하기</button>
+        <button className="button">글 작성하기</button>
       </Link>
       <table>
         <thead className="table-head">
@@ -32,11 +34,7 @@ export const Post = () => {
           {post.map((post) => (
             <tr key={post.postId}>
               <td>{post.postId}</td>
-              <td onClick={() => moveToProductDetail(post.postId)}>
-                {/* <Link to={ROUTE.VIEWPOST_PAGE.link}>{post.title}</Link> */}
-                {post.title}
-              </td>
-
+              <PostModalButton name={post} post={post.title} />
               {/* TODO: 날짜 형식 바꿔서 출력 */}
               <td>{post.createdAt}</td>
               <td>{post.updatedAt}</td>
