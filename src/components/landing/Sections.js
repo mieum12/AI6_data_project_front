@@ -8,21 +8,51 @@ import safety from "../../../src/asset/반딧불알리미.png";
 import story from "../../../src/asset/반딧불이야기.png";
 const Sections = () => {
   return (
-    <>
+    <S.Landing className="Landing">
       <S.PictureSection>
         <div>
           <img className="picture" src={background} alt="family" />
         </div>
       </S.PictureSection>
-      <S.BodySection1>
-        <div className="textList">
-          <h1>잠시동안 따뜻한 쉼터로 안내합니다.</h1>
-          <div>반딧불이는 이재민 분들을 위해 쉼터의 위치와 정보를 제공합니다. </div>
+      <S.Body1>
+      <div className="title">"이재민"</div>
+      <div className="text">
+        <div className="t1">罹災民</div>
+        <div className="t2">재해를 입은 사람</div>
+        <div className="t3">자연재해나 인재로 발생한 사건 사고로 인해 발생</div>
+      </div>
+    </S.Body1>
+    <S.Body2>
+      <div className="title1">재난 뒤 찾아오는 막막함,</div>
+      <div className="title2">안전한 머물 곳을 찾으신다면</div>
+      <div className="text">반딧불이가 잠시동안 따듯한 쉼터로 안내드립니다. <br/><br/> 어두운 밤에 빛을 비추는 반딧불이처럼 이재민 분들의 일상 회복을 위한 길을 저희 반딧불이가 함께 걷겠습니다.</div>
+    </S.Body2>
+    <S.Body3>
+    <div className="wrapper">
+        <div className="chartTitle">
+          우리 자치구에 발생하는 재난 대비 수용시설이 충분히 있을까?
         </div>
-      </S.BodySection1>
-      <S.BodySection2>
+        <div className="chartDes">
+          구별 발생 재난 빈도 수와 이재민 수용 시설의 상관 관계를 한눈에 알아 볼
+          수 있습니다.
+        </div>
+        <div>스캐터차트</div>
+      </div>
+    </S.Body3>
+    <S.Body4>
+    <div className="wrapper">
+        <div className="chartTitle">우리 자치구에 화재가 몇 번 발생했지?</div>
+        <div className="chartTitle">우리 자치구의 강우량은 어떻게 되지?</div>
+        <div className="chartDes">
+          이재민들의 가장 큰 피해 원인인 화재, 강우 데이터를 분석해 제공합니다.
+        </div>
+        <div>바차트</div>
+      </div>
+    </S.Body4>
+      <S.Body5>
         <div className="nameList">
-          <div className="name">반딧불이 이용법</div>
+          <div className="name">반딧불이 이용방법을 소개합니다.</div>
+          <div className="text">반딧불이는 이재민 분들을 위해 쉼터의 위치와 정보를 제공합니다. </div>
         </div>
         <div className="BoxList">
           <Box
@@ -42,8 +72,8 @@ const Sections = () => {
             boxText={"쉼터를 통해 알게된 정보와 생각 등을,\n자유롭게 공유합니다."}
           />
         </div>
-      </S.BodySection2>
-      <S.BodySection3>
+      </S.Body5>
+      <S.Body6>
         <div className="center3">
           <div>
             그럼 저희 반딧불이와 함께
@@ -53,8 +83,8 @@ const Sections = () => {
             <SeoulMap />
           </div>
         </div>
-      </S.BodySection3>
-    </>
+      </S.Body6>
+    </S.Landing>
   );
 };
 
