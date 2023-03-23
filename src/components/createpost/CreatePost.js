@@ -11,12 +11,6 @@ export const CreatePost = () => {
   const [createPost, setCreatePost] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    axios.get("http://localhost:8000/post").then((response) => {
-      setCreatePost(response.data);
-    });
-  }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -71,7 +65,7 @@ export const CreatePost = () => {
           <label>비밀번호:</label>
           <br />
           <input
-            type="text"
+            type="password"
             placeholder="비밀번호를 입력해주세요"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
