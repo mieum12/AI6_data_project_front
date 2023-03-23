@@ -34,7 +34,9 @@ export const Post = () => {
           {post.map((post) => (
             <tr key={post.postId}>
               <td>{post.postId}</td>
-              <PostModalButton name={post} post={post.title} />
+              <td>
+                <PostModalButton name={post} post={post.title} />
+              </td>
               {/* TODO: 날짜 형식 바꿔서 출력 */}
               <td>{post.createdAt}</td>
               <td>{post.updatedAt}</td>
