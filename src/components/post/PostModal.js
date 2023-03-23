@@ -16,9 +16,8 @@ export const PostModal = ({ setModalOpen, name }) => {
 
       <ModalBody>
         <div>제목 : {name.title} </div>
-        <div>내용 :{name.content} </div>
         <div>사용자명 : {name.userNm}</div>
-        <div>비밀번호 : {name.password}</div>
+        <div>내용 :{name.content} </div>
       </ModalBody>
     </ModalSection>
   );
