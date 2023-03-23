@@ -24,7 +24,7 @@ export const ShelterList = () => {
 
   // 전체 구 목록 조회
   let filterGuList = shelter.map((shelter) => (
-    <tr key={shelter.id}>
+    <tr key={shelter.id} className="filterListBody">
       <td className="gu-name">{shelter.guNm}</td>
       <td className="shelter-name">
         <ModalButton name={shelter} shelter={shelter.shelterNm}></ModalButton>

@@ -42,6 +42,10 @@ export const Table = styled.div`
   }
   .table-body {
     height: 500px;
+    
+  }
+  .filterListBody{
+    border-bottom: ${PRIMARY_COLOR} solid;
   }
   .gu-name {
     width: 70px;
