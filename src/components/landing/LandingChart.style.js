@@ -15,17 +15,30 @@ export const Chart = styled.div`
 
   .wrapper {
     padding: 50px;
+    padding-bottom: 200px;
   }
 
   .chartDesTitle {
-    font-size: 35px;
+    font-size: 70px;
     font-weight: bold;
+    text-align: left;
+    padding: 100px 30px 0px 100px;
+  }
+
+  .chartDesTitle2 {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: end;
+    padding: 20px 150px 0px 200px;
   }
 
   .chartDes {
-    color: ${COLOR_LIGHT_GREEN};
-    padding: 30px 270px 20px 10px;
-    text-align: end;
+    color: ${PRIMARY_COLOR};
+    padding: 20px 270px 20px 10px;
+    text-align: center;
+    padding: 80px 30px 30px 30px;
+    font-size: 25px;
+    opacity: 0.6;
   }
 
   /* chart style */

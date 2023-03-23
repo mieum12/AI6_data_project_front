@@ -1,13 +1,12 @@
 import * as S from "./LandingChart.style";
-import { RainChart, FireChart, ShelterChart } from "./index";
+import { ShelterChart } from "../safety";
 
 export const LandingChart = () => {
   return (
     <S.Chart>
       <div className="wrapper">
-        <div className="chartDesTitle">
-          우리 자치구에 발생하는 재난 대비 수용시설이 충분히 있을까?
-        </div>
+        <div className="chartDesTitle">우리 자치구에 발생하는 재난 대비</div>
+        <div className="chartDesTitle2">수용시설이 충분히 있을까?</div>
         <div className="chartDes">
           구별 발생 재난 빈도 수와 이재민 수용 시설의 상관 관계를 한눈에 알아 볼
           수 있습니다.
