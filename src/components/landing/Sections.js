@@ -46,6 +46,10 @@ const Sections = () => {
       <S.BodySection3>
         <div className="center3">
           <div>
+            그럼 저희 반딧불이와 함께
+            <br /> 우리 자치구의 이재민 수용 시설의 현황을 확인해 볼까요?
+          </div>
+          <div>
             <SeoulMap />
           </div>
         </div>
