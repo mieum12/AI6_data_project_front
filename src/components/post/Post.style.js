@@ -4,7 +4,7 @@ import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 export const PostSection = styled.div`
   color: ${PRIMARY_COLOR};
   background-color: ${COLOR_WHITE};
-  padding-top: 70px;
+  padding-top: 40px;
   padding-bottom: 20px;
   font-size: 15px;
 
@@ -16,7 +16,7 @@ export const PostSection = styled.div`
     font-size: 20px;
     padding: 10px;
     margin-left: 1100px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   table {
@@ -24,6 +24,7 @@ export const PostSection = styled.div`
     border-spacing: 0;
     width: 1000px;
     margin: 0 auto;
+    margin-bottom: 70px;
     border-top: solid ${PRIMARY_COLOR} 20px;
     border-bottom: solid white 20px;
     border-radius: 20px;
