@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
 
 export const ChartSection = styled.div`
-  margin: 20px 0 80px 0;
+  margin: 20px 0 60px 0;
   /* width: 100%; */
   /* height: 550px; */
 
