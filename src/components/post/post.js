@@ -2,10 +2,17 @@ import { usePost } from "../../hooks";
 import * as S from "./Post.style";
 import { Link } from "react-router-dom";
 import { ROUTE } from "../../routes/Route";
+import { useNavigate } from "react-router-dom";
+
 
 export const Post = () => {
   const { post } = usePost();
   console.log(post);
+  const navigate = useNavigate();
+
+  const moveToProductDetail = (postId) => {
+    navigate(`/post/${postId}`);
+  };
 
   return (
     <S.PostSection>
@@ -25,8 +32,9 @@ export const Post = () => {
           {post.map((post) => (
             <tr key={post.postId}>
               <td>{post.postId}</td>
-              <td>
-                <Link to={ROUTE.VIEWPOST_PAGE.link}>{post.title}</Link>
+              <td onClick={() => moveToProductDetail(post.postId)}>
+                {/* <Link to={ROUTE.VIEWPOST_PAGE.link}>{post.title}</Link> */}
+                {post.title}
               </td>
 
               {/* TODO: 날짜 형식 바꿔서 출력 */}
