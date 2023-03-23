@@ -31,9 +31,9 @@ export const Post = () => {
           </tr>
         </thead>
         <tbody className="table-body">
-          {post.map((post) => (
+          {post.map((post, index) => (
             <tr key={post.postId}>
-              <td>{post.postId}</td>
+              <td>{index + 1}</td>
               <td>
                 <PostModalButton name={post} post={post.title} />
               </td>
