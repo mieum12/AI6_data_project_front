@@ -1,0 +1,27 @@
+import styled from "styled-components";
+import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
+
+export const Container = styled.div`
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  color: ${PRIMARY_COLOR};
+  background-color: ${COLOR_WHITE};
+`;
+export const FormContainer = styled.div`
+  textarea {
+    height: 100px;
+    width: 500px;
+  }
+  button {
+    background-color: ${PRIMARY_COLOR};
+    color: ${COLOR_WHITE};
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 7px;
+  }
+`;

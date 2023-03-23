@@ -1,4 +1,5 @@
 export * from "./common/box";
+export * from "./createpost";
 export * from "./plus";
 export * from "./post";
 export * from "./safety";
