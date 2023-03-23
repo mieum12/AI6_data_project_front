@@ -33,7 +33,7 @@ export const ROUTE = {
     element: CreatePost,
   },
   UPDATEPOST_PAGE: {
-    path: "/UdatePostPage",
+    path: "/UpdatePostPage",
     link: "/UpdatePostPage",
     element: UpdatePost,
   },
