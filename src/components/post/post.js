@@ -22,19 +22,18 @@ export const Post = () => {
           </tr>
         </thead>
         <tbody className="table-body">
-          {post &&
-            post.map((post) => (
-              <tr key={post.postId}>
-                <td>{post.postId}</td>
-                <td>
-                  <Link to={ROUTE.UPDATEPOST_PAGE.link}>{post.title}</Link>
-                </td>
+          {post.map((post) => (
+            <tr key={post.postId}>
+              <td>{post.postId}</td>
+              <td>
+                <Link to={ROUTE.VIEWPOST_PAGE.link}>{post.title}</Link>
+              </td>
 
-                {/* TODO: 날짜 형식 바꿔서 출력 */}
-                <td>{post.createdAt}</td>
-                <td>{post.updatedAt}</td>
-              </tr>
-            ))}
+              {/* TODO: 날짜 형식 바꿔서 출력 */}
+              <td>{post.createdAt}</td>
+              <td>{post.updatedAt}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
       {/* <Link to={ROUTE.CREATEPOST_PAGE.link}>

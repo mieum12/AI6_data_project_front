@@ -5,6 +5,7 @@ import Safety from "../pages/safety/Safety";
 import CreatePost from "../pages/createPost/CreatePost";
 import PostList from "../pages/post/PostList";
 import UpdatePost from "../pages/updatePost/UpdatePost";
+import ViewPost from "../pages/viewPost/ViewPost";
 
 export const ROUTE = {
   LANDING_PAGE: {
@@ -42,6 +43,11 @@ export const ROUTE = {
     link: "/PostListPage",
     element: PostList,
   },
+  VIEWPOST_PAGE: {
+    path: "/ViewPostPage",
+    link: "/ViewPostPage",
+    element: ViewPost,
+  }
 };
 
 export const ROUTE_ARR = Object.values(ROUTE);

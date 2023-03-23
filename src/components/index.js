@@ -8,3 +8,4 @@ export * from "./sheltermap";
 export * from "./Footer";
 export * from "./Header";
 export * from "./updatepost";
+export * from "./ViewPost";
