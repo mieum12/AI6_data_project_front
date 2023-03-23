@@ -1,4 +1,4 @@
-import Sections from "../../components/landing/Sections";
+import { Sections } from "../../components";
 
 const LandingPage = () => {
   return (
