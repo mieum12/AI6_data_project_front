@@ -12,6 +12,16 @@ export const Container = styled.div`
   background-color: ${COLOR_WHITE};
 `;
 export const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: ${PRIMARY_COLOR};
+  border-width: 10px;
+  padding: 30px;
   textarea {
     height: 100px;
     width: 500px;
@@ -21,7 +31,7 @@ export const FormContainer = styled.div`
     color: ${COLOR_WHITE};
     border: none;
     border-radius: 10px;
-    font-size: 15px;
-    padding: 7px;
+    font-size: 20px;
+    padding: 10px;
   }
 `;
