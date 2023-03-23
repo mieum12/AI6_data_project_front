@@ -111,7 +111,7 @@ export const ShelterChart = () => {
     <>
       <div className="chartTitle">수용시설 현황</div>
       <div className="chartBack">
-        <ResponsiveContainer width="100%" height={400}>
+        <ResponsiveContainer width="100%" height="100%">
           <ScatterChart
             margin={{
               top: 20,
