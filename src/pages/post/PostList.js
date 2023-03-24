@@ -11,38 +11,24 @@
 // export default PostListPage;
 
 import React, { useState } from "react";
-import styled from "styled-components";
 import { usePost } from "../../hooks";
-import { PRIMARY_COLOR, COLOR_WHITE } from "../../styles/color";
+
+import * as S from "./PostList.style";
 
 function Article(props) {
   return (
-    <ArticlePart>
+    <S.ArticlePart>
       <article>
         <h2 className="title">{props.title}</h2>
         <div className="body">{props.body}</div>
       </article>
-    </ArticlePart>
+    </S.ArticlePart>
   );
 }
 
-const ArticlePart = styled.div`
-  background-color: ${COLOR_WHITE};
-  color: ${PRIMARY_COLOR};
-  .title {
-    display: flex;
-    justify-content: center;
-  }
-  .body {
-    display: flex;
-    justify-content: center;
-    height: 350px;
-  }
-`;
-
 function Header(props) {
   return (
-    <HeaderPart>
+    <S.HeaderPart>
       <header>
         <h1>
           <a
@@ -57,16 +43,9 @@ function Header(props) {
           </a>
         </h1>
       </header>
-    </HeaderPart>
+    </S.HeaderPart>
   );
 }
-
-const HeaderPart = styled.div`
-  .title {
-    text-decoration: none;
-    color: ${PRIMARY_COLOR};
-  }
-`;
 
 function Nav(props) {
   const lis = [];
@@ -89,26 +68,17 @@ function Nav(props) {
     );
   }
   return (
-    <List>
+    <S.List>
       <nav>
         <ol>{lis}</ol>
       </nav>
-    </List>
+    </S.List>
   );
 }
 
-const List = styled.div`
-height: 370px;
-display: block;
-overflow: scroll;
-.lists {
-    text-decoration: none;
-    color: ${PRIMARY_COLOR};
-  }
-`;
 function Create(props) {
   return (
-    <CreatePage>
+    <S.CreatePage>
       <article>
         <h2>새 글 작성 페이지 입니다.</h2>
         <form
@@ -130,19 +100,15 @@ function Create(props) {
           </p>
         </form>
       </article>
-    </CreatePage>
+    </S.CreatePage>
   );
 }
-
-const CreatePage = styled.div`
-  margin-left: 20px;
-`;
 
 function Update(props) {
   const [title, setTitle] = useState(props.title);
   const [body, setBody] = useState(props.body);
   return (
-    <Updateing>
+    <S.Updateing>
       <article>
         <h2>지금 수정 중 입니다!</h2>
         <form
@@ -181,19 +147,9 @@ function Update(props) {
           </p>
         </form>
       </article>
-    </Updateing>
+    </S.Updateing>
   );
 }
-
-const Updateing = styled.div`
-  // display:flex;
-  padding-left: 30px;
-
-  .title {
-    // display:flex;
-    // justify-content:center;
-  }
-`;
 
 function App() {
   const [mode, setMode] = useState("WELCOME");
@@ -223,12 +179,7 @@ function App() {
 
   // 처음 페이지를 들어왔을 때
   if (mode === "WELCOME") {
-    content = (
-      <Article
-        title="반딧불 이야기 게시판 입니다"
-        body="새 글을 작성해 소통해 보세요!"
-      ></Article>
-    );
+    content = <Article title="반딧불 이야기 게시판 입니다" body="새 글을 작성해 소통해 보세요!"></Article>;
 
     // 글을 클릭하면 해당 글 보여줌
   } else if (mode === "READ") {
@@ -315,8 +266,8 @@ function App() {
   //   );
   // }
   return (
-    <FullBody>
-      <ListPart>
+    <S.FullBody>
+      <S.ListPart>
         <Header
           className="title"
           title="게시판"
@@ -342,71 +293,13 @@ function App() {
         >
           글 작성하기
         </a>
-      </ListPart>
-      <OneArticle>
+      </S.ListPart>
+      <S.OneArticle>
         {content}
         <div>{contextControl}</div>
-      </OneArticle>
-    </FullBody>
+      </S.OneArticle>
+    </S.FullBody>
   );
 }
-
-const FullBody = styled.div`
-  color: ${PRIMARY_COLOR};
-  display: flex;
-  justify-content: center;
-  height: 600px;
-  padding-bottom: 120px;
-  background-color: ${COLOR_WHITE};
-  .button1 {
-    text-decoration: none;
-    color: ${COLOR_WHITE};
-    background-color: ${PRIMARY_COLOR};
-    border-radius: 10px;
-    padding: 10px;
-    margin: 0 10px 0 300px;
-  }
-  .button2 {
-    text-decoration: none;
-    color: ${COLOR_WHITE};
-    background-color: ${PRIMARY_COLOR};
-    border-radius: 10px;
-    padding: 10px;
-  }
-`;
-
-const ListPart = styled.div`
-  width: 300px;
-  height: 500px;
-  background: ${COLOR_WHITE};
-  margin: 10px;
-  border-radius: 20px;
-  border-style: solid;
-  border-color: ${PRIMARY_COLOR};
-  border-width: 10px;
-  .title {
-    display: flex;
-    justify-content: center;
-  }
-  .buttons {
-    text-decoration: none;
-    color: ${COLOR_WHITE};
-    background-color: ${PRIMARY_COLOR};
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 20px 20px 100px;
-  }
-`;
-
-const OneArticle = styled.div`
-  width: 500px;
-  height: 500px;
-  background: ${COLOR_WHITE};
-  margin: 10px;
-  border-radius: 20px;
-  border-style: solid;
-  border-color: ${PRIMARY_COLOR};
-  border-width: 10px;
-`;
 
 export default App;
