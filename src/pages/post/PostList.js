@@ -106,9 +106,10 @@ function Create(props) {
 
 function Update(props) {
   const [title, setTitle] = useState(props.title);
-  const [body, setBody] = useState(props.body);
+  const [body, setBody] = useState(props.content);
+
   return (
-    <S.Updateing>
+    <S.Updating>
       <article>
         <h2>지금 수정 중 입니다!</h2>
         <form
@@ -147,7 +148,7 @@ function Update(props) {
           </p>
         </form>
       </article>
-    </S.Updateing>
+    </S.Updating>
   );
 }
 
@@ -158,22 +159,6 @@ function App() {
 
   const { post } = usePost();
 
-  // const [topics, setTopics] = useState([
-  //   {
-  //     id: 1,
-  //     title: "[긴급]용산구에 큰 화재가 났어요",
-  //     body: "갈만한 시설 중 추천해주세요!",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "이번 여름엔 비가 많이 오네요",
-  //     body: "홍수가 날까봐 걱정입니다.",
-  //   },
-  //   { id: 3, title: "영등포구 시설 소개", body: "좋은 시설이 많네요" },
-  //   { id: 4, title: "화재 시 대피 요령!!", body: "내용 대피요령" },
-  //   { id: 5, title: "지도 보기 도움~~!!~~!!", body: "내용 지도" },
-  //   { id: 6, title: "[긴급] 현재 양천구에서 시설을 찾아요", body: "ㅊㅊ부탁" },
-  // ]);
   let content = null;
   let contextControl = null;
 
@@ -196,6 +181,7 @@ function App() {
         body = post[i].content;
       }
     }
+
     content = <Article title={title} body={body}></Article>;
     contextControl = (
       <>
@@ -241,35 +227,35 @@ function App() {
         }}
       ></Create>
     );
-  } //else if (mode === "UPDATE") {
-  //   let title,
-  //     body = null;
-  //   for (let i = 0; i < topics.length; i++) {
-  //     if (topics[i].id === id) {
-  //       title = topics[i].title;
-  //       body = topics[i].body;
-  //     }
-  //   }
-  //   content = (
-  //     <Update
-  //       title={title}
-  //       body={body}
-  //       onUpdate={(title, body) => {
-  //         console.log(title, body);
-  //         const newTopics = [...post];
-  //         const updatedTopic = { id: id, title: title, body: body };
-  //         for (let i = 0; i < newTopics.length; i++) {
-  //           if (newTopics[i].id === id) {
-  //             newTopics[i] = updatedTopic;
-  //             break;
-  //           }
-  //         }
-  //         // setTopics(newTopics);
-  //         setMode("READ");
-  //       }}
-  //     ></Update>
-  //   );
-  // }
+  } else if (mode === "UPDATE") {
+    let title,
+      body = null;
+    for (let i = 0; i < post.length; i++) {
+      if (post[i].id === id) {
+        title = post[i].title;
+        body = post[i].body;
+      }
+    }
+    content = (
+      <Update
+        title={title}
+        body={body}
+        onUpdate={(title, body) => {
+          console.log(title, body);
+          const newTopics = [...post];
+          const updatedTopic = { id: id, title: title, body: body };
+          for (let i = 0; i < newTopics.length; i++) {
+            if (newTopics[i].id === id) {
+              newTopics[i] = updatedTopic;
+              break;
+            }
+          }
+          // setTopics(newTopics);
+          setMode("READ");
+        }}
+      ></Update>
+    );
+  }
   return (
     <S.FullBody>
       <S.ListPart>

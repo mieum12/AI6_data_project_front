@@ -31,7 +31,7 @@ export const List = styled.div`
   }
 `;
 
-export const Updateing = styled.div`
+export const Updating = styled.div`
   // display:flex;
   padding-left: 30px;
 
