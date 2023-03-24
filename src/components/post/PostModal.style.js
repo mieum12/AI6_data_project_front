@@ -72,13 +72,22 @@ export const ModalBody = styled.div`
 
   //'제목,작성자,내용'이라는 제목
   .titles{
+    padding-top:10px;
     font-weight: bold;
     font-size: 30px;
     margin-top: 20px;
   }
   //사용자가 쓴 부분
   .texts {
+    padding-top:10px;
     background: white;
     height: 40px;
     border-radius: 20px;
+  }
+  .textsC {
+    padding-top:10px;
+    height: 80px;
+    background: white;
+    border-radius: 20px;
+  }
 `;

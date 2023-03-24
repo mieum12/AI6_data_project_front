@@ -61,7 +61,7 @@ export const PostModal = ({ setModalOpen, name }) => {
         <div className="titles">작성자</div>
         <div className="texts">{name.userNm}</div>
         <div className="titles">내용</div>
-        <div className="texts">{name.content} </div>
+        <div className="textsC">{name.content} </div>
         {/* {updatePost} */}
         <div className="buttonWrapper">
           <button onClick={onChangePost} className="Pbutton">
