@@ -98,8 +98,10 @@ function Nav(props) {
 }
 
 const List = styled.div`
-  height: 370px;
-  .lists {
+height: 370px;
+display: block;
+overflow: scroll;
+.lists {
     text-decoration: none;
     color: ${PRIMARY_COLOR};
   }
