@@ -21,6 +21,8 @@ export const PostModalButton = ({ post, name }) => {
 
 const FormSection = styled.div`
   .modalButton {
+    font-weight: bold;
+    font-size: 20px;
     border: none;
     padding: auto;
     color: ${PRIMARY_COLOR};

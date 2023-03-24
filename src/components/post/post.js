@@ -3,7 +3,7 @@ import * as S from "./Post.style";
 import { Link, useParams } from "react-router-dom";
 import { ROUTE } from "../../routes/Route";
 // import { useNavigate } from "react-router-dom";
-// import { PostModalButton } from "./PostModalButon";
+import { PostModalButton } from "./PostModalButon";
 
 export const Post = () => {
   const { postId } = useParams();
@@ -36,9 +36,16 @@ export const Post = () => {
             <tr key={post.postId}>
               <td>{index + 1}</td>
               <td>
-                <Link to={ROUTE.VIEWPOST_PAGE.link} name={post}>
+                {/* 게시글페이지로이동하기 */}
+                {/* <Link 
+                  className="title"
+                  to={ROUTE.VIEWPOST_PAGE.link} 
+                  name={post}>
                   {post.title}
-                </Link>
+                </Link> */}
+
+                {/* 게시글 모달로 보기 */}
+                <PostModalButton name={post} post={post.title} />
               </td>
               {/* TODO: 날짜 형식 바꿔서 출력 */}
               <td>{post.createdAt}</td>
@@ -47,9 +54,6 @@ export const Post = () => {
           ))}
         </tbody>
       </table>
-      {/* <Link to={ROUTE.CREATEPOST_PAGE.link}>
-        <button>글 작성하기</button>
-      </Link> */}
     </S.PostSection>
   );
 };

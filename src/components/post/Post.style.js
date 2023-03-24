@@ -51,6 +51,10 @@ export const PostSection = styled.div`
   .table-body {
     background-color: white;
   }
+  .title {
+    text-decoration: none;
+    color: ${PRIMARY_COLOR};
+  }
   th {
     padding-bottom: 20px;
   }

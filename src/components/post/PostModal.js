@@ -56,9 +56,12 @@ export const PostModal = ({ setModalOpen, name }) => {
       <S.ModalTitle>{name.shelterNm}</S.ModalTitle>
 
       <S.ModalBody>
-        <div>제목 : {name.title} </div>
-        <div>사용자명 : {name.userNm}</div>
-        <div>내용 :{name.content} </div>
+        <div className="titles">제목</div>
+        <div className="texts">{name.title} </div>
+        <div className="titles">작성자</div>
+        <div className="texts">{name.userNm}</div>
+        <div className="titles">내용</div>
+        <div className="texts">{name.content} </div>
         {/* {updatePost} */}
         <div className="buttonWrapper">
           <button onClick={onChangePost} className="Pbutton">
