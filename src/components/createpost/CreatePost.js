@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./CreatePost.style";
 import { useNavigate } from "react-router-dom";
+import { api } from "../../api/api";
 
 export const CreatePost = () => {
   const [title, setTitle] = useState("");
@@ -13,7 +14,7 @@ export const CreatePost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
+    api
       .post("http://localhost:8000/post", { title, content, userNm, password })
       .then(() => {
         setTitle("");
