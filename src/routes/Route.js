@@ -44,10 +44,10 @@ export const ROUTE = {
     element: PostList,
   },
   VIEWPOST_PAGE: {
-    path: "/ViewPostPage",
-    link: "/ViewPostPage",
+    path: "/ViewPostPage/:id",
+    link: "/ViewPostPage/:id",
     element: ViewPost,
-  }
+  },
 };
 
 export const ROUTE_ARR = Object.values(ROUTE);
