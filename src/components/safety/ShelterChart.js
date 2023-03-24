@@ -1,13 +1,5 @@
 import { useFire, useRain, useShelter } from "../../hooks";
-import {
-  ScatterChart,
-  Scatter,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { COLOR_WHITE } from "../../styles/color";
 
 const fireData = [
@@ -111,7 +103,7 @@ export const ShelterChart = () => {
     <>
       <div className="chartTitle">수용시설 현황</div>
       <div className="chartBack">
-        <ResponsiveContainer width="100%" height={400}>
+        <ResponsiveContainer width="100%" height="100%">
           <ScatterChart
             margin={{
               top: 20,
@@ -121,14 +113,7 @@ export const ShelterChart = () => {
             }}
           >
             <CartesianGrid />
-            <XAxis
-              type="number"
-              dataKey="x"
-              name="Shelter"
-              unit="개"
-              domain={[25, 90]}
-              stroke={COLOR_WHITE}
-            />
+            <XAxis type="number" dataKey="x" name="Shelter" unit="개" domain={[25, 90]} stroke={COLOR_WHITE} />
             <YAxis
               yAxisId="left"
               type="number"
@@ -149,18 +134,9 @@ export const ShelterChart = () => {
               stroke="#82ca9d"
             />
             <Tooltip cursor={{ strokeDasharray: "2 2" }} />
-            <Scatter
-              yAxisId="left"
-              name="화재량"
-              data={fireData}
-              fill="#8884d8"
-            />
-            <Scatter
-              yAxisId="right"
-              name="강우량"
-              data={rainData}
-              fill="#82ca9d"
-            />
+            <Legend />
+            <Scatter yAxisId="left" name="화재량" data={fireData} fill="#8884d8" />
+            <Scatter yAxisId="right" name="강우량" data={rainData} fill="#82ca9d" />
           </ScatterChart>
         </ResponsiveContainer>
       </div>

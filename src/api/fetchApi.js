@@ -31,9 +31,12 @@ export async function fetchShelter(guNm) {
 }
 
 // 게시판 글 조회
-export async function fetchPost() {
+export async function fetchPost(postId) {
   try {
-    const { data } = await api.get("/post");
+    let path = "/post";
+    if (typeof postId === "string") path += postId;
+
+    const { data } = await api.get(path);
     return data;
   } catch (err) {
     console.log("error", err);
