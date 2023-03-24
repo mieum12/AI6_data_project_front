@@ -26,6 +26,9 @@ export const List = styled.div`
     text-decoration: none;
     color: ${PRIMARY_COLOR};
   }
+  .lists:hover {
+    color: orange;
+  }
 `;
 
 export const Updateing = styled.div`

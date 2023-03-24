@@ -179,7 +179,12 @@ function App() {
 
   // 처음 페이지를 들어왔을 때
   if (mode === "WELCOME") {
-    content = <Article title="반딧불 이야기 게시판 입니다" body="새 글을 작성해 소통해 보세요!"></Article>;
+    content = (
+      <Article
+        title="반딧불 이야기 게시판 입니다"
+        body="새 글을 작성해 소통해 보세요!"
+      ></Article>
+    );
 
     // 글을 클릭하면 해당 글 보여줌
   } else if (mode === "READ") {
