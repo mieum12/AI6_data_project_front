@@ -1,6 +1,7 @@
 import "./App.css";
 import styled from "styled-components";
 import RoutesList from "./routes/RoutesList";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <ContentNav>
           <RoutesList />
         </ContentNav>
+        <Footer />
       </Nav>
     </>
   );
