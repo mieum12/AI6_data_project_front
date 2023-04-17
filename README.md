@@ -1,6 +1,9 @@
 # 반딧불이
 - 이재민을 위한 수용시설 안내 서비스
 
+# 깃랩 주소
+https://kdt-gitlab.elice.io/ai_track/class_06/data_project/team07
+
 <br >
 
 ## 1. 프로젝트 소개
